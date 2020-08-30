@@ -1,0 +1,96 @@
+.o-hero {
+    position: relative;
+    @include mediaQueriesMd {
+        .container {
+            padding: 0;
+        }
+    }
+}
+.m-waves__container {
+    position: relative;
+    height: 380px;
+    background: $color-secondary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    @include mediaQueriesMd {
+        height: 450px;
+    }
+    @include mediaQueries0 {
+        height: 520px;
+    }
+    .-faqAnswer & {
+        height: 180px;
+    }
+}
+.m-waves {
+    position: absolute;
+    bottom: -136px;
+    height: 527px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.a-wave {
+    width: 2402px;
+    height: 427px;
+    background: url(../img/recursos/waves.png) center bottom no-repeat;
+    position: absolute;
+    left: -180px;
+    bottom: 0;
+    animation: 5s wave ease-in-out infinite alternate;
+    &.-a {
+        background-position: 0 -854px;
+    }
+    &.-b {
+        background-position: 0 -427px;
+        animation-delay: .6s;
+    }
+    &.-c {
+        background-position: 0 0;
+        animation-delay: 1.2s;
+    }
+}
+
+.-waveHero {
+    max-width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: whitesmoke;
+    z-index: 3;
+    .-faqAnswer & {
+        height: auto;
+    }
+    @include mediaQueriesMd {
+        .-faq & {
+            height: auto;
+        }
+    }
+    @include mediaQueriesXs {
+        height: auto;
+    }
+}
+#main {
+    position: relative;
+}
+@keyframes wave {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-80px, 30px);
+    }
+    100% {
+        transform: translate(160px, -60px);
+    }
+}

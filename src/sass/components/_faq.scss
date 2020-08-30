@@ -1,0 +1,84 @@
+.o-faq__wrapper {
+    border-radius: 4px;
+    box-shadow: $shadow1;
+    overflow: hidden;
+}
+
+.faq-list {
+    padding: 0;
+    list-style: none;
+}
+
+
+ol.faq-list {
+    margin: 0;
+    & > li {
+        position: relative;
+        padding: 0;
+        & li {
+            border: none;
+            position: static;
+        }
+        &::marker {
+            visibility: visible;
+        }
+    }
+    @include mediaQueriesMd {
+        li {
+            padding-bottom: $spaceXs;
+        }
+    }
+    .-check__container {
+        li {
+            border-bottom: none;
+        }
+        p:first-child {
+            padding-top: 0;
+        }
+    }
+}
+
+.m-faq__text {
+    padding: $spaceXs 0;
+    background-color: #F8FAFB;
+    border-bottom: 1px solid $color-lightgrey;
+    li {
+        display: block;
+        padding: $spaceXs $spaceRg;
+    }
+}
+
+.a-faq__name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transition: .5s;
+    line-height: 1.4;
+    border-bottom: 1px solid $color-lightgrey;
+    &::after {
+        display: block;
+        width: $spaceXs;
+        position: absolute;
+        right: $spaceXs;
+        margin: 2px 5px 0;
+        content: url('../img/icons/big-down-arrow.svg');
+    }
+    &[aria-expanded=true] {
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
+    p.-title {
+        @extend .-semiBold;
+        padding: $spaceSm $spaceRg;
+        max-width: 88%;
+        &:hover {
+            color: $color-secondary;
+        }
+        &:active, &:focus {
+            outline: none;
+            text-decoration: underline;
+        }
+    }
+}

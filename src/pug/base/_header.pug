@@ -1,0 +1,21 @@
+nav.o-nav.sticky
+ .o-navFixedContainer
+  .o-nav__content
+   .a-brand
+    a(href=linksUrl[1]): img.a-brand__Img(src=linksUrl[1]+logoResponsive[0], alt="Logotipo de monlogo")
+ 
+   .a-burguer#burger
+    img.a-burguer__menu(src=linksUrl[1]+"assets/img/icons/burguer.svg", alt="Icono de menu")
+
+   .m-itemContent
+    .a-burguerOut#burgerOutMenu
+     img.a-burguerOut__menu(src=linksUrl[1]+"assets/img/icons/close.svg", alt="Icono de cierre del menu")
+    .a-brandMobile
+     a(href=linksUrl[1]): img.a-brandMobile__Img(src=linksUrl[1]+logoResponsive[0], alt="Logo de monlogo")
+    .m-itemContent__container
+     ul.m-itemContent__list
+      li: a.a-itemLink(href=linksUrl[1]+linksInternos[0]) #{titles[0]}
+      li: a.a-itemLink(href=linksUrl[1]+linksInternos[1]) #{titles[1]}
+      li: a.a-itemLink(href=linksUrl[1]+linksInternos[4]) #{titles[2]}
+      li: a.a-itemLink(href=linksUrl[1]) #{titles[4]}
+      li: a.a-itemLink(href=linksUrl[1]+linksInternos[5]) #{titles[3]}

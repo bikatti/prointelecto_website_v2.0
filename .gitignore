@@ -1,0 +1,10 @@
+recursos/
+dist/assets/img
+dist/assets/fonts
+dist/assets/video
+*.ai
+*.xd
+*.psd
+*.md
+*.jpg
+*.png

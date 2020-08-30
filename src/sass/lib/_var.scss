@@ -1,0 +1,60 @@
+// colors
+$color-primary: #E65F13;
+$color-secondary: #1C5899;
+$color-alert: #0771E6;
+$color-calm: #1C9951;
+
+$bg: #FCFCFC;
+
+// colors grey
+$color-lightin: #FEFEFE;
+$color-lightgrey: #DDDCE0;
+$color-grey: #C9CED9;
+$color-darkgrey: #515151;
+$color-darkengrey: #393E46;
+
+// fonts
+$font1: 'Roboto', sans-serif;
+$font2: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// font-size
+$fontS1: 12px;
+$fontS2: 15px;
+$fontS3: 22px;
+$fontS4: 29px;
+$fontS5: 45px;
+$fontS6: 48px;
+
+// font-size Mobile
+$fontSM1: 14px;
+$fontSM2: 16px;
+$fontSM3: 30px;
+$fontSM4: 38px;
+$fontSM5: 18px;
+$fontSM6: 25px;
+
+// font-size 0
+$font01: 16px;
+
+// Shadow
+$shadow1: 0 3px 9px rgba($color-darkgrey, $alpha: .35);
+$shadow2: 0 3px 9px rgba($color-darkgrey, $alpha: .2);
+
+// Border
+$borderBottom: 2px solid $color-darkgrey;
+
+// Breakpoints
+$breakXl: 1200px;
+$breakLg: 992px;
+$breakMd: 768px;
+$breakSm: 576px;
+$breakXs: 425px;
+$breakXxs: 375px;
+$break0: 320px;
+
+// Spaces
+$spaceBg: 70px;
+$spaceMd: 50px;
+$spaceRg: 35px;
+$spaceSm: 25px;
+$spaceXs: 15px;

@@ -1,0 +1,288 @@
+// Navegación y distribución de la página
+.-ContainerUniversal {
+    max-width: 76%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 10px 5px;
+    box-sizing: border-box;
+    @include mediaQueriesLg {
+        max-width: 89.66%;
+    }
+    @include mediaQueriesSm {
+        padding: 10px;
+    }
+    @include mediaQueries0 {
+        padding: 0;
+        max-width: 86%;
+    }
+}
+
+.-ContainerBlog {
+    @extend .-ContainerUniversal;
+    max-width: 60%;
+    @include mediaQueriesMd {
+        max-width: 89.66%;
+    }
+    @include mediaQueries0 {
+        padding: 0;
+        max-width: 86%;
+    }
+}
+
+// Margin & Padding Modifiers
+.-mAuto {
+    margin: auto;
+}
+.-mAutoRL {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.-mAutoLeft {
+    margin-left: auto;
+}
+.-mAutoRight {
+    margin-right: auto;
+    margin-left: $spaceXs;
+}
+.-mXsRight {
+    margin-right: $spaceXs;
+}
+.-mXsTop {
+    margin-top: $spaceXs;
+}
+.-mSmTop {
+    margin-top: $spaceSm;
+}
+.-mXsBottom {
+    margin-bottom: $spaceXs;
+}
+.-mSmBottom {
+    margin-bottom: $spaceSm;
+}
+.-mRgTop {
+    margin-top: $spaceRg;
+}
+.-mRgBottom {
+    margin-bottom: $spaceRg;
+}
+.-mSmSmBottom {
+    @include mediaQueriesSm {
+        margin-bottom: $spaceSm;
+    }
+}
+
+.a-noMargin {
+    margin: 0 !important;
+}
+
+section .a-noPadding {
+    padding: 0 ;
+}
+
+section .a-paddingMd {
+    padding-top: $spaceXs;
+    padding-bottom: $spaceSm;
+}
+
+.-padCoolTopBottom {
+    padding-top: $spaceBg + 20px;
+    padding-bottom: $spaceBg + 20px;
+    @include mediaQueriesMd {
+        padding-top: $spaceBg;
+        padding-bottom: $spaceBg;
+    }
+}
+
+.-padMdTopBottom {
+    padding-top: $spaceMd;
+    padding-bottom: $spaceMd;
+}
+
+.-padRgTopBottom {
+    padding-top: $spaceRg;
+    padding-bottom: $spaceRg;
+}
+
+.-padSmTopBottom {
+    padding-top: $spaceSm;
+    padding-bottom: $spaceSm;
+}
+
+.-padBgBottom {
+    padding-bottom: 80px;
+    @include mediaQueriesMd {
+        padding-bottom: $spaceMd;
+    }
+}
+.-padMdBottom {
+    padding-bottom: $spaceMd;
+}
+
+section .-padSmBottom, .-padSmBottom {
+    padding-bottom: $spaceSm !important;
+}
+
+.-padXsBottom {
+    padding-bottom: $spaceXs;
+}
+
+.-padRgBottom {
+    padding-bottom: $spaceRg;
+}
+
+.-padBgTop {
+    padding-top: $spaceBg;
+    @include mediaQueriesMd {
+        padding-top: $spaceMd;
+    }
+}
+
+.-padMdTop {
+    padding-top: $spaceMd;
+}
+
+.-padRgTop {
+    padding-top: $spaceRg;
+}
+.-padSmTop {
+    padding-top: $spaceSm;
+}
+
+.-padXsTop {
+    padding-top: $spaceXs;
+}
+.-pad0Left {
+    padding-left: 0 !important;
+}
+.-pad0Rigth  {
+    padding-right: 0 !important;
+}
+
+.-containerText {
+    margin-bottom: $spaceSm;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 68.66%;
+    @include mediaQueriesMd {
+        max-width: 100%;
+    }
+}
+
+// Display
+.-dInline {
+    display: inline;
+}
+.-dFlex {
+    display: flex;
+}
+
+// Position
+.-pRelative {
+    position: relative;
+}
+.-zI10 {
+    z-index: 10;
+}
+.-alignItemsLeft {
+    align-items: left !important;
+}
+
+// border y resources
+.-borderBottom {
+    opacity: .3;
+    border-bottom: $borderBottom;
+}
+
+// bg colors
+.-bg {
+    background-color: $bg;
+    &Pri {
+        background-color: $color-primary;
+    }
+    &Alert {
+        background-color: $color-alert;
+    }
+    &Calm {
+        background-color: $color-calm;
+    }
+}
+
+// Display Show & Hide
+.-hide {
+    display: none;
+}
+.-hideSm {
+    @include mediaQueriesSm {
+        display: none;
+    }
+}
+.-hideMd {
+    @include mediaQueriesMd {
+        display: none;
+    }
+}
+.-showMd {
+    @include mediaQueriesMd {
+        display: block;
+    }
+}
+.-showSm {
+    @include mediaQueriesSm {
+        display: block;
+    }
+}
+.-mw80 {
+    max-width: 71%;
+}
+.-bottom {
+    position: absolute;
+    bottom: $spaceSm;
+}
+
+// Grid
+.-row {
+    display: flex;
+    flex-wrap: wrap;
+    .-col-1 {
+        width: 8.3333333333%;
+    }
+    .-col-2 {
+        width: 16.6666666666%;
+    }
+    .-col-3 {
+        width: 24.9999999999%;
+    }
+    .-col-4 {
+        width: 33.3333333332%;
+    }
+    .-col-5 {
+        width: 41.6666666665%;
+    }
+    .-col-6 {
+        width: 49.9999999998%;
+    }
+    .-col-7 {
+        width: 58.3333333331%;
+    }
+    .-col-8 {
+        width: 66.6666666664%;
+    }
+    .-col-9 {
+        width: 74.9999999997%;
+    }
+    .-col-10 {
+        width: 83.3333333333%;
+    }
+    .-col-11 {
+        width: 91.6666666663%;
+    }
+    .-col-12 {
+        width: 100%;
+    }
+    @include mediaQueriesSm {
+        .-col-1, .-col-2, .-col-3, .-col-4, .-col-5, .-col-6,
+        .-col-7, .-col-8, .-col-9, .-col-10, .-col-11, .-col-12 {
+            width: 100%;
+        }
+    }
+}

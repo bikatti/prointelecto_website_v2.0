@@ -1,0 +1,23 @@
+include ../lib/_var.pug
+include ../lib/_mixin.pug
+<!DOCTYPE html>
+html(lang="es")
+ include ../base/_head.pug
+ include ../base/_headstyle.pug
+  +metadataCourse(titles[2]+" - "+title,"Descripción","https://prointelecto.com/faq/","website","https://monlogo.co/assets/img/banner/banner.png","Banner con el logotipo de Prointelecto")
+ 
+ body.o-colorIndex.-bg
+  // menu
+  include ../base/_header.pug
+
+  // hero
+  include ../components/faq/index/_hero.pug
+
+  // section
+  include ../components/faq/index/_section.pug
+
+  // call-to-action
+  include ../components/faq/index/_cta.pug
+
+  // Footer
+  include ../base/_footer.pug

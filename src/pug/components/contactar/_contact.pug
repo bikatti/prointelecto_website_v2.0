@@ -1,0 +1,46 @@
+section.o-contact.-index.-bgAlert
+ .m-underline.-curve.-shapeTop
+  svg(xmlns="http://www.w3.org/2000/svg", viewBox="0 0 3000 185.4")
+   path(fill="currentColor",d="M3000,185.4V0H0v185.4C496.4,69.8,996.4,12,1500,12S2503.6,69.8,3000,185.4z")
+ 
+ .m-contact__content.-ContainerUniversal.-padBgTop
+  .m-contact__header.-textCenter.-mSmBottom
+   p.-uppercase.-colorLightin Contáctanos ahora
+   h2.-colorLightin.-medium Estamos esperando tu #[b.-regular.-colorPrimary mensaje.]
+  .m-contact__grid.-zI10
+   .m-contact__form
+    form(action=linksUrl[1]+"assets/php/info.php", method="POST")
+     .m-form
+      .m-form__group
+       label Nombre
+       input(type="text", name="nombre", placeholder="Alex Fernandez", id="", required)
+      .m-form__group
+       label Email
+       input(type="email", name="email", placeholder="alexfernandez@gmail.com", id="", required)
+      .m-form__group
+       label Servicio
+       select(name="servicio", placeholder="Seleccinar", id="", required)
+        option(value, selected, disabled) Seleccionar
+        option(value="servicio1") Registro de Marcas, Nombres y Lemas Comerciales
+        option(value="servicio2") Renovación de Registros de Marcas, Nombres y Lemas Comerciales
+        option(value="servicio3") Oposiciones y Recursos administrativos
+        option(value="servicio4") Acciones de nulidad de registro y Cancelaciones por falta de uso
+        option(value="servicio5") Consultas de estatus administrativo de trámites de Registro de Marca
+        option(value="servicio6") Inscripciones de licencias, cesiones, cambios de nombre, domicilio y otros
+        option(value="servicio7") Estudios jurídicos de casos relacionados con Derechos de Propiedad Intelectual
+        option(value="servicio8") Contratos, acuerdos y notificaciones relacionados con la Propiedad Intelectual
+        option(value="servicio9") Registro de Nombres de Dominio .com.ve
+      .m-form__group
+       label Cuéntanos sobre tu proyecto
+       textarea.-formControl(name="mensaje", placeholder="Buenos días, me gustaría saber...", id="", rows="3", required)
+      .a-button
+       button.a-btn.-btnSecondary.-btnBlock(type="submit") Enviar
+   
+   .m-contact__text
+    h3.-colorLightin Cómo lo hacemos
+    p.-colorLightin En este sitio web encontrará información relacionada con Registro de Marcas, Nombres y Lemas Comerciales. Lo invitamos a visitar nuestra sección de Preguntas más frecuentes en donde podrá encontrar respuestas a las interrogantes y dudas más comunes sobre registro de marcas. Si está interesado en nuestros servicios, contáctenos sin compromiso por correo electrónico y uno de nuestros asesores lo atenderá.
+
+.-pRelative.-bgCalm
+ .m-underline.-underCurve.-curve.-shapeTop
+  svg(xmlns="http://www.w3.org/2000/svg", viewBox="0 0 3000 185.4")
+   path(fill="currentColor",d="M3000,185.4V0H0v185.4C496.4,69.8,996.4,12,1500,12S2503.6,69.8,3000,185.4z")

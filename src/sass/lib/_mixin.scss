@@ -1,0 +1,79 @@
+// background hover
+@mixin greyHoverLinks {
+    background-color: rgba($color-darkgrey, $alpha: .1);
+    fill: rgba($color-darkgrey, $alpha: .1);
+}
+
+@mixin globalHoverLinks($color: $color-alert, $a: .5) {
+    background-color: rgba($color, $a);
+    fill: rgba($color, $a);
+}
+
+@mixin blueActiveLinks {
+    background-color: darken($color-secondary, $amount: 8%);
+    fill: darken($color-secondary, $amount: 8%);
+}
+
+@mixin thumnailBox($img: none) {
+    animation-delay: .5s;
+    background-image: $img;
+    background-size: contain;
+    background-position: center bottom;
+}
+
+// MediaQueries
+@mixin mediaQueriesXl {
+    @media only screen and (max-width: $breakXl) {
+        @content;
+    }
+}
+@mixin mediaQueriesLg {
+    @media only screen and (max-width: $breakLg) {
+        @content;
+    }
+}
+
+@mixin mediaQueriesMd {
+    @media only screen and (max-width: $breakMd) {
+        @content;
+    }
+}
+
+@mixin mediaQueriesSm {
+    @media only screen and (max-width: $breakSm) {
+        @content;
+    }
+}
+
+@mixin mediaQueriesXs {
+    @media only screen and (max-width: $breakXs) {
+        @content;
+    }
+}
+
+@mixin mediaQueriesXxs {
+    @media only screen and (max-width: $breakXxs) {
+        @content;
+    }
+}
+
+@mixin mediaQueries0 {
+    @media only screen and (max-width: $break0) {
+        @content;
+    }
+}
+
+// If & else functions
+@mixin footerFirmFunction($blueBg: true) {
+    @if $blueBg {
+        background-color: $color-primary;
+        p {
+            color: $color-lightin;
+        }
+    } @else {
+        background-color: transparent;
+        p {
+            color: $color-alert;
+        }
+    }
+}

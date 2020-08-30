@@ -1,0 +1,34 @@
+.m-searchBar {
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    border-radius: $spaceMd;
+    background-color: $color-lightin;
+    box-shadow: $shadow1;
+    padding: calc(#{$spaceXs} / 3);
+    padding-left: $spaceXs;
+    @include mediaQueriesMd {
+        width: 100%;
+        max-width: 680px;
+    }
+}
+
+.m-form.-faq {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    .m-form__group {
+        margin: 0;
+    }
+    input {
+        border: 0;
+    }
+    input:focus {
+        background-color: none;
+        border-color: none;
+        box-shadow: none;
+    }
+    @include mediaQueriesXs {
+        grid-template-columns: 1fr auto;
+    }
+}

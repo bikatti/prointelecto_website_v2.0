@@ -1,0 +1,21 @@
+.m-breadcrumbs {
+    display: flex;
+    justify-content: center;
+    .a-breadcrumb:hover {
+        color: $color-lightin;
+    }
+    .-slash {
+        margin: 0 $spaceXs;
+    }
+    @include mediaQueriesMd {
+        .a-breadcrumb {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            max-width: 184px;
+            max-height: 40px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.o-hdwdi {
+    position: relative;
+    z-index: 5;
+}
+
+.m-hdwdi  {
+    padding: $spaceSm $spaceBg $spaceRg;
+    margin-top: -100px;
+    background: $color-lightin;
+    box-shadow: $shadow1;
+    border-radius: 4px;
+    @include mediaQueriesLg {
+        padding: $spaceSm;
+        margin-top: -130px;
+    }
+    @include mediaQueriesXs {
+        margin-top: -$spaceBg;
+        padding: $spaceXs;
+    }
+}

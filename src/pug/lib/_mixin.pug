@@ -1,0 +1,62 @@
+//- Contenido del index
+mixin box(a="#", img=linksUrl[1]+"assets/img/icons/*", n="", title="Box con texto", texto="Texto de la card")
+ a(class="m-box m-box__anima", href=""+a)
+  .m-box__container
+   h3.m-box__title.a-explainTitle=title
+   img(class="m-box__img", src=""+img, alt=""+n)
+   p.a-box__text=texto
+
+mixin boxItem(n,url,cat,t,p,img,alt)
+ a.m-box(class="-box"+n,href=""+url)
+  .m-box__item.-boxHeight
+   .-back-half
+   p.-category #{cat}
+   h3.-maxTitle.-h4Sm #{t}
+   p.-openMouth.-maxTitle #{p}
+   img.-box__img(src=""+img, alt=""+alt)
+
+mixin boxItemIcon(n,url,color,t,p,f,cL,icon)
+ a.m-box(class="-box"+n,href=""+url)
+  div(class="m-box__item -boxPlusHeight -wColorNIcon "+color)
+   h4.-noLetter #{t}
+   p.-openMouth.-noLetter #{p}
+   span(class="-moreLink -bottom -uppercase -semiBold "+cL) #{f} #[i(class="-icon -iconLeft "+icon)]
+
+mixin boxItemFaq(n,url,color,t,img)
+ a.m-box(class="-box"+n,href=""+url)
+  div(class="m-box__item -smallHeight -wColorNIcon "+color)
+   img.-mSmBottom.-box__imgFaq(src=""+img, alt="Icono de "+t)
+   h4.-noLetter.-textCenter #{t}
+
+//- Hero Faq
+mixin heroFaq(a1,l1)
+ section.o-hero
+  ol.m-breadcrumbs.-mSmTop
+   li: a.a-breadcrumb.-colorLightin(href=linksUrl[1]+linksInternos[4]) #{titles[2]}
+   b(class="-regular -slash -colorLightin") /
+   li: a.a-breadcrumb.-colorLightin(href=""+a1) #{l1}
+ 
+//- Footer
+mixin footerLink(lin=linksUrl[1],acl="",pr="Link")
+ li: a(href=""+lin, class="-footerLink "+acl)=pr
+
+mixin nameFaq(id="faq1", n="pregunta")
+ a(data-toggle="collapse", class="collapsed aqui a-faq__name", href="#"+id)
+  p.-title=n
+  .a-iconFaq
+   .a-iconFaq__icon
+
+//- Metadata
+mixin metadataCourse(t,d,url,img,imgAlt)
+ link(rel="canonical", href=""+url)
+ meta(name="og:title", content=""+t)
+ meta(name="og:description", content=""+d)
+ meta(name="og:url", content=""+url)
+ meta(name="og:type", content="website")
+ meta(name="og:image", content=""+img)
+ meta(name="og:image:alt", content=""+imgAlt)
+ meta(name="og:image:type", content="image/png")
+ meta(name="og:image:secure_url", content=""+img)
+ meta(name="title", content=""+t)
+ meta(name="description", content=""+d)
+ title=t

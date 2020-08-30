@@ -1,0 +1,105 @@
+.o-contact {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    &.-index {
+        background-image: url('../img/index/background_contact.png');
+    }
+    &.-faq {
+        background-image: url('../img/index/background_contact.png');
+        background-position: 35% center;
+    }
+    @include mediaQueriesMd {
+        &.-faq {
+            h2 {
+                margin-bottom: $spaceXs;
+            }
+        }
+    }
+}
+.m-contact__grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "conForm conText";
+    grid-gap: $spaceMd;
+    margin-bottom: -100px;
+    @include mediaQueriesMd {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "conText" "conForm";
+    }
+}
+.m-contact__text {
+    grid-area: conText;
+    @include mediaQueriesMd {
+        margin: 0 auto;
+        width: 70%;
+    }
+    @include mediaQueriesSm {
+        width: 80%;
+    }
+    @include mediaQueriesXs {
+        width: 100%;
+    }
+}
+.m-contact__form {
+    grid-area: conForm;
+    width: 100%;
+    background: $color-lightin;
+    border-radius: 4px;
+    box-shadow: $shadow1;
+    @include mediaQueriesMd {
+        margin: 0 auto;
+        width: 70%;
+    }
+    @include mediaQueriesSm {
+        width: 90%;
+    }
+    @include mediaQueriesXs {
+        width: 100%;
+    }
+}
+.m-form {
+    width: 100%;
+    padding: $spaceSm;
+}
+.m-form__group {
+    position: relative;
+    margin: $spaceXs 0 $spaceSm 0;
+    input, textarea, select {
+        font-weight: 400;
+        display: block;
+        width: 100%;
+        padding: $spaceXs calc(#{$spaceXs} + 5px);
+        height: 50px;
+        background-color: $color-lightin;
+        background-clip: padding-box;
+        border: 1px solid $color-grey;
+        border-radius: 4px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    textarea.-formControl {
+        height: auto;
+    }
+    input:focus, textarea:focus, select:focus {
+        background-color: #fff;
+        border-color: rgba($color-primary, 0.8);
+        outline: 0;
+        box-shadow: 0 0 10px rgba($color-primary, 0.1);
+    }
+    label {
+        transition: 0.5s ease all;
+        pointer-events: none;
+        margin-bottom: calc(#{$spaceXs} / 2);
+    }
+}
+
+.o-contant__buttons {
+    justify-content: center;
+    align-items: center;
+    @include mediaQueriesMd {
+        margin-top: $spaceSm;
+    }
+}

@@ -1,0 +1,185 @@
+.o-footer {
+    background-color: $color-lightin;
+}
+.-footerIndex {
+    padding-top: calc(#{$spaceBg} * 1.5);
+}
+
+.m-footer {
+    max-width: 71%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "usFooter courFooter artiFooter subsFooter";
+    grid-gap: 0 $spaceSm;
+    h3 {
+        padding-bottom: $spaceXs;
+    }
+    @include mediaQueriesMd {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "usFooter courFooter" "artiFooter subsFooter";
+        grid-gap: $spaceSm;
+        justify-content: start;
+        margin-bottom: $spaceSm;
+    }
+    @include mediaQueriesXs {
+        max-width: 93%;
+    }
+}
+
+.m-footer__logo {
+    grid-area: logoFooter;
+    margin-bottom: $spaceRg;
+    padding-right: $spaceXs;
+    margin-right: auto;
+    img {
+        width: 200px;
+    }
+    @include mediaQueriesMd {
+        margin-bottom: 0;
+    }
+}
+
+.m-footer__us {
+    grid-area: usFooter;
+    padding-left: $spaceXs;
+}
+.a-footerIcons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    left: -$spaceXs;
+    margin-top: $spaceXs;
+    margin-left: $spaceXs;
+    .a-instagram {
+        margin-right: $spaceXs;
+    }
+    @include mediaQueriesMd {
+        margin-top: 12px;
+    }
+}
+
+.m-footer__course {
+    grid-area: courFooter;
+}
+
+.m-footer__article {
+    grid-area: artiFooter;
+    @include mediaQueriesMd {
+        padding-left: $spaceXs;
+    }
+}
+
+.m-footer__subs {
+    grid-area: subsFooter;
+}
+
+.m-footer__copy {
+    grid-area: copyFooter;
+    padding-bottom: $spaceXs;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .a-world {
+        position: relative;
+        top: 4px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    @include mediaQueriesMd {
+        justify-content: center;
+    }
+}
+
+.m-footer__things {
+    display: flex;
+    margin-top: 5px;
+    flex-direction: row;
+    align-items: center;
+    @include mediaQueriesMd {
+        justify-content: center;
+    }
+}
+
+
+
+.o-footerDeco {
+    .a-thingsLeft {
+        position: absolute;
+        width: 230px;
+        bottom: -$spaceBg;
+    }
+    @include mediaQueriesSm {
+        .a-thingsLeft {
+            left: -$spaceMd;
+        }
+    }
+    @include mediaQueriesXs {
+        .a-thingsLeft {
+            left: -80px;
+        }
+    }
+}
+
+
+.a-mailChimp__form {
+    .-btnFooter {
+        padding: 6px 20px;
+        font-weight: 600;
+    }
+    display: flex;
+    max-width: 100%;
+    @include mediaQueriesLg {
+        flex-wrap: wrap;
+    }
+}
+
+.a-mailchimpGroup {
+    margin-right: $spaceXs;
+    @include mediaQueriesXxs {
+        margin-right: 8px;
+    }
+}
+.a-mailchimpMail {
+    font-size: $fontS2;
+    border-radius: 6px;
+    border: 2px solid $color-primary;
+    box-shadow: 4px 4px $color-alert;
+    padding: 6px $spaceXs;
+    &:focus {
+        outline: none;
+        border-color: $color-secondary;
+    }
+}
+
+// Firm Dev
+.m-footerFirmDev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: $spaceSm;
+    p {
+        margin-right: $spaceXs;
+    }
+    @include mediaQueriesSm {
+        flex-wrap: wrap;
+        p {
+            margin-right: 5px;
+        }
+    }
+}
+
+.m-backFooter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: $spaceBg;
+    margin-bottom: $spaceMd;
+    @include mediaQueriesSm {
+        margin-right: $spaceRg;
+        margin-bottom: $spaceRg;
+    }
+}

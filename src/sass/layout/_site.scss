@@ -1,0 +1,64 @@
+html, body, p, div, h1, h2, h3, ul, ol, img, form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    padding-top: 80px;
+    @include mediaQueriesMd {
+        padding-top: 50px;
+    }
+}
+
+article, aside, figure, footer, header,
+main, menu, nav, section {
+    display: block;
+}
+
+article {
+    font-size: $fontS2;
+    font-family: $font2;
+    padding-bottom: $spaceRg;
+}
+
+ul, ol, dl {
+    padding-left: 5px;
+    padding-right: 0;
+    list-style: none;
+    ol {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    li {
+        padding-bottom: $spaceXs;
+    }
+    @include mediaQueriesMd {
+        padding-left: 10px;
+        padding-right: 0;
+        li {
+            padding-bottom: 10px;
+            line-height: 1.4;
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+    @include mediaQueriesSm {
+        padding-left: 20px;
+        padding-right: 10px;
+    }
+    @include mediaQueriesXs {
+        padding-left: 25px;
+        padding-right: 5px;
+        ol {
+            padding-left: 25px;
+            padding-right: 10px;
+        }
+    }
+}
+
+ol {
+    margin-top: 0;
+    margin-bottom: $fontSM2;
+}

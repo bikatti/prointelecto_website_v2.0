@@ -1,0 +1,143 @@
+a {
+    color: $color-darkengrey;
+    &:hover {
+        color: $color-alert;
+        text-decoration: none;
+    }
+    &:active, &:focus {
+        outline: none;
+    }
+}
+
+.a-itemLink {
+    font-size: $font01;
+    font-weight: 600;
+    color: $color-darkengrey;
+    &:hover {
+        color: rgba($color-darkengrey, $alpha: .9);
+    }
+    @include mediaQueriesMd {
+        font-size: $fontS3;
+    }
+}
+.-footerLink {
+    &:hover {
+        border-bottom: solid 2px rgba($color-alert, $alpha: .8);
+    }
+}
+
+.-faqLink {
+    @extend .-semiBold;
+    color: $color-alert;
+}
+
+.-linksText {
+    font-size: $font01;
+    border-bottom: 1px solid $color-grey;
+    margin-left: $spaceXs;
+    @include mediaQueriesMd {
+        font-size: $fontSM2;
+    }
+}
+.-linksTextHover {
+    padding-left: $spaceXs;
+    padding-right: $spaceXs;
+    border-radius: 4px;
+    transition: background 120ms ease-in 0s;
+    text-overflow: ellipsis;
+    // max-width: 220px;
+    overflow: hidden;
+    white-space: nowrap;
+    &:hover {
+        background: $color-lightgrey;
+    }
+}
+.-target {
+    &::after {
+        display: block;
+        width: 18px;
+        position: absolute;
+        right: $spaceXs;
+        content: url('../img/icons/external.svg');
+    }
+}
+.-targetText {
+    &::after {
+        display: inline-flex;
+        position: relative;
+        top: 3px;
+        margin-left: 5px;
+        width: $spaceSm;
+        content: url('../img/icons/external_sec.svg');
+    }
+}
+.-download {
+    &::after {
+        display: block;
+        width: 18px;
+        position: absolute;
+        right: $spaceXs;
+        content: url('../img/icons/download.svg');
+    }
+}
+
+.-iconLinks {
+    font-size: $fontS2;
+    margin-right: 3px;
+}
+
+
+// Modificadores de Links
+.-modifierLink {
+    color: $color-alert;
+    text-decoration: none;
+}
+a.-LinkFaq {
+    font-size: $fontS2;
+    display: inline-block;
+    position: static;
+    color: $color-primary;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+
+// Links especificos con sus hover & behavior
+.m-containerHeading__itemHeader.-linkHover {
+    &:hover {
+        text-decoration: none;
+        @include greyHoverLinks;
+    }
+}
+
+.a-itemContent {
+    &:hover {
+        @include greyHoverLinks;
+    }
+    &:focus {
+        box-shadow: $color-primary 0 0 0 2px inset;
+        outline: currentColor none medium;
+        position: relative;
+    }
+    &:active:focus {
+        color: $color-alert;
+    }
+    &:active {
+        @include blueActiveLinks;
+    }
+}
+
+.a-itemContent.-colorWhite {
+    &:hover {
+        @include globalHoverLinks();
+    }
+    &:focus {
+        box-shadow: $color-lightin 0 0 0 2px inset;
+        outline: currentColor none medium;
+        position: relative;
+    }
+    &:active {
+        @include globalHoverLinks($color-secondary, 1);
+        color: $color-primary;
+    }
+}
