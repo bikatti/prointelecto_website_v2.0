@@ -1,34 +1,31 @@
 .o-contact {
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
     &.-index {
-        background-image: url('../img/index/background_contact.png');
-    }
-    &.-faq {
-        background-image: url('../img/index/background_contact.png');
         background-position: 35% center;
     }
     @include mediaQueriesMd {
-        &.-faq {
+        &.-index {
             h2 {
                 margin-bottom: $spaceXs;
             }
         }
     }
 }
+.m-contact__content {
+    background-color: $color-primary;
+    background-image: url('../img/index/background_contact.png');
+    border-radius: 4px;
+    padding: $spaceRg;
+    margin-top: -$spaceBg;
+    @include mediaQueriesMd {
+        padding: $spaceRg $spaceXs;
+    }
+}
 .m-contact__grid {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "conForm conText";
-    grid-gap: $spaceMd;
-    margin-bottom: -100px;
+    margin: 0 auto;
+    max-width: 60%;
     @include mediaQueriesMd {
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
-        grid-template-areas: "conText" "conForm";
+        max-width: 100%;
     }
 }
 .m-contact__text {
@@ -45,7 +42,6 @@
     }
 }
 .m-contact__form {
-    grid-area: conForm;
     width: 100%;
     background: $color-lightin;
     border-radius: 4px;
@@ -68,6 +64,26 @@
 .m-form__group {
     position: relative;
     margin: $spaceXs 0 $spaceSm 0;
+    display: flex;
+    &.-radio {
+        flex-direction: row;
+        justify-content: center;
+        [type=radio] {
+            // appearance: none;
+            border-radius: 50%;
+            width: $spaceXs;
+            border: 2px solid #999;
+            transition: 0.2s all linear;
+            margin-right: $spaceXs;
+            position: relative;
+            top: -4px;
+        }
+    }
+    .a-radioCheck {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     input, textarea, select {
         font-weight: 400;
         display: block;
@@ -94,6 +110,9 @@
         pointer-events: none;
         margin-bottom: calc(#{$spaceXs} / 2);
     }
+    @include mediaQueriesSm {
+        flex-direction: column;
+    }
 }
 
 .o-contant__buttons {
@@ -101,5 +120,90 @@
     align-items: center;
     @include mediaQueriesMd {
         margin-top: $spaceSm;
+    }
+}
+
+.m-contant__content {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $spaceRg;
+    @include mediaQueriesMd {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+    }
+}
+.m-ctaBox {
+    @extend .-bg;
+    padding: $spaceXs;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    &.-only {
+        @extend .-bgPri;
+        padding: $spaceSm $spaceXs;
+        display: flex;
+        .m-ctaBox__text {
+            width: 80%;
+        }
+        .m-ctaBox__img {
+            width: 280px;
+            top: -$spaceRg;
+        }
+        .a-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &.-calm {
+        @extend .-bgCalm;
+    }
+    .m-ctaBox__img {
+        position: absolute;
+        top: -$spaceXs;
+        left: 0;
+        width: 190px;
+    }
+    .m-ctaBox__text {
+        position: relative;
+        z-index: 5;
+        margin-left: auto;
+        max-width: 60%;
+        display: flex;
+        flex-direction: column;
+        .a-button {
+            margin-left: auto;
+        }
+    }
+    @include mediaQueriesLg {
+        .m-ctaBox__text {
+            max-width: 48%;
+        }
+        &.-only {
+            flex-direction: column;
+            .m-ctaBox__text {
+                width: 100%;
+                max-width: 100%;
+                text-align: center;
+                margin-bottom: $spaceXs;
+            }
+            .m-ctaBox__img {
+                display: none;
+            }
+        }
+    }
+    @include mediaQueriesMd {
+        .m-ctaBox__text {
+            max-width: 60%;
+        }
+    }
+    @include mediaQueriesXs {
+        .m-ctaBox__text {
+            max-width: 100%;
+        }
+        .m-ctaBox__img {
+            top: $spaceBg;
+        }
     }
 }

@@ -6,13 +6,22 @@
     }
     .-slash {
         margin: 0 $spaceXs;
+        margin-bottom: 5px;
     }
     @include mediaQueriesMd {
+        max-width: 90%;
+        margin: 0 auto;
+        margin-bottom: calc(#{$spaceXs} / 2);
+        .a-breadcrumb {
+            font-size: $fontSM1;
+        }
+    }
+    @include mediaQueriesSm {
         .a-breadcrumb {
             display: -webkit-box;
             -webkit-box-orient: vertical;
             -webkit-line-clamp: 1;
-            max-width: 184px;
+            max-width: 200px;
             max-height: 40px;
             overflow: hidden;
             text-overflow: ellipsis;

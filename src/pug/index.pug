@@ -4,7 +4,7 @@ include lib/_mixin.pug
 html(lang="es")
  include base/_head.pug
  include base/_headstyle.pug
-  +metadataCourse(title+" - Propiedad Intelectual a su Alcance","Descripción","https://monlogo.co/","website","https://monlogo.co/assets/img/banner/banner.png","Banner con el logotipo de Prointelecto")
+  +metadata(title+" - Propiedad Intelectual a su Alcance","Descripción","https://prointelecto.com/","website","https://prointelecto.com/assets/img/banner/banner.png","Banner con el logotipo de Prointelecto")
   meta(name="googlebot-news", content="nosnippet")
  
  body.o-colorIndex.-bg
@@ -16,6 +16,9 @@ html(lang="es")
 
   // Cómo lo hacemos hdwdi
   include components/index/_hdwdi.pug
+
+  // Servicios
+  include components/index/_servicio.pug
  
   // Blog
   include components/index/_stuff.pug

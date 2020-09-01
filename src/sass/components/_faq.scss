@@ -1,7 +1,9 @@
 .o-faq__wrapper {
     border-radius: 4px;
-    box-shadow: $shadow1;
     overflow: hidden;
+}
+.tab-pane {
+    box-shadow: $shadow1;
 }
 
 .faq-list {
@@ -23,11 +25,6 @@ ol.faq-list {
             visibility: visible;
         }
     }
-    @include mediaQueriesMd {
-        li {
-            padding-bottom: $spaceXs;
-        }
-    }
     .-check__container {
         li {
             border-bottom: none;
@@ -38,16 +35,43 @@ ol.faq-list {
     }
 }
 
+.-fdr .m-faq__text {
+    @include mediaQueriesSm {
+        p, h3 {
+            padding-left: $spaceSm;
+            padding-right: $spaceSm;
+        }
+        .m-listContent {
+            padding: 0 $spaceXs;
+            li p {
+                padding-left: $spaceXs + 3;
+            }
+        }
+    }
+}
 .m-faq__text {
     padding: $spaceXs 0;
     background-color: #F8FAFB;
     border-bottom: 1px solid $color-lightgrey;
     li {
+        position: relative !important;
         display: block;
         padding: $spaceXs $spaceRg;
     }
+    .m-listContent li {
+        padding: 0;
+        p {
+            padding-left: $spaceSm;
+        }
+    }
+    p, h3 {
+        padding: 0 $spaceRg;
+        padding-bottom: $spaceXs;
+    }
+    @include mediaQueriesMd {
+        padding-bottom: $spaceRg;
+    }
 }
-
 .a-faq__name {
     display: flex;
     flex-direction: column;
@@ -68,6 +92,9 @@ ol.faq-list {
         &::after {
             transform: rotate(180deg);
         }
+    }
+    .-fdr & p.-title {
+        padding-left: $spaceSm;
     }
     p.-title {
         @extend .-semiBold;

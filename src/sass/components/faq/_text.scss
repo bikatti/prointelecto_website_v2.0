@@ -2,12 +2,18 @@
     position: relative;
 }
 .o-faqArticle__content {
+    padding: $spaceRg $spaceMd;
+    border-radius: 6px;
     display: grid;
     grid-template-columns: 8fr 4fr;
     grid-gap: $spaceRg;
     @include mediaQueriesMd {
+        padding: $spaceRg;
         grid-template-columns: 100%;
         grid-template-rows: auto auto;
         grid-gap: $spaceXs;
+    }
+    @include mediaQueriesXs {
+        padding:  $spaceSm;
     }
 }

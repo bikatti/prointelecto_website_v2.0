@@ -1,0 +1,13 @@
+.o-accordion {
+    position: relative;
+}
+.m-accordion__content {
+    display: grid;
+    grid-gap: $spaceSm;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    @include mediaQueriesMd {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, auto);
+    }
+}

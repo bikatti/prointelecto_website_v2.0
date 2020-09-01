@@ -47,6 +47,9 @@
 .-mXsRight {
     margin-right: $spaceXs;
 }
+.-mSmRight {
+    margin-right: $spaceSm;
+}
 .-mXsTop {
     margin-top: $spaceXs;
 }
@@ -64,6 +67,9 @@
 }
 .-mRgBottom {
     margin-bottom: $spaceRg;
+}
+.-mMdBottom {
+    margin-bottom: $spaceMd;
 }
 .-mSmSmBottom {
     @include mediaQueriesSm {
@@ -149,7 +155,7 @@ section .-padSmBottom, .-padSmBottom {
 }
 
 .-padXsTop {
-    padding-top: $spaceXs;
+    padding-top: $spaceXs !important;
 }
 .-pad0Left {
     padding-left: 0 !important;
@@ -205,6 +211,16 @@ section .-padSmBottom, .-padSmBottom {
     &Calm {
         background-color: $color-calm;
     }
+    &Square {
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-image: url('../img/index/background_contact.png');
+    }
+}
+.-shadow {
+    box-shadow: $shadow1;
 }
 
 // Display Show & Hide
@@ -233,6 +249,9 @@ section .-padSmBottom, .-padSmBottom {
 }
 .-mw80 {
     max-width: 71%;
+}
+.-h100 {
+    height: 100%;
 }
 .-bottom {
     position: absolute;

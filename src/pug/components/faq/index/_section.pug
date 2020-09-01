@@ -1,8 +1,55 @@
-section.o-hdwdi.-padMdTopBottom
- .-ContainerUniversal
-  h2.-colorDarken.-medium.-mSmBottom Preguntas generales
-  .m-box__group.-faq
-   +boxItemFaq("1",linksUrl[1]+linksFaq[0],"-bg","Conceptos e información básica","https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg")
-   +boxItemFaq("2",linksUrl[1]+linksFaq[0],"-bg","Registro de Marcas","https://theme.zdassets.com/theme_assets/680878/b9005eeab719e98b8c076a3f0eca977d7016e281.svg")
-   +boxItemFaq("3",linksUrl[1]+linksFaq[0],"-bg","Registro de otros signos comerciales","https://theme.zdassets.com/theme_assets/680878/d3054d6290f802e0009110cb4e29ea4b2de2477b.svg")
-   +boxItemFaq("4",linksUrl[1]+linksFaq[0],"-bg","Por qué registrar su marca","https://theme.zdassets.com/theme_assets/680878/b74d1823d3a943f3f1e50c3f74057b6dfbc901e4.svg")
+section.o-accordion.-faqIndex.-padMdTop
+ .m-accordion__content.-ContainerUniversal
+  div.-fadeInUp(class="o-faq__wrapper", data-artucle-title="overview")
+   div(class="tab-pane fade show active -bg", id="pills-home" role="tabpanel", aria-labelledby="pills-home-tab")
+    ol(class="wow faq-list", style="visibility: visible;")
+     li
+      +nameFaq("faq1",askSections[0])
+      .collapse.show.m-faq__text#faq1
+       ul.-faqList.a-noPadding
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_1[0]) #{ask_1[0]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_1[1]) #{ask_1[1]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_1[2]) #{ask_1[2]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_1[3]) #{ask_1[3]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_1[4]) #{ask_1[4]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_1[5]) #{ask_1[5]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_1[6]) #{ask_1[6]}
+  
+  div.-fadeInUp(class="o-faq__wrapper -shadow", data-artucle-title="overview")
+   div(class="tab-pane fade show active -bg", id="pills-home" role="tabpanel", aria-labelledby="pills-home-tab")
+    ol(class="wow faq-list", style="visibility: visible;")
+     li
+      +nameFaq("faq2",askSections[1])
+      .collapse.show.m-faq__text#faq2
+       ul.-faqList.a-noPadding
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_2[0]) #{ask_2[0]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_2[1]) #{ask_2[1]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_2[2]) #{ask_2[2]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_2[3]) #{ask_2[3]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_2[4]) #{ask_2[4]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_2[5]) #{ask_2[5]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_2[6]) #{ask_2[6]}
+
+  div.-fadeInUp(class="o-faq__wrapper -shadow", data-artucle-title="overview")
+   div(class="tab-pane fade show active -bg", id="pills-home" role="tabpanel", aria-labelledby="pills-home-tab")
+    ol(class="wow faq-list", style="visibility: visible;")
+     li
+      +nameFaq("faq3",askSections[2])
+      .collapse.show.m-faq__text#faq3
+       ul.-faqList.a-noPadding
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_3[0]) #{ask_3[0]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_3[1]) #{ask_3[1]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_3[2]) #{ask_3[2]}
+
+  div.-fadeInUp(class="o-faq__wrapper -shadow", data-artucle-title="overview")
+   div(class="tab-pane fade show active -bg", id="pills-home" role="tabpanel", aria-labelledby="pills-home-tab")
+    ol(class="wow faq-list", style="visibility: visible;")
+     li
+      +nameFaq("faq4",askSections[3])
+      .collapse.show.m-faq__text#faq4
+       ul.-faqList.a-noPadding
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_4[0]) #{ask_4[0]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_4[1]) #{ask_4[1]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_4[2]) #{ask_4[2]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_4[3]) #{ask_4[3]}
+        li: a.-faqLink.-footerLink(href=linksUrl[1]+askUrl_4[4]) #{ask_4[4]}

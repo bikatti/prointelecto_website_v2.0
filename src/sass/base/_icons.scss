@@ -1,11 +1,3 @@
-.a-arrowRight {
-    width: 11px;
-    margin-left: 6px;
-    position: relative;
-    top: 1px;
-    content: url('../img/icons/arrow_right_white.svg');
-}
-
 .a-facebook {
     width: 11px;
     margin-left: 20px;
@@ -34,40 +26,20 @@
     }
 }
 
-.a-iconsPodcast {
-    width: 60px;
-    margin-left: $spaceXs;
-    box-sizing: border-box;
-    &:hover {
-        transform: translateY(-2px);
-        border-bottom: 1px dashed $color-darkgrey;
-        transition: all .5s;
-    }
-    @include mediaQueriesLg {
-        width: 50px;
-    }
-    @include mediaQueriesXs {
-        width: 42px;
-    }
-}
-
 .a-burguerOut {
     cursor: pointer;
 }
-
-.a-paypal {
-    width: 26px;
-    content: url('../img/icons/paypal.png');
-    // margin-top: 5px;
-    margin-right: 3px;
-}
-
 .-arrowRight {
     content: url('../img/icons/next-arrow.svg');
 }
 .-arrowRightWhite {
     content: url('../img/icons/next-arrow-white.svg');
 }
+.-search {
+    width: 20px;
+    content: url('../img/icons/search.svg');
+}
+
 .-icon {
     &Left {
         margin-left: 4px;

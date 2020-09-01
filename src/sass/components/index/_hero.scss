@@ -14,14 +14,17 @@
     align-items: center;
     justify-content: center;
     z-index: 0;
+    .-fdr & {
+        height: 280px;
+    }
+    .-contact & {
+        height: 180px;
+    }
     @include mediaQueriesMd {
         height: 450px;
     }
     @include mediaQueries0 {
         height: 520px;
-    }
-    .-faqAnswer & {
-        height: 180px;
     }
 }
 .m-waves {
@@ -68,13 +71,8 @@
     right: 0;
     color: whitesmoke;
     z-index: 3;
-    .-faqAnswer & {
+    .-fdr &, .-contact & {
         height: auto;
-    }
-    @include mediaQueriesMd {
-        .-faq & {
-            height: auto;
-        }
     }
     @include mediaQueriesXs {
         height: auto;

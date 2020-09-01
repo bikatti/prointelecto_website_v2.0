@@ -13,20 +13,11 @@
         grid-template-columns: 36% repeat(2, 1fr);
         grid-template-areas: "box1 box2 box3";
     }
-    &.-faq {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: "box1 box2 box3 box4";
-    }
     @include mediaQueriesMd {
         &.-noPart {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, auto);
             grid-template-areas: "box1 box1" "box2 box3";
-        }
-        &.-faq {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, auto);
-            grid-template-areas: "box1 box2" "box3 box4";
         }
     }
     @include mediaQueriesXs {
@@ -39,11 +30,6 @@
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(3, auto);
             grid-template-areas: "box1" "box2" "box3";
-        }
-        &.-faq {
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(4, auto);
-            grid-template-areas: "box1" "box2" "box3" "box4";
         }
     }
 }
@@ -62,6 +48,12 @@
     &.-box4 {
         grid-area: box4;
     }
+    &.-box5 {
+        grid-area: box5;
+    }
+    &.-box6 {
+        grid-area: box6;
+    }
 }
 
 .m-box__item {
@@ -75,12 +67,13 @@
         max-height: 315px;
         border-radius: 6px;
         box-shadow: $shadow2;
-        &:hover {
-            background-color: $color-primary;
+        &:hover .-back-half {
+            display: block;
         }
     }
-    &.-smallHeight {
-        height: 240px;
+    &.-wColorNIcon .-back-half {
+        display: none;
+        background-color: rgba($color-darkengrey, $alpha: .08);
     }
     &.-boxHeight {
         height: 260px;
@@ -97,17 +90,12 @@
         z-index: 2;
         background-color: rgba($color-darkengrey, $alpha: .4);
     }
-
     h3, h4, .-category, p {
         position: relative;
         color: $color-lightin;
         z-index: 2;
         letter-spacing: 1.3px;
         margin-bottom: 8px;
-    }
-    &.-wColorNIcon:hover h3,&.-wColorNIcon:hover h4,
-    &.-wColorNIcon:hover p,&.-wColorNIcon:hover span {
-        color: $color-lightin;
     }
     &.-wColorNIcon:hover .-arrowRight {
         content: url('../img/icons/next-arrow-white.svg');
@@ -155,11 +143,4 @@
             font-size: $fontS3;
         }
     }
-}
-
-.m-box__group.-faq .m-box__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }

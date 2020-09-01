@@ -51,12 +51,12 @@
 
 .-btnCalm {
     @extend .-btnPrimary;
-    border: 2px solid $color-lightgrey;
-    background-color: $color-lightgrey;
+    border: 2px solid $color-lightin;
+    background-color: $color-lightin;
     color: $color-secondary;
     &:hover {
-        background: darken($color: $color-lightgrey, $amount: 5%);
-        border-color: darken($color: $color-lightgrey, $amount: 5%);
+        background: darken($color: $color-lightin, $amount: 5%);
+        border-color: darken($color: $color-lightin, $amount: 5%);
     }
 }
 

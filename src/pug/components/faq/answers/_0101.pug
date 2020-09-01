@@ -1,5 +1,5 @@
-section.o-faqArticle.-padMdTopBottom
- .o-faqArticle__content.-ContainerUniversal
+section.o-faqArticle.-padMdBottom
+ .o-faqArticle__content.-bg.-ContainerUniversal
   .-columnLeft
    article
     h1.-h3.-mSmBottom #{ask_1[0]}
@@ -9,8 +9,6 @@ section.o-faqArticle.-padMdTopBottom
     p.-medium “La marca tiene el poder de influir y guiar el comportamiento de compra de las personas”
 
   .-columnRight
-   section.m-relatedArticle
-    h4.-mXsTop.-mXsBottom Preguntas relacionadas
-    ul.a-noPadding 
-     li: a.-footerLink.-colorAlert(href=linksUrl[1]+askUrl_1[1]) #{ask_1[1]}
-     li: a.-footerLink.-colorAlert(href="#") #{ask_1[2]}
+   +ask_1("-hide","","","","","","")
+ 
+  include _contact.pug

@@ -1,0 +1,72 @@
+.o-farFromHome, .o-service {
+    position: relative;
+}
+.m-farFromHome__content {
+    display: flex;
+    @include mediaQueriesMd {
+        flex-direction: column;
+    }
+}
+.m-farFromHome__text {
+    max-width: 53%;
+    margin-right: $spaceSm;
+    @include mediaQueriesMd {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: $spaceRg;
+    }
+}
+.m-farFromHome__img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @include mediaQueriesMd {
+        height: 260px;
+    }
+}
+
+.m-service__content {
+    margin-top: -$spaceMd;
+    @include mediaQueriesSm {
+        padding: 0;
+    }
+}
+
+.m-service__container {
+    padding: $spaceSm $spaceRg;
+    box-shadow: $shadow1;
+    width: 100%;
+    border-radius: 4px;
+    .m-box__group {
+        display: grid;
+        grid-gap: $spaceSm;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "box1 box1 box1 box2 box2 box2" "box3 box3 box3 box3 box3 box3" "box4 box4 box5 box5 box6 box6";
+    }
+    .m-box__item {
+        border-radius: 4px;
+        padding: $spaceSm $spaceXs;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    @include mediaQueriesSm {
+        padding: $spaceSm $spaceXs;
+        .m-box__group {
+            justify-content: center;
+            grid-gap: $spaceXs;
+            grid-template-columns: repeat(2, calc(50% - calc(#{$spaceXs} / 2)));
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas: "box1 box2" "box3 box4" "box5 box6";
+        }
+    }
+}
