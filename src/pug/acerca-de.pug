@@ -3,19 +3,25 @@ include lib/_mixin.pug
 <!DOCTYPE html>
 html(lang="es")
  include base/_head.pug
- include base/_headstyle.pug
+ include base/_headblog.pug
   +metadata(titles[0]+" - "+title,"Descripción","https://prointelecto.com/acerca-de","website","https://prointelecto.com/assets/img/banner/banner.png","Banner con el logotipo de Prointelecto")
   meta(name="googlebot-news", content="nosnippet")
 
  body.o-colorIndex.-bg
   // menu
   include base/_header.pug
-  
+
   // Hero
   include components/acerca-de/_hero.pug
 
   // Contactar
-  include components/acerca-de/_cta.pug
+  include components/acerca-de/_subtitle.pug
+
+  // Article
+  include components/acerca-de/_article.pug
+
+  //- Contactar
+   include components/acerca-de/_cta.pug
 
   // Footer
   include base/_footer.pug

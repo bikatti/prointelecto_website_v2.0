@@ -1,0 +1,47 @@
+.o-article {
+    position: relative;
+    z-index: 10;
+}
+
+.m-article__text {
+    display: grid;
+    border-radius: 6px;
+    display: grid;
+    grid-template-columns: 7fr 4fr;
+    grid-gap: $spaceMd;
+    @include mediaQueriesMd {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        grid-gap: $spaceXs;
+    }
+    p {
+        line-height: 1.75;
+        letter-spacing: normal;
+        text-align: left;
+    }
+    .m-listContent.-check li {
+        &::before {
+            margin-top: 8px;
+        }
+    }
+    .m-img {
+        max-width: 765px;
+        margin: $spaceRg auto $spaceMd auto;
+        height: auto;
+    }
+    img {
+        width: 100%;
+        min-width: 217px;
+        border-radius: 4px;
+    }
+}
+.m-article__cta {
+    position: sticky;
+    top: 100px;
+    float: right;
+    margin-top: 170px;
+    background-color: $color-primary;
+    padding: $spaceXs;
+    border-radius: 4px;
+    box-shadow: $shadow2;
+}

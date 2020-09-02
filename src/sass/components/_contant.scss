@@ -10,6 +10,10 @@
         }
     }
 }
+.o-subtitle {
+    margin-top: -$spaceMd;
+}
+
 .m-contact__content {
     background-color: $color-primary;
     background-image: url('../img/index/background_contact.png');
