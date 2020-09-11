@@ -1,5 +1,5 @@
 //- Contenido del index
-mixin box(a="#", img=linksUrl[1]+"assets/img/icons/*", n="", title="Box con texto", texto="Texto de la card")
+mixin box(a="#", img=linksUrl[1]+"assets/img/icons/", n="", title="Box con texto", texto="Texto de la card")
  a(class="m-box m-box__anima", href=""+a)
   .m-box__container
    h3.m-box__title.a-explainTitle=title
@@ -15,28 +15,77 @@ mixin boxItem(n,url,cat,t,p,img,alt)
    p.-openMouth.-maxTitle #{p}
    img.-box__img(src=""+img, alt=""+alt)
 
-mixin boxItemIcon(n,url,color,t,p,f,cL,icon)
+mixin boxItemIcon(n,url,color,t,p,f,cL,icon,img,alt)
  a.m-box(class="-box"+n,href=""+url)
   div(class="m-box__item -boxPlusHeight -wColorNIcon "+color)
    .-back-half
    h4.-nochange.-noLetter #{t}
    p.-openMouth.-noLetter #{p}
    span(class="-moreLink -bottom -uppercase -semiBold "+cL) #{f} #[i(class="-icon -iconLeft "+icon)]
-
+   .m-boxImg
+    img(src=""+img, alt="Icono de la sección "+t+", "+alt)
+ 
 mixin boxItemFaq(n,color,t,img)
  .m-box(class="-box"+n)
   div(class="m-box__item -smallHeight -wColorNIcon -h100 "+color)
    img.-mSmBottom.-box__imgFaq(src=""+img, alt="Icono de "+t)
    h4.-noLetter.-textCenter #{t}
 
+mixin boxItemFr(url,cat,t,img,alt)
+ a.m-box(href=""+url)
+  .m-box__item
+   p.-category.-padXsBottom #{cat}
+   h3.-maxTitle.-h4Sm #{t}
+   img.-box__img(src=""+img, alt=""+alt)
+
+mixin boxItemPi(url,img,alt,cat,t)
+ a.m-box(href=""+url)
+  .m-boxSmall
+   .m-smallImg
+    img.-box__img(src=""+img, alt=""+alt)
+   p.-category #{cat}
+   h4 #{t}
+
+mixin boxItemRelated(url,img,alt,cat,t,p)
+ a.m-box(href=""+url)
+  .m-boxSmall
+   .m-smallImg
+    img.-box__img(src=""+img, alt=""+alt)
+   p.-category #{cat}
+   h4 #{t}
+   p=p
+
+mixin pi(d1,d2,d3)
+ section.o-blog.-pi
+  .m-box__content.-ContainerUniversal
+   .m-box__group
+    .-row
+     .-col-6.-colMd-6.-colSm-6.-pSmall.-mXsBottom(class=""+d1)
+      +boxItemRelated(linksUrl[1]+blogSUrl_1[0],linksUrl[1]+"assets/img/blog/img_011.jpg","alt",blogCat[0],blogS_1[0],"Illustration is a good way to enhance positive user experience in UI/UX design.The article by Tubik Studio considers features of efficient illustration design.")
+     .-col-6.-colMd-6.-colSm-6.-pSmall.-mXsBottom(class=""+d2)
+      +boxItemRelated(linksUrl[1]+blogSUrl_1[1],linksUrl[1]+"assets/img/blog/img_005.jpg","alt",blogCat[0],blogS_1[1],"Illustration is a good way to enhance positive user experience in UI/UX design.The article by Tubik Studio considers features of efficient illustration design.")
+     .-col-6.-colMd-6.-colSm-6.-pSmall.-mXsBottom(class=""+d3)
+      +boxItemRelated(linksUrl[1]+blogSUrl_1[2],linksUrl[1]+blogImgS_1[2],"alt",blogCat[0],blogS_1[2],"Illustration is a good way to enhance positive user experience in UI/UX design.The article by Tubik Studio considers features of efficient illustration design.")
+ 
 //- Hero Faq
 mixin heroFaq(a1,l1)
- section.o-hero
-  ol.m-breadcrumbs
-   li: a.a-breadcrumb.-colorLightin(href=linksUrl[1]+linksInternos[4]) #{titles[2]}
-   b(class="-regular -slash -colorLightin") /
-   li: a.a-breadcrumb.-colorLightin(href=""+a1) #{l1}
- 
+ section.o-hero.-padSmTop
+  .-ContainerUniversal
+   ol.m-breadcrumbs
+    li: a.a-breadcrumb.-footerLink(href=linksUrl[1]+linksInternos[4]) #{titles[2]}
+    li: a.a-breadcrumb.-footerLink(href=""+a1) #{l1}
+
+mixin breadcrumb(l1)
+ ol.m-breadcrumbs.a-noMargin
+  li: a.a-breadcrumb.-footerLink(href=linksUrl[1]) Inicio
+  li: span.a-breadcrumb.-semiBold #{l1}
+
+mixin breadcrumb2(url1,l1,l2)
+ ol.m-breadcrumbs.a-noMargin
+  li: a.a-breadcrumb.-footerLink(href=linksUrl[1]) Inicio
+  li: a.a-breadcrumb.-footerLink(href=""+url1) #{l1}
+  li: span.a-breadcrumb.-semiBold #{l2}
+
 mixin ask_1(d1,d2,d3,d4,d5,d6,d7)
  section.m-relatedArticle.-mXsBottom
   h4.-mXsTop.-mXsBottom.-nochange Preguntas relacionadas
@@ -78,6 +127,24 @@ mixin ask_4(d1,d2,d3,d4,d5,d6,d7)
    li(class=""+d3): a.-footerLink.-colorAlert(href=linksUrl[1]+askUrl_4[2]) #{ask_4[2]}
    li(class=""+d4): a.-footerLink.-colorAlert(href=linksUrl[1]+askUrl_4[3]) #{ask_4[3]}
    li(class=""+d5): a.-footerLink.-colorAlert(href=linksUrl[1]+askUrl_4[4]) #{ask_4[4]}
+
+//- Card
+mixin cardService(img,alt,t,badge,cta)
+ .m-service__card
+  .m-service__item
+   .m-service__itemContent
+    img(src=""+img, alt="Icono de "+alt)
+    .m-mediaBody
+     p.-semiBold #{t} #[span.-mXsLeft(class="a-badge "+badge) #{cta}]
+
+mixin cardServiceLink(url,img,alt,t,badge,cta)
+ a(href=""+url)
+  .m-service__card
+   .m-service__item
+    .m-service__itemContent
+     img(src=""+img, alt="Icono de "+alt)
+     .m-mediaBody
+      p.-semiBold #{t} #[span.-mXsLeft(class="a-badge "+badge) #{cta}]
 
 //- Footer
 mixin footerLink(lin=linksUrl[1],acl="",pr="Link")

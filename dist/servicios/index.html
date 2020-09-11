@@ -21,7 +21,7 @@
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
   </head>
-  <link rel="stylesheet" href="/main/dist/assets/css/style.css?v=22"/>
+  <link rel="stylesheet" href="/main/dist/assets/css/style.css?v=39"/>
   <link rel="canonical" href="https://prointelecto.com/servicios/"/>
   <meta name="og:title" content="Servicios - Prointelecto"/>
   <meta name="og:description" content="Descripción"/>
@@ -47,7 +47,7 @@
             <div class="a-brandMobile"><a href="/main/dist/"><img class="a-brandMobile__Img" src="/main/dist/assets/img/logo/logotipo_rev1.png" alt="Logo de monlogo"/></a></div>
             <div class="m-itemContent__container">
               <ul class="m-itemContent__list">
-                <li><a class="a-itemLink" href="/main/dist/acerca-de.html">Nosotros</a></li>
+                <li><a class="a-itemLink" href="/main/dist/nosotros.html">Nosotros</a></li>
                 <li><a class="a-itemLink" href="/main/dist/servicios/">Servicios</a></li>
                 <li><a class="a-itemLink" href="/main/dist/faq/">Preguntas frecuentes</a></li>
                 <li><a class="a-itemLink" href="/main/dist/blog/">Blog</a></li>
@@ -61,84 +61,136 @@
       </div>
     </nav>
     <!-- hero-->
-    <section class="o-hero" id="main">
-      <div class="main">
-        <div class="m-waves__container">
-          <div class="m-waves">
-            <div class="a-wave -a"></div>
-            <div class="a-wave -b"></div>
-            <div class="a-wave -c"></div>
-          </div>
-        </div>
-        <div class="m-heroContent -waveHero container">
-          <div class="content -ContainerUniversal">
-            <div class="m-heroContent__text -center">
-              <div class="a-heroContent__title">
-                <h1 class="-colorLightin -bold">Servicios</h1>
-              </div>
-              <div class="a-heroContent__text">
-                <p class="-colorLightin -light -subtitle">Todo lo relacionado con la protección de sus derechos de Propiedad Intelectual</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="o-hero -padSmTop">
+      <div class="-ContainerUniversal">
+        <ol class="m-breadcrumbs a-noMargin">
+          <li><a class="a-breadcrumb -footerLink" href="/main/dist/">Inicio</a></li>
+          <li><span class="a-breadcrumb -semiBold">Servicios</span></li>
+        </ol>
       </div>
     </section>
     <!-- call-to-action-->
     <section class="o-service -padMdBottom -zI10 -pRelative">
       <div class="m-service__content -ContainerUniversal">
-        <div class="m-service__container -bg -mMdBottom">
-          <h3>Registros de Marcas</h3>
-          <p class="-mRgBottom -subtitle">Atendemos a clientes ubicados en cualquier parte del mundo</p>
-          <div class="m-box__group">
-            <div class="m-box -box1">
-              <div class="m-box__item -smallHeight -wColorNIcon -h100 -bg"><img class="-mSmBottom -box__imgFaq" src="https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg" alt="Icono de Registro de Marcas, Nombres y Lemas Comerciales"/>
-                <h4 class="-noLetter -textCenter">Registro de Marcas, Nombres y Lemas Comerciales</h4>
+        <h1 class="-h2 -medium -mXsBottom -textCenter">¿Qué servicio requieres? </h1>
+        <div class="m-tabs -textCenter -mRgBottom">
+          <ul class="m-tabs__nav">
+            <li>
+              <p class="m-tabs__item -isActive" onclick="mostrarPestana(0)">Registro de Marca</p>
+            </li>
+            <li>
+              <p class="m-tabs__item" onclick="mostrarPestana(1)">Otros de Propiedad Industrial</p>
+            </li>
+          </ul>
+        </div>
+        <div class="-content m-tabs__topic -isActive">
+          <div class="m-service__container -bg">
+            <div class="-row">
+              <div class="-col-4 -colMd-12 m-service__main">
+                <div class="m-service__cta">
+                  <div class="-pRelative"><img class="-mXsBottom" src="/main/dist/assets/img/servicios/img001.jpg" alt=""/></div>
+                  <p>Servicios para Registro de marcas y trámites relacionados</p>
+                </div>
               </div>
-            </div>
-            <div class="m-box -box2">
-              <div class="m-box__item -smallHeight -wColorNIcon -h100 -bg"><img class="-mSmBottom -box__imgFaq" src="https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg" alt="Icono de Renovación de Registros de Marcas, Nombres y Lemas Comerciales"/>
-                <h4 class="-noLetter -textCenter">Renovación de Registros de Marcas, Nombres y Lemas Comerciales</h4>
-              </div>
-            </div>
-            <div class="m-box -box3">
-              <div class="m-box__item -smallHeight -wColorNIcon -h100 -bg"><img class="-mSmBottom -box__imgFaq" src="https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg" alt="Icono de Oposiciones y Recursos administrativos"/>
-                <h4 class="-noLetter -textCenter">Oposiciones y Recursos administrativos</h4>
-              </div>
-            </div>
-            <div class="m-box -box4">
-              <div class="m-box__item -smallHeight -wColorNIcon -h100 -bg"><img class="-mSmBottom -box__imgFaq" src="https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg" alt="Icono de Acciones de nulidad de registro y Cancelaciones por falta de uso"/>
-                <h4 class="-noLetter -textCenter">Acciones de nulidad de registro y Cancelaciones por falta de uso</h4>
-              </div>
-            </div>
-            <div class="m-box -box5">
-              <div class="m-box__item -smallHeight -wColorNIcon -h100 -bg"><img class="-mSmBottom -box__imgFaq" src="https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg" alt="Icono de Consultas de estatus administrativo de trámites de Registro de Marca"/>
-                <h4 class="-noLetter -textCenter">Consultas de estatus administrativo de trámites de Registro de Marca</h4>
-              </div>
-            </div>
-            <div class="m-box -box6">
-              <div class="m-box__item -smallHeight -wColorNIcon -h100 -bg"><img class="-mSmBottom -box__imgFaq" src="https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg" alt="Icono de Inscripciones de licencias, cesiones, cambios de nombre, domicilio y otros"/>
-                <h4 class="-noLetter -textCenter">Inscripciones de licencias, cesiones, cambios de nombre, domicilio y otros</h4>
+              <div class="-col-8 -colMd-12">
+                <div class="m-serviceGroup"><a href="/main/dist/servicios/registro-de-marca.html">
+                    <div class="m-service__card">
+                      <div class="m-service__item">
+                        <div class="m-service__itemContent"><img src="/main/dist/assets/img/icons/service-01.svg" alt="Icono de alt"/>
+                          <div class="m-mediaBody">
+                            <p class="-semiBold">1. Registro de Marcas, Nombres y Lemas Comerciales <span class="-mXsLeft a-badge -badgePrimary">Iniciar</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div></a>
+                </div>
+                <div class="m-serviceGroup">
+                  <div class="m-service__card">
+                    <div class="m-service__item">
+                      <div class="m-service__itemContent"><img src="/main/dist/assets/img/icons/service-02.svg" alt="Icono de alt"/>
+                        <div class="m-mediaBody">
+                          <p class="-semiBold">2. Oposiciones y Recursos administrativos <span class="-mXsLeft a-badge -hide">New</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="m-service__card">
+                    <div class="m-service__item">
+                      <div class="m-service__itemContent"><img src="/main/dist/assets/img/icons/service-03.svg" alt="Icono de alt"/>
+                        <div class="m-mediaBody">
+                          <p class="-semiBold">3. Renovación de Registros de Marcas, Nombres y Lemas Comerciales <span class="-mXsLeft a-badge -hide">New</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-serviceGroup">
+                  <div class="m-service__card">
+                    <div class="m-service__item">
+                      <div class="m-service__itemContent"><img src="/main/dist/assets/img/icons/service-04.svg" alt="Icono de alt"/>
+                        <div class="m-mediaBody">
+                          <p class="-semiBold">4. Acciones de nulidad y Cancelaciones por falta de uso <span class="-mXsLeft a-badge -hide">New</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="m-service__card">
+                    <div class="m-service__item">
+                      <div class="m-service__itemContent"><img src="/main/dist/assets/img/icons/service-05.svg" alt="Icono de alt"/>
+                        <div class="m-mediaBody">
+                          <p class="-semiBold">5. Inscripción de licencias, cesiones, cambios de nombre y domicilio <span class="-mXsLeft a-badge -hide">New</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="m-service__container">
-          <h3 class="-mSmBottom"> Otros servicios relacionados</h3>
-          <div class="m-box__group">
-            <div class="m-box -box1">
-              <div class="m-box__item -smallHeight -wColorNIcon -h100 -bg"><img class="-mSmBottom -box__imgFaq" src="https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg" alt="Icono de Estudios jurídicos de casos relacionados con Derechos de Propiedad Intelectual"/>
-                <h4 class="-noLetter -textCenter">Estudios jurídicos de casos relacionados con Derechos de Propiedad Intelectual</h4>
+        <div class="-content m-tabs__topic">
+          <div class="m-service__container -bg -mMdBottom">
+            <div class="-row">
+              <div class="-col-4 -colMd-12 m-service__main">
+                <div class="m-service__cta">
+                  <div class="-pRelative"><img class="-mXsBottom" src="/main/dist/assets/img/servicios/img002.jpg" alt=""/></div>
+                  <p>Otros servicios relacionados con marcas y derechos de Propiedad Intelectual</p>
+                </div>
               </div>
-            </div>
-            <div class="m-box -box2">
-              <div class="m-box__item -smallHeight -wColorNIcon -h100 -bg"><img class="-mSmBottom -box__imgFaq" src="https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg" alt="Icono de Contratos, acuerdos y notificaciones relacionados con la Propiedad Intelectual"/>
-                <h4 class="-noLetter -textCenter">Contratos, acuerdos y notificaciones relacionados con la Propiedad Intelectual</h4>
-              </div>
-            </div>
-            <div class="m-box -box3">
-              <div class="m-box__item -smallHeight -wColorNIcon -h100 -bg"><img class="-mSmBottom -box__imgFaq" src="https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg" alt="Icono de Registro de Nombres de Dominio .com.ve"/>
-                <h4 class="-noLetter -textCenter">Registro de Nombres de Dominio .com.ve</h4>
+              <div class="-col-8 -colMd-12">
+                <div class="m-serviceGroup">
+                  <div class="m-service__card">
+                    <div class="m-service__item">
+                      <div class="m-service__itemContent"><img src="/main/dist/assets/img/icons/service-06.svg" alt="Icono de alt"/>
+                        <div class="m-mediaBody">
+                          <p class="-semiBold">1. Estudios jurídicos de casos sobre marcas, invenciones, derechos de autor, imagen, confidencialidad y restricción de la competencia <span class="-mXsLeft a-badge -hide">New</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-serviceGroup">
+                  <div class="m-service__card">
+                    <div class="m-service__item">
+                      <div class="m-service__itemContent"><img src="/main/dist/assets/img/icons/service-07.svg" alt="Icono de alt"/>
+                        <div class="m-mediaBody">
+                          <p class="-semiBold">2. Contratos, acuerdos y notificaciones relacionados con ventas, cesión, licencias, franquicias, confidencialidad, competencia y/o desarrollo <span class="-mXsLeft a-badge -hide">New</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="m-serviceGroup">
+                  <div class="m-service__card">
+                    <div class="m-service__item">
+                      <div class="m-service__itemContent"><img src="/main/dist/assets/img/icons/service-08.svg" alt="Icono de alt"/>
+                        <div class="m-mediaBody">
+                          <p class="-semiBold">3. Registro de Nombres de Dominio <span class="-mXsLeft a-badge -hide">New</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -146,13 +198,13 @@
       </div>
     </section>
     <!-- call-to-action-->
-    <section class="o-contact -padMdBottom">
+    <section class="o-contact">
       <div class="-ContainerUniversal">
         <div class="m-ctaBox -only -shadow">
           <div class="m-ctaBox__img"><img src="/main/dist/assets/img/fdr/calendar.svg" alt=""/></div>
           <div class="m-ctaBox__text">
-            <h3 class="-colorLightin">Comienza ya tus tramites</h3>
-            <p class="-colorLightin">Contactanos ahora mismo para empezar</p>
+            <h3 class="-colorLightin">Comienza tus trámites ya</h3>
+            <p class="-colorLightin">Contáctanos ahora mismo para empezar</p>
           </div><a class="a-button" href="/main/dist/contactar.html">
             <button class="a-btn -btnSecondary" type="button">Contactar</button></a>
         </div>
@@ -165,22 +217,22 @@
           <div class="m-footer__us">
             <h4 class="-nochange -semiBold -mXsBottom -colorDarken">Compañía</h4>
             <ol class="m-listFooter">
-              <li><a class="-footerLink " href="/main/dist/acerca-de.html">Nosotros</a></li>
+              <li><a class="-footerLink " href="/main/dist/nosotros.html">Nosotros</a></li>
               <li><a class="-footerLink " href="/main/dist/servicios/">Servicios</a></li>
             </ol>
           </div>
           <div class="m-footer__course">
             <h4 class="-nochange -semiBold -mXsBottom -colorDarken">Servicios</h4>
             <ol class="m-listFooter">
-              <li><a class="-footerLink " href="/main/dist/servicios/fases-de-registro.html">Fases del registro</a></li>
+              <li><a class="-footerLink " href="/main/dist/servicios/registro-de-marca.html">Registro de Marcas</a></li>
             </ol>
           </div>
           <div class="m-footer__article">
             <h4 class="-nochange -semiBold -mXsBottom -colorDarken">Blog</h4>
             <ol class="m-listFooter">
               <li><a class="-footerLink " href="/main/dist/blog/">Artículos</a></li>
-              <li><a class="-footerLink " href="/main/dist/blog/">Propiedad Intelectual</a></li>
-              <li><a class="-footerLink " href="/main/dist/blog/">Franquicias</a></li>
+              <li><a class="-footerLink " href="/main/dist/blog/#pi">Propiedad Intelectual</a></li>
+              <li><a class="-footerLink " href="/main/dist/blog/#fr">Franquicia</a></li>
             </ol>
           </div>
           <div class="m-footer__subs">
@@ -207,6 +259,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="/main/dist/assets/js/index.js?v=22"></script>
+    <script src="/main/dist/assets/js/index.js?v=39"></script>
+    <script src="/main/dist/assets/js/nav-segment.js?v=39"></script>
   </body>
 </html>

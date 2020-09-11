@@ -1,0 +1,48 @@
+section.o-contact.-padMdTop.-zI10.-pRelative
+ .m-contact__content.-ContainerUniversal
+  h1.-h2 Solicitud de información
+  p.-mSmBottom Si está interesado en recibir información detallada sobre los servicios y tarifas para el registro de marcas, nombres o lemas comerciales, le agradecemos que complete el siguiente formulario:
+  .m-contact__grid.-zI10
+   .m-contact__form
+    form(action=linksUrl[1]+"assets/php/rdm.php", method="POST")
+     .m-form
+      .m-form__group
+       label ¿Cuál es la ciudad en la que se encuentra ubicada la empresa o actividad comercial relacionada con los productos o servicios de la(s) marca(s) que desea registrar?
+       input.-mXsRight(type="address", name="direccion", id="", required)
+      .m-form__group
+       label Señale la actividad comercial, productos y/o servicios que se identificarán con la(s) marca(s) que desea registrar
+       input(type="text", name="actividad", id="", required)
+      label ¿Usted o su empresa tienen alguna experiencia anterior con trámites de registro de marca en el país que desea hacer este trámite?
+      .m-form__group.-radio
+       .a-radioCheck.-mSmRight
+        input(type="radio", name="experiencia", id="yes",value="experiencia-yes")
+        label(for="yes") Sí
+       .a-radioCheck.-mSmRight
+        input(type="radio", name="experiencia", id="no",value="experiencia-no")
+        label(for="no") No
+       .a-radioCheck
+        input(type="radio", name="experiencia", id="idk",value="experiencia-idk", checked)
+        label(for="idk") No lo sé
+      .m-form__group
+       label ¿Los trámites de registro de marca que le interesa gestionar se harán a nombre de una empresa o de una persona natural?
+       select(name="persona", id="", required)
+        option(value, selected, disabled) Seleccionar
+        option(value="persona1") Persona Natural
+        option(value="persona2") Persona Jurídica (empresa)
+        option(value="persona3") No sabe
+      .m-form__group
+       label Comentario (opcional)
+       textarea.-formControl(name="mensaje", id="", rows="3")
+      h3 Datos de persona contacto
+      .m-form__group
+       label Nombre completo
+       input.-mXsRight(type="text", name="nombre", id="", required)
+      .m-form__group
+       label Teléfono de contacto
+       input.-mXsRight(type="tel", name="numero", id="", required)
+      .m-form__group
+       label Correo electrónico
+       input.-mXsRight(type="email", name="nombre", id="", required)
+
+      .a-button.a-noMargin
+       button.a-btn.-btnPrimary.-btnBlock(type="submit") Enviar

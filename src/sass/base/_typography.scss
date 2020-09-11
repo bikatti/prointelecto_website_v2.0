@@ -22,7 +22,7 @@ h1, .-h1 {
     }
 }
 
-h2 {
+h2, .-h2 {
     font-size: $fontS5;
     @include mediaQueriesMd {
         font-size: $fontSM3;
@@ -35,7 +35,7 @@ h3, .-h3 {
         font-size: $fontS3;
     }
 }
-h4 {
+h4, .-h4 {
     font-size: $fontS3;
     @include mediaQueriesXs {
         font-size: $font01;
@@ -59,7 +59,8 @@ p, i, ol, li, label {
 }
 
 .-small {
-    font-size: $fontSM1;
+    font-size: $fontSM1 !important;
+    letter-spacing: 0px !important;
 }
 
 small, span {
@@ -223,9 +224,34 @@ ol {
 }
 
 article p,.-textContent p {
-    padding-bottom: calc(#{$spaceSm} - 5px);
+    padding-bottom: $spaceXs;
     line-height: 1.38;
     &:last-child {
         padding-bottom: 0;
     }
+}
+.-fistLetter {
+    &:first-of-type::first-letter {
+        font: 900 90px/70px $font2;
+        float: left;
+        color: $color-primary;
+        padding-right: $spaceXs;
+    }
+}
+
+// Bagde
+.a-badge {
+    @extend .-small;
+    display: inline-block;
+    padding: 2px $spaceXs;
+    border-radius: $spaceBg;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    transition: all 0.2s ease-in-out;
+}
+
+.-badgePrimary {
+    color: $color-lightin;
+    background-color: $color-primary;
 }

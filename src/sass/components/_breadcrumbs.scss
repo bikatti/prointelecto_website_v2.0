@@ -1,30 +1,36 @@
 .m-breadcrumbs {
-    display: flex;
-    justify-content: center;
-    .a-breadcrumb:hover {
-        color: $color-lightin;
+    display: block;
+    .a-breadcrumb {
+        font-size: $fontS2;
     }
-    .-slash {
-        margin: 0 $spaceXs;
-        margin-bottom: 5px;
+    a.a-breadcrumb:hover {
+        color: $color-alert;
+    }
+    .a-breadcrumb:hover {
+        color: $color-darkgrey;
+    }
+    li {
+        display: inline;
+        max-width: 450px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &::before {
+            content: "/";
+            margin: 0 calc(#{$spaceXs} / 1.2);
+        }
+        &:first-child::before {
+            content: none;
+        }
     }
     @include mediaQueriesMd {
-        max-width: 90%;
-        margin: 0 auto;
         margin-bottom: calc(#{$spaceXs} / 2);
         .a-breadcrumb {
             font-size: $fontSM1;
         }
-    }
-    @include mediaQueriesSm {
-        .a-breadcrumb {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 1;
-            max-width: 200px;
-            max-height: 40px;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        li {
+            &::before {
+                margin: 0 calc(#{$spaceXs} / 2) 0 calc(#{$spaceXs} / 4);
+            }
         }
     }
 }

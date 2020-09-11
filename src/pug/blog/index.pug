@@ -1,4 +1,5 @@
 include ../lib/_var.pug
+include ../lib/_varblog.pug
 include ../lib/_mixin.pug
 <!DOCTYPE html>
 html(lang="es")
@@ -10,18 +11,18 @@ html(lang="es")
  body.o-colorIndex.-bg
   // menu
   include ../base/_header.pug
-
+ 
   // Nav
-  include ../components/blog/index/_nav.pug
+  include ../components/blog/_nav.pug
 
   // All
   include ../components/blog/index/_all.pug
 
-  // Propiedad Intelectual
-  include ../components/blog/index/_pi.pug
+  //- Propiedad Intelectual
+   include ../components/blog/index/_pi.pug
 
-  // Franquicias
-  include ../components/blog/index/_fr.pug
+  //- Franquicias
+   include ../components/blog/index/_fr.pug
 
   // Footer
   include ../base/_footer.pug

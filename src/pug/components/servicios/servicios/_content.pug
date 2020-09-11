@@ -1,19 +1,41 @@
 section.o-service.-padMdBottom.-zI10.-pRelative
  .m-service__content.-ContainerUniversal
-  .m-service__container.-bg.-mMdBottom
-   h3 Registros de Marcas
-   p.-mRgBottom.-subtitle Atendemos a clientes ubicados en cualquier parte del mundo
-   .m-box__group
-    +boxItemFaq("1","-bg","Registro de Marcas, Nombres y Lemas Comerciales","https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg")
-    +boxItemFaq("2","-bg","Renovación de Registros de Marcas, Nombres y Lemas Comerciales","https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg")
-    +boxItemFaq("3","-bg","Oposiciones y Recursos administrativos","https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg")
-    +boxItemFaq("4","-bg","Acciones de nulidad de registro y Cancelaciones por falta de uso","https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg")
-    +boxItemFaq("5","-bg","Consultas de estatus administrativo de trámites de Registro de Marca","https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg")
-    +boxItemFaq("6","-bg","Inscripciones de licencias, cesiones, cambios de nombre, domicilio y otros","https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg")
+  h1.-h2.-medium.-mXsBottom.-textCenter ¿Qué servicio requieres? 
+  .m-tabs.-textCenter.-mRgBottom
+   ul.m-tabs__nav
+    li: p.m-tabs__item.-isActive(onclick="mostrarPestana(0)") Registro de Marca
+    li: p.m-tabs__item(onclick="mostrarPestana(1)") Otros de Propiedad Industrial
 
-  .m-service__container
-   h3.-mSmBottom  Otros servicios relacionados
-   .m-box__group
-    +boxItemFaq("1","-bg","Estudios jurídicos de casos relacionados con Derechos de Propiedad Intelectual","https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg")
-    +boxItemFaq("2","-bg","Contratos, acuerdos y notificaciones relacionados con la Propiedad Intelectual","https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg")
-    +boxItemFaq("3","-bg","Registro de Nombres de Dominio .com.ve","https://theme.zdassets.com/theme_assets/680878/25ba6d89e902fcdc64cd1b187ff6213273a28052.svg")
+  div.-content.m-tabs__topic.-isActive
+   .m-service__container.-bg
+    .-row
+     .-col-4.-colMd-12.m-service__main
+      .m-service__cta
+       .-pRelative
+        img.-mXsBottom(src=linksUrl[1]+"assets/img/servicios/img001.jpg", alt="")
+       p Servicios para Registro de marcas y trámites relacionados
+     .-col-8.-colMd-12
+      .m-serviceGroup
+       +cardServiceLink(linksUrl[1]+linksInternos[3],linksUrl[1]+"assets/img/icons/service-01.svg","alt","1. Registro de Marcas, Nombres y Lemas Comerciales","-badgePrimary","Iniciar")
+      .m-serviceGroup
+       +cardService(linksUrl[1]+"assets/img/icons/service-02.svg","alt","2. Oposiciones y Recursos administrativos","-hide","New")
+       +cardService(linksUrl[1]+"assets/img/icons/service-03.svg","alt","3. Renovación de Registros de Marcas, Nombres y Lemas Comerciales","-hide","New")
+      .m-serviceGroup
+       +cardService(linksUrl[1]+"assets/img/icons/service-04.svg","alt","4. Acciones de nulidad y Cancelaciones por falta de uso","-hide","New")
+       +cardService(linksUrl[1]+"assets/img/icons/service-05.svg","alt","5. Inscripción de licencias, cesiones, cambios de nombre y domicilio","-hide","New")
+
+  div.-content.m-tabs__topic
+   .m-service__container.-bg.-mMdBottom
+    .-row
+     .-col-4.-colMd-12.m-service__main
+      .m-service__cta
+       .-pRelative
+        img.-mXsBottom(src=linksUrl[1]+"assets/img/servicios/img002.jpg", alt="")
+       p Otros servicios relacionados con marcas y derechos de Propiedad Intelectual
+     .-col-8.-colMd-12
+      .m-serviceGroup
+       +cardService(linksUrl[1]+"assets/img/icons/service-06.svg","alt","1. Estudios jurídicos de casos sobre marcas, invenciones, derechos de autor, imagen, confidencialidad y restricción de la competencia","-hide","New")
+      .m-serviceGroup
+       +cardService(linksUrl[1]+"assets/img/icons/service-07.svg","alt","2. Contratos, acuerdos y notificaciones relacionados con ventas, cesión, licencias, franquicias, confidencialidad, competencia y/o desarrollo","-hide","New")
+      .m-serviceGroup
+       +cardService(linksUrl[1]+"assets/img/icons/service-08.svg","alt","3. Registro de Nombres de Dominio","-hide","New")

@@ -1,0 +1,66 @@
+.m-contact__grid {
+    position: relative;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.m-contact__form {
+    width: 100%;
+}
+.m-form {
+    width: 100%;
+    // padding: $spaceSm;
+}
+.m-form__group {
+    position: relative;
+    margin: $spaceXs 0 $spaceSm 0;
+    display: flex;
+    flex-direction: column;
+    &.-radio {
+        flex-direction: row;
+        justify-content: center;
+        [type=radio] {
+            // appearance: none;
+            border-radius: 50%;
+            width: $spaceXs;
+            border: 2px solid #999;
+            transition: 0.2s all linear;
+            margin-right: $spaceXs;
+            position: relative;
+            top: -4px;
+        }
+    }
+    .a-radioCheck {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    input, textarea, select {
+        font-weight: 400;
+        display: block;
+        width: 100%;
+        padding: $spaceXs calc(#{$spaceXs} + 5px);
+        height: 50px;
+        background-color: $color-lightin;
+        background-clip: padding-box;
+        border: 1px solid $color-grey;
+        border-radius: 4px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    textarea.-formControl {
+        height: auto;
+    }
+    input:focus, textarea:focus, select:focus {
+        background-color: #fff;
+        border-color: rgba($color-primary, 0.8);
+        outline: 0;
+        box-shadow: 0 0 10px rgba($color-primary, 0.1);
+    }
+    label {
+        transition: 0.5s ease all;
+        pointer-events: none;
+        margin-bottom: calc(#{$spaceXs} / 2);
+    }
+    @include mediaQueriesSm {
+        flex-direction: column;
+    }
+}

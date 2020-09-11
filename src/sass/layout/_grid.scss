@@ -44,6 +44,9 @@
     margin-right: auto;
     margin-left: $spaceXs;
 }
+.-mXsLeft {
+    margin-left: $spaceXs;
+}
 .-mXsRight {
     margin-right: $spaceXs;
 }
@@ -75,6 +78,10 @@
     @include mediaQueriesSm {
         margin-bottom: $spaceSm;
     }
+}
+
+.-pSmall {
+    padding: calc(#{$spaceXs} / 2.5);
 }
 
 .a-noMargin {
@@ -163,6 +170,9 @@ section .-padSmBottom, .-padSmBottom {
 .-pad0Rigth  {
     padding-right: 0 !important;
 }
+.-padXsRL {
+    padding: 0 $spaceXs;
+}
 
 .-containerText {
     margin-bottom: $spaceSm;
@@ -189,6 +199,9 @@ section .-padSmBottom, .-padSmBottom {
 .-zI10 {
     z-index: 10;
 }
+.-zI-1 {
+    z-index: -1;
+}
 .-alignItemsLeft {
     align-items: left !important;
 }
@@ -211,13 +224,11 @@ section .-padSmBottom, .-padSmBottom {
     &Calm {
         background-color: $color-calm;
     }
-    &Square {
-        position: relative;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: top;
-        background-image: url('../img/index/background_contact.png');
-    }
+}
+.-bgImgHero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 .-shadow {
     box-shadow: $shadow1;
@@ -225,7 +236,7 @@ section .-padSmBottom, .-padSmBottom {
 
 // Display Show & Hide
 .-hide {
-    display: none;
+    display: none !important;
 }
 .-hideSm {
     @include mediaQueriesSm {
@@ -239,14 +250,18 @@ section .-padSmBottom, .-padSmBottom {
 }
 .-showMd {
     @include mediaQueriesMd {
-        display: block;
+        display: block !important;
     }
 }
 .-showSm {
     @include mediaQueriesSm {
-        display: block;
+        display: block !important;
     }
 }
+.-isActive {
+    display: block;
+}
+
 .-mw80 {
     max-width: 71%;
 }
@@ -298,9 +313,23 @@ section .-padSmBottom, .-padSmBottom {
     .-col-12 {
         width: 100%;
     }
+    @include mediaQueriesMd {
+        .-colMd-6 {
+            width: 49.9999999998%;
+        }
+        .-colMd-12 {
+            width: 100%;
+        }
+    }
     @include mediaQueriesSm {
         .-col-1, .-col-2, .-col-3, .-col-4, .-col-5, .-col-6,
         .-col-7, .-col-8, .-col-9, .-col-10, .-col-11, .-col-12 {
+            width: 100%;
+        }
+        .-colSm-6 {
+            width: 49.9999999998%;
+        }
+        .-colSm-12 {
             width: 100%;
         }
     }

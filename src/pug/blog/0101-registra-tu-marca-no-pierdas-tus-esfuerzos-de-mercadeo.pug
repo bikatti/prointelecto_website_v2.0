@@ -1,0 +1,29 @@
+include ../lib/_var.pug
+include ../lib/_varblog.pug
+include ../lib/_mixin.pug
+<!DOCTYPE html>
+html(lang="es")
+ include ../base/_head.pug
+ include ../base/_headblog.pug
+  +metadata(blogS_1[0],"Descripción","https://prointelecto.com/blog/","website","https://prointelecto.com/assets/img/banner/banner.png","Banner con el logotipo de Prointelecto")
+  +article(linksExternos[1],"","")
+  meta(name="googlebot-news", content="nosnippet")
+
+ body.o-colorIndex.-bg
+  // menu
+  include ../base/_header.pug
+
+  // Nav
+  include ../components/blog/_nav.pug
+
+  // Article
+  include ../components/blog/article/_0101.pug
+
+  // Contactar
+  include ../components/blog/cta/_servicio.pug
+  
+  // Others articles
+  +pi("-hide","","")
+ 
+  // Footer
+  include ../base/_footer.pug

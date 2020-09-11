@@ -1,6 +1,9 @@
 .o-hdwdi {
     position: relative;
     z-index: 5;
+    @include mediaQueriesXs {
+        padding-bottom: $spaceSm;
+    }
 }
 
 .m-hdwdi  {

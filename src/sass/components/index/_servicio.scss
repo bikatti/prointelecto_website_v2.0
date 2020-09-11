@@ -1,5 +1,8 @@
 .o-farFromHome, .o-service {
     position: relative;
+    @include mediaQueriesXs {
+        padding-bottom: $spaceSm;
+    }
 }
 .m-farFromHome__content {
     display: flex;
@@ -15,58 +18,219 @@
         margin-right: 0;
         margin-bottom: $spaceRg;
     }
+    @include mediaQueriesXxs {
+        margin-bottom: $spaceXs;
+    }
 }
+// collage
 .m-farFromHome__img {
     position: relative;
     width: 100%;
     overflow: hidden;
-    border-radius: 6px;
-    img {
+    &::before {
+        border-radius: 8px;
+        content: "";
+        display: block;
         position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border: 1px solid $color-grey;
+        width: 81%;
+        height: 81%;
     }
-    @include mediaQueriesMd {
-        height: 260px;
+    img {
+        display: block;
+        position: relative;
+        border-radius: 8px;
+        margin: .7%;
+        float: left;
+        width: 16%;
+        height: 16%;
+        &:nth-child(2), &:nth-child(4) {
+            margin-top: 17%;
+        }
+        &:nth-child(3), &:nth-child(6) {
+            width: 31%;
+            height: 31%;
+        }
+        &:nth-child(5) {
+            width: 65%;
+            height: 65%;
+        }
+    }
+    @include mediaQueriesXxs {
+        img {
+            &:nth-child(1), &:nth-child(2), &:nth-child(4) {
+                display: none;
+            }
+            &:nth-child(6) {
+                margin-top: -17%;
+                position: relative;
+                top: -50px;
+            }
+        }
+    }
+}
+.m-farFromHome__steps {
+    display: inline-block;
+}
+.m-farFromHome__item {
+    display: flex;
+    .m-farFromHome__icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        img {
+            width: 48px;
+            height: 48px;
+        }
+    }
+    .m-farFromHome__summary {
+        display: flex;
+        flex-direction: column;
+        margin: 0 $spaceXs $spaceSm;
     }
 }
 
+// Highlight
+.o-highlight {
+    margin-top: $spaceMd;
+    margin-bottom: $spaceXs;
+    .a-quote {
+        width: 90px;
+        opacity: .9;
+        position: absolute;
+        top: -$spaceMd;
+    }
+    @include mediaQueriesXxs {
+        margin-top: 0;
+    }
+}
+.m-highlight {
+    position: relative;
+    z-index: 5;
+    max-width: 90%;
+    padding: $spaceSm $spaceRg;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: $shadow2;
+    background-color: $color-secondary;
+}
+
+// Service page
 .m-service__content {
-    margin-top: -$spaceBg;
     @include mediaQueriesSm {
         padding: 0;
     }
 }
 
 .m-service__container {
-    padding: $spaceSm $spaceRg;
     box-shadow: $shadow1;
     width: 100%;
     border-radius: 4px;
-    .m-box__group {
-        display: grid;
-        grid-gap: $spaceSm;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas: "box1 box1 box1 box2 box2 box2" "box3 box3 box3 box3 box3 box3" "box4 box4 box5 box5 box6 box6";
-    }
-    .m-box__item {
+}
+.m-service__cta {
+    padding: $spaceRg;
+    img {
         border-radius: 4px;
-        padding: $spaceSm $spaceXs;
+        max-width: 100%;
+    }
+}
+
+.m-service__main {
+    background-color: #f6f7f8;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.m-serviceGroup {
+    display: flex;
+    flex-flow: row wrap;
+    a {
+        position: relative;
+        width: 100%;
+        transition: .3s color ease-in;
+        // border-bottom: 1px solid $color-grey;
+        &::before {
+            background: $color-lightin;
+            transition-duration: .3s;
+            transition-timing-function: ease-out;
+            transition-property: box-shadow, transform;
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        &::after {
+            content: '';
+            border-bottom: 1px solid $color-grey;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 $spaceSm;
+        }
+    }
+    a:hover {
+        z-index: 5;
+        &::before {
+            box-shadow: $shadow1;
+            transform: scale(1.02,1.02);
+        }
+        &::after {
+            display: none;
+        }
+    }
+    .m-service__card {
         display: flex;
+        flex: 1 0 0%;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        margin-left: $spaceSm;
+        margin-right: $spaceSm;
+    }
+    .m-service__card * {
+        position: relative;
+    }
+    &:not(:last-child) .m-service__card {
+        border-bottom: 1px solid $color-grey;
+    }
+    .m-service__item {
+        display: block;
+        padding: calc(#{$spaceXs} / 2) 0;
+        margin: $spaceXs 0;
+    }
+    .m-service__card:not(:last-child) .m-service__item {
+        position: relative;
+        &::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: -$spaceSm;
+            border-right: 1px solid $color-grey;
+            height: 100%;
+            content: "";
+        }
     }
     @include mediaQueriesSm {
-        padding: $spaceSm $spaceXs;
-        .m-box__group {
-            justify-content: center;
-            grid-gap: $spaceXs;
-            grid-template-columns: repeat(2, calc(50% - calc(#{$spaceXs} / 2)));
-            grid-template-rows: repeat(3, auto);
-            grid-template-areas: "box1 box2" "box3 box4" "box5 box6";
+        flex-direction: column;
+        &:last-child .m-service__card {
+            border-bottom: 1px solid $color-grey;
+        }
+    }
+}
+.m-service__itemContent {
+    display: flex;
+    align-items: center;
+    img {
+        width: 100%;
+        max-width: $spaceMd;
+        margin-right: $spaceXs;
+    }
+    @include mediaQueriesXs {
+        img {
+            max-width: 60px;
         }
     }
 }

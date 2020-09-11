@@ -1,0 +1,102 @@
+.o-blog.-fr, .o-blog.-pi {
+    position: relative;
+    @include mediaQueriesMd {
+        [class~=-col-4] {
+            padding-bottom: $spaceSm;
+            &:nth-child(1) {
+                padding-right: 0;
+            }
+            &:nth-child(2) {
+                padding-right: 0;
+            }
+            &:nth-child(3) {
+                padding-left: 0;
+            }
+        }
+    }
+    @include mediaQueriesSm {
+        [class~=-col-4] {
+            &:nth-child(2) {
+                padding-left: 0;
+            }
+        }
+    }
+}
+.-fr .m-box__item {
+    padding: $spaceRg $spaceSm;
+    min-height: 435px;
+    background-color: $color-lightin;
+    box-shadow: $shadow2;
+    h3, h4, .-category, p {
+        line-height: 1.1;
+        color:  $color-darkgrey;
+    }
+    .-box__img {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        height: 50%;
+    }
+    @include mediaQueriesSm {
+        min-height: 330px;
+    }
+}
+
+.-pi .m-box__item {
+    &.-bigArticle {
+        height: 492px;
+        max-height: none;
+    }
+    .-box__img  {
+        max-height: none;
+    }
+    @include mediaQueriesXs {
+        &.-bigArticle {
+            height: 300px;
+        }
+    }
+}
+.-pi .m-boxSmall {
+    overflow: hidden;
+    border-radius: 6px;
+    .m-smallImg {
+        height: 183px;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: $spaceXs;
+        border-radius: 6px;
+    }
+    .-category {
+        @extend .-medium;
+        font-size: $fontS1;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        padding-bottom: calc(#{$spaceXs} / 2);
+    }
+    .-box__img {
+        transition: 0.4s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-height: 260px;
+    }
+    p:not(.-category) {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        max-width: 95%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &:hover .-box__img {
+        transform: scale(1.05);
+    }
+    @include mediaQueriesXs {
+        .m-smallImg {
+            height: 130px;
+        }
+    }
+}

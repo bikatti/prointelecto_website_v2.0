@@ -21,7 +21,7 @@
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
   </head>
-  <link rel="stylesheet" href="/main/dist/assets/css/style.css?v=22"/>
+  <link rel="stylesheet" href="/main/dist/assets/css/style.css?v=39"/>
   <link rel="canonical" href="https://prointelecto.com/contactar"/>
   <meta name="og:title" content="Contactar - Prointelecto"/>
   <meta name="og:description" content="Descripción"/>
@@ -47,7 +47,7 @@
             <div class="a-brandMobile"><a href="/main/dist/"><img class="a-brandMobile__Img" src="/main/dist/assets/img/logo/logotipo_rev1.png" alt="Logo de monlogo"/></a></div>
             <div class="m-itemContent__container">
               <ul class="m-itemContent__list">
-                <li><a class="a-itemLink" href="/main/dist/acerca-de.html">Nosotros</a></li>
+                <li><a class="a-itemLink" href="/main/dist/nosotros.html">Nosotros</a></li>
                 <li><a class="a-itemLink" href="/main/dist/servicios/">Servicios</a></li>
                 <li><a class="a-itemLink" href="/main/dist/faq/">Preguntas frecuentes</a></li>
                 <li><a class="a-itemLink" href="/main/dist/blog/">Blog</a></li>
@@ -61,80 +61,39 @@
       </div>
     </nav>
     <!-- Hero-->
-    <section class="o-hero -fdr" id="main">
-      <div class="main">
-        <div class="m-waves__container">
-          <div class="m-waves">
-            <div class="a-wave -a"></div>
-            <div class="a-wave -b"></div>
-            <div class="a-wave -c"></div>
-          </div>
-        </div>
-        <div class="m-heroContent -waveHero container">
-          <div class="content -ContainerUniversal">
-            <div class="m-heroContent__text -center">
-              <div class="a-heroContent__title">
-                <h1 class="-colorLightin -bold">Contactar</h1>
-              </div>
-            </div>
-          </div>
+    <section class="o-hero -padSmTop">
+      <div class="m-heroContent">
+        <div class="-ContainerUniversal">
+          <ol class="m-breadcrumbs a-noMargin">
+            <li><a class="a-breadcrumb -footerLink" href="/main/dist/">Inicio</a></li>
+            <li><span class="a-breadcrumb -semiBold">Contactar</span></li>
+          </ol>
         </div>
       </div>
     </section>
     <!-- Contactar-->
-    <section class="o-contact -padRgTop -zI10 -pRelative">
-      <div class="m-contact__content -ContainerUniversal -shadow -padMdTopBottom">
-        <div class="m-contact__header -textCenter -mSmBottom">
-          <p class="-uppercase -colorLightin">Contáctanos ahora</p>
-          <h2 class="-medium -colorLightin">Estamos esperando tu </h2>
-        </div>
+    <section class="o-contact -padMdTop -zI10 -pRelative">
+      <div class="m-contact__content -ContainerUniversal">
         <div class="m-contact__grid -zI10">
           <div class="m-contact__form">
             <form action="/main/dist/assets/php/info.php" method="POST">
               <div class="m-form">
                 <h4>Rellena el formulario y te contactaremos muy pronto</h4>
                 <div class="m-form__group">
-                  <input class="-mXsRight -mSmSmBottom" type="text" name="nombre" placeholder="Nombre" id="" required="required"/>
-                  <input type="text" name="apellido" placeholder="Apellido" id="" required="required"/>
+                  <label>Nombre</label>
+                  <input class="-mXsRight -mSmSmBottom" type="text" name="nombre" id="" required="required"/>
                 </div>
                 <div class="m-form__group">
-                  <input class="-mXsRight -mSmSmBottom" type="email" name="email" placeholder="Correo electrónico" id="" required="required"/>
-                  <input type="tel" name="numero" placeholder="Número teléfonico" id="" required="required"/>
+                  <label>Correo electrónico</label>
+                  <input class="-mXsRight -mSmSmBottom" type="email" name="email" id="" required="required"/>
                 </div>
                 <div class="m-form__group">
-                  <input class="-mXsRight -mSmSmBottom" type="address" name="email" placeholder="Dirección" id="" required="required"/>
-                  <input type="text" name="pais" placeholder="País" id="" required="required"/>
+                  <label>Dirección</label>
+                  <input class="-mXsRight -mSmSmBottom" type="address" name="email" id="" required="required"/>
                 </div>
                 <div class="m-form__group">
-                  <input type="text" name="product" placeholder="Qué desee registrar" id="" required="required"/>
-                </div>
-                <div class="m-form__group">
-                  <select name="servicio" placeholder="Seleccinar" id="" required="required">
-                    <option value="value" selected="selected" disabled="disabled">Seleccionar servicio</option>
-                    <option value="servicio1">Registro de Marcas, Nombres y Lemas Comerciales</option>
-                    <option value="servicio2">Renovación de Registros de Marcas, Nombres y Lemas Comerciales</option>
-                    <option value="servicio3">Oposiciones y Recursos administrativos</option>
-                    <option value="servicio4">Acciones de nulidad de registro y Cancelaciones por falta de uso</option>
-                    <option value="servicio5">Consultas de estatus administrativo de trámites de Registro de Marca</option>
-                    <option value="servicio6">Inscripciones de licencias, cesiones, cambios de nombre, domicilio y otros</option>
-                    <option value="servicio7">Estudios jurídicos de casos relacionados con Derechos de Propiedad Intelectual</option>
-                    <option value="servicio8">Contratos, acuerdos y notificaciones relacionados con la Propiedad Intelectual</option>
-                    <option value="servicio9">Registro de Nombres de Dominio .com.ve</option>
-                  </select>
-                </div>
-                <p class="-textCenter">¿Haz tenido experiencia haciendo tramites de registro?</p>
-                <div class="m-form__group -radio">
-                  <div class="a-radioCheck -mSmRight">
-                    <input type="radio" name="experiencia" id="yes" value="experiencia-yes"/>
-                    <label for="yes">Sí</label>
-                  </div>
-                  <div class="a-radioCheck">
-                    <input type="radio" name="experiencia" id="no" value="experiencia-no" checked="checked"/>
-                    <label for="no">No</label>
-                  </div>
-                </div>
-                <div class="m-form__group">
-                  <textarea class="-formControl" name="mensaje" placeholder="Escribenos acerca de tu caso" id="" rows="3" required="required"></textarea>
+                  <label>Escribenos</label>
+                  <textarea class="-formControl" name="mensaje" id="" rows="3" required="required"></textarea>
                 </div>
                 <div class="a-button a-noMargin">
                   <button class="a-btn -btnPrimary -btnBlock" type="submit">Enviar</button>
@@ -165,22 +124,22 @@
           <div class="m-footer__us">
             <h4 class="-nochange -semiBold -mXsBottom -colorDarken">Compañía</h4>
             <ol class="m-listFooter">
-              <li><a class="-footerLink " href="/main/dist/acerca-de.html">Nosotros</a></li>
+              <li><a class="-footerLink " href="/main/dist/nosotros.html">Nosotros</a></li>
               <li><a class="-footerLink " href="/main/dist/servicios/">Servicios</a></li>
             </ol>
           </div>
           <div class="m-footer__course">
             <h4 class="-nochange -semiBold -mXsBottom -colorDarken">Servicios</h4>
             <ol class="m-listFooter">
-              <li><a class="-footerLink " href="/main/dist/servicios/fases-de-registro.html">Fases del registro</a></li>
+              <li><a class="-footerLink " href="/main/dist/servicios/registro-de-marca.html">Registro de Marcas</a></li>
             </ol>
           </div>
           <div class="m-footer__article">
             <h4 class="-nochange -semiBold -mXsBottom -colorDarken">Blog</h4>
             <ol class="m-listFooter">
               <li><a class="-footerLink " href="/main/dist/blog/">Artículos</a></li>
-              <li><a class="-footerLink " href="/main/dist/blog/">Propiedad Intelectual</a></li>
-              <li><a class="-footerLink " href="/main/dist/blog/">Franquicias</a></li>
+              <li><a class="-footerLink " href="/main/dist/blog/#pi">Propiedad Intelectual</a></li>
+              <li><a class="-footerLink " href="/main/dist/blog/#fr">Franquicia</a></li>
             </ol>
           </div>
           <div class="m-footer__subs">
@@ -207,6 +166,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="/main/dist/assets/js/index.js?v=22"></script>
+    <script src="/main/dist/assets/js/index.js?v=39"></script>
   </body>
 </html>

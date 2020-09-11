@@ -39,9 +39,44 @@
     width: 20px;
     content: url('../img/icons/search.svg');
 }
+.a-quote {
+    content: url('../img/icons/quote.svg');
+}
+
+.-circleBlue {
+    content: url('../img/recursos/circle.svg');
+}
+.-squareGreen {
+    content: url('../img/recursos/square-green.svg');
+}
+.-squareOrange {
+    width: 100px;
+    content: url('../img/recursos/square-orange.svg');
+}
+.-squareWierd {
+    content: url('../img/recursos/square-wierd.svg');
+}
+.-squareOrangeAte {
+    content: url('../img/recursos/square-orange-ate.svg');
+}
 
 .-icon {
     &Left {
         margin-left: 4px;
+    }
+    &LeftTop {
+        position: absolute;
+        left:  -$spaceSm;
+        top:  $spaceSm;
+    }
+    &LeftBottom {
+        position: absolute;
+        left: -$spaceSm;
+        bottom: -$spaceSm;
+    }
+    &RightBottom {
+        position: absolute;
+        right: -$spaceXs;
+        bottom: -$spaceXs;
     }
 }

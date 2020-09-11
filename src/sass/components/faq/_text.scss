@@ -1,12 +1,14 @@
 .o-faqArticle {
     position: relative;
+    padding-top: $spaceXs;
 }
 .o-faqArticle__content {
-    padding: $spaceRg $spaceMd;
-    border-radius: 6px;
+    padding: $spaceRg;
+    border-radius: 4px;
     display: grid;
     grid-template-columns: 8fr 4fr;
     grid-gap: $spaceRg;
+    box-shadow: $shadow2;
     @include mediaQueriesMd {
         padding: $spaceRg;
         grid-template-columns: 100%;

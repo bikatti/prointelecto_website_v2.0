@@ -1,46 +1,21 @@
-section.o-contact.-padRgTop.-zI10.-pRelative
- .m-contact__content.-ContainerUniversal.-shadow.-padMdTopBottom
-  .m-contact__header.-textCenter.-mSmBottom
-   p.-uppercase.-colorLightin Contáctanos ahora
-   h2.-medium.-colorLightin Estamos esperando tu 
+section.o-contact.-padMdTop.-zI10.-pRelative
+ .m-contact__content.-ContainerUniversal
   .m-contact__grid.-zI10
    .m-contact__form
     form(action=linksUrl[1]+"assets/php/info.php", method="POST")
      .m-form
       h4 Rellena el formulario y te contactaremos muy pronto
       .m-form__group
-       input.-mXsRight.-mSmSmBottom(type="text", name="nombre", placeholder="Nombre", id="", required)
-       input(type="text", name="apellido", placeholder="Apellido", id="", required)
+       label Nombre
+       input.-mXsRight.-mSmSmBottom(type="text", name="nombre", id="", required)
       .m-form__group
-       input.-mXsRight.-mSmSmBottom(type="email", name="email", placeholder="Correo electrónico", id="", required)
-       input(type="tel", name="numero", placeholder="Número teléfonico", id="", required)
+       label Correo electrónico
+       input.-mXsRight.-mSmSmBottom(type="email", name="email", id="", required)
       .m-form__group
-       input.-mXsRight.-mSmSmBottom(type="address", name="email", placeholder="Dirección", id="", required)
-       input(type="text", name="pais", placeholder="País", id="", required)
+       label Dirección
+       input.-mXsRight.-mSmSmBottom(type="address", name="email", id="", required)
       .m-form__group
-       input(type="text", name="product", placeholder="Qué desee registrar", id="", required)
-      .m-form__group
-       select(name="servicio", placeholder="Seleccinar", id="", required)
-        option(value, selected, disabled) Seleccionar servicio
-        option(value="servicio1") Registro de Marcas, Nombres y Lemas Comerciales
-        option(value="servicio2") Renovación de Registros de Marcas, Nombres y Lemas Comerciales
-        option(value="servicio3") Oposiciones y Recursos administrativos
-        option(value="servicio4") Acciones de nulidad de registro y Cancelaciones por falta de uso
-        option(value="servicio5") Consultas de estatus administrativo de trámites de Registro de Marca
-        option(value="servicio6") Inscripciones de licencias, cesiones, cambios de nombre, domicilio y otros
-        option(value="servicio7") Estudios jurídicos de casos relacionados con Derechos de Propiedad Intelectual
-        option(value="servicio8") Contratos, acuerdos y notificaciones relacionados con la Propiedad Intelectual
-        option(value="servicio9") Registro de Nombres de Dominio .com.ve
-      p.-textCenter ¿Haz tenido experiencia haciendo tramites de registro?
-      .m-form__group.-radio
-       .a-radioCheck.-mSmRight
-        input(type="radio", name="experiencia", id="yes",value="experiencia-yes")
-        label(for="yes") Sí
-       .a-radioCheck
-        input(type="radio", name="experiencia", id="no",value="experiencia-no", checked)
-        label(for="no") No
-      .m-form__group
-       textarea.-formControl(name="mensaje", placeholder="Escribenos acerca de tu caso", id="", rows="3", required)
+       label Escribenos
+       textarea.-formControl(name="mensaje", id="", rows="3", required)
       .a-button.a-noMargin
        button.a-btn.-btnPrimary.-btnBlock(type="submit") Enviar
-   

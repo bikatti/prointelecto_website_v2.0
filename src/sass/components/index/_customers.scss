@@ -64,8 +64,11 @@
 }
 .m-customer__column {
     display: flex;
-    margin-bottom: calc(#{$spaceXs} / 2);
+    margin-bottom: $spaceXs;
     h2, h4 {
         width: 50%;
+    }
+    &:last-child {
+        margin-bottom: 0;
     }
 }

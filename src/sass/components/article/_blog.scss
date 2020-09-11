@@ -3,6 +3,45 @@
     z-index: 10;
 }
 
+
+.m-article__header{
+    margin-top: $spaceSm;
+    h1 {
+        max-width: 890px;
+        padding-bottom: $spaceSm;
+    }
+    p, h3 {
+        max-width: 680px;
+    }
+    .-writer {
+        margin-top: $spaceMd;
+    }
+    .-category {
+        @extend .-medium;
+        color: $color-primary;
+        font-size: $fontS1;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        padding-bottom: $spaceXs;
+    }
+    @include mediaQueriesMd {
+        margin-top: 0;
+    }
+}
+
+.m-article__imgBg {
+    .m-imgBg__post {
+        margin-top: $spaceXs;
+        width: 100%;
+        height: 390px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-attachment: fixed;
+        margin-bottom: $spaceMd;
+    }
+}
+
 .m-article__text {
     display: grid;
     border-radius: 6px;
@@ -14,6 +53,14 @@
         grid-template-rows: auto auto;
         grid-gap: $spaceXs;
     }
+    .m-article__sec {
+        & > p:last-child {
+            padding-bottom: $spaceMd;
+        }
+        &:last-child > p:last-child  {
+            padding-bottom: 0;
+        }
+    }
     p {
         line-height: 1.75;
         letter-spacing: normal;
@@ -21,7 +68,7 @@
     }
     .m-listContent.-check li {
         &::before {
-            margin-top: 8px;
+            margin-top: 3px;
         }
     }
     .m-img {
@@ -35,13 +82,34 @@
         border-radius: 4px;
     }
 }
+
+.m-article__left {
+    @include mediaQueriesMd {
+        margin-bottom: $spaceRg;
+    }
+}
+
 .m-article__cta {
-    position: sticky;
-    top: 100px;
-    float: right;
-    margin-top: 170px;
+    &.-sticky {
+        position: sticky;
+        top: 100px;
+        float: right;
+        
+    }
     background-color: $color-primary;
     padding: $spaceXs;
     border-radius: 4px;
     box-shadow: $shadow2;
+    position: relative;
+    left: $spaceXs;
+    @include mediaQueriesMd {
+        left: 0;
+        &.-sticky {
+            margin-top: 0;
+            float: none;
+        }
+        h3, p {
+            text-align: center;
+        }
+    }
 }
