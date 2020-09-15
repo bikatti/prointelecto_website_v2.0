@@ -51,12 +51,12 @@
             margin-top: 17%;
         }
         &:nth-child(3), &:nth-child(6) {
-            width: 31%;
-            height: 31%;
+            width: 35%;
+            height: 35%;
         }
         &:nth-child(5) {
-            width: 65%;
-            height: 65%;
+            width: 55%;
+            height: 55%;
         }
     }
     @include mediaQueriesXxs {
@@ -95,7 +95,7 @@
 
 // Highlight
 .o-highlight {
-    margin-top: $spaceMd;
+    margin-top: $spaceBg;
     margin-bottom: $spaceXs;
     .a-quote {
         width: 90px;
@@ -104,7 +104,7 @@
         top: -$spaceMd;
     }
     @include mediaQueriesXxs {
-        margin-top: 0;
+        margin-top: $spaceXs;
     }
 }
 .m-highlight {
@@ -149,9 +149,11 @@
     flex-flow: row wrap;
     a {
         position: relative;
-        width: 100%;
+        width: 50%;
         transition: .3s color ease-in;
-        // border-bottom: 1px solid $color-grey;
+        &.-w100 {
+            width: 100%;
+        }
         &::before {
             background: $color-lightin;
             transition-duration: .3s;
@@ -163,6 +165,7 @@
             bottom: 0;
             left: 0;
             right: 0;
+            border-radius: 4px;
         }
         &::after {
             content: '';
@@ -171,6 +174,7 @@
             left: 0;
             right: 0;
             margin: 0 $spaceSm;
+            border-radius: 4px;
         }
     }
     a:hover {
@@ -215,6 +219,9 @@
     }
     @include mediaQueriesSm {
         flex-direction: column;
+        a {
+            width: 100%;
+        }
         &:last-child .m-service__card {
             border-bottom: 1px solid $color-grey;
         }
@@ -232,5 +239,16 @@
         img {
             max-width: 60px;
         }
+    }
+}
+
+// others Servicio
+.m-otherService__item {
+    padding: 0 $spaceSm;
+    box-sizing: border-box;
+    img {
+        max-width: $spaceBg;
+        margin: 0 auto;
+        display: flex;
     }
 }

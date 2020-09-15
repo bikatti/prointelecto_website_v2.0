@@ -3,16 +3,17 @@ include ../lib/_mixin.pug
 <!DOCTYPE html>
 html(lang="es")
  include ../base/_head.pug
- include ../base/_headask.pug
-  +metadata(ask_4[4]+" - "+title,"Descripción","https://prointelecto.com/faq/0405-cuales-son-las-desventajas-de-usar-marcas-no-registradas","article","https://prointelecto.com/assets/img/banner/banner.png","Banner con el logotipo de Prointelecto")
-  +article("https://www.facebook.com/prointelecto/","2020-08-31T13:12:54+00:00","2020-08-31T13:12:54+00:00")
- 
+  include ../base/_headask.pug
+  +metadata("Desventajas de usar marcas no registradas"+metaFirm,"Usar marcas no registradas es de alto riesgo, están libres para cualquiera que solicite su registro, y luego podrían exigirle a usted que la deje de usar",metaAuthor[1],"https://prointelecto.com/faq/0405-cuales-son-las-desventajas-de-usar-marcas-no-registradas",metaType[1],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
+  +article("2020-08-31T13:12:54+00:00","2020-08-31T13:12:54+00:00")
+
  body.-bg
   // menu
   include ../base/_header.pug
 
   // hero
-  +heroFaq(linksUrl[1]+linksInternos[4],askSections[3])
+  +heroFaq(linksUrl[1]+linksInternos[4]+"#faq4",askSections[0],ask_4[4])
+
   // contact
   include ../components/faq/answers/_0405.pug
 
@@ -21,3 +22,6 @@ html(lang="es")
 
   // Footer
   include ../base/_footer.pug
+
+  // Google Rich Card
+  +jsonOrganization()

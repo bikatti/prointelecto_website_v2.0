@@ -3,8 +3,9 @@ include lib/_mixin.pug
 <!DOCTYPE html>
 html(lang="es")
  include base/_head.pug
- include base/_headstyle.pug
-  +metadata(titles[3]+" - "+title,"Descripción","https://prointelecto.com/contactar","website","https://prointelecto.com/assets/img/banner/banner.png","Banner con el logotipo de Prointelecto")
+  include base/_headstyle.pug
+  +metadata("Contactar para servicios relacionados con Propiedad Intelectual"+metaFirm,"Contacta a Prointelecto para Registro de marcas y otros servicios de Propiedad Intelectual",metaAuthor[0],"https://prointelecto.com/contactar",metaType[0],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
+  meta(name="robots", content="noindex")
   meta(name="googlebot-news", content="nosnippet")
 
  body.-bg
@@ -22,3 +23,6 @@ html(lang="es")
  
   // Footer
   include base/_footer.pug
+
+  // Google Rich Card
+  +jsonOrganization()

@@ -1,12 +1,13 @@
-section.o-service.-padMdBottom.-zI10.-pRelative
- .m-service__content.-ContainerUniversal
-  h1.-h2.-medium.-mXsBottom.-textCenter ¿Qué servicio requieres? 
-  .m-tabs.-textCenter.-mRgBottom
+section.o-service.-padMdBottom.-padMdTop
+ .m-service__content.-ContainerUniversal.-zI10.-pRelative
+  h1.-h2.-medium.-mXsBottom ¿Qué servicio requieres? 
+  .m-tabs.-mRgBottom
    ul.m-tabs__nav
-    li: p.m-tabs__item.-isActive(onclick="mostrarPestana(0)") Registro de Marca
-    li: p.m-tabs__item(onclick="mostrarPestana(1)") Otros de Propiedad Industrial
+    li: p.m-tabs__item.-isActive(onclick="mostrarPestana(0)") Propiedad Intelectual
 
-  div.-content.m-tabs__topic.-isActive
+  include _text.pug
+
+  div.-content.m-tabs__topic.-isActive.-pRelative.-zI10
    .m-service__container.-bg
     .-row
      .-col-4.-colMd-12.m-service__main
@@ -16,16 +17,17 @@ section.o-service.-padMdBottom.-zI10.-pRelative
        p Servicios para Registro de marcas y trámites relacionados
      .-col-8.-colMd-12
       .m-serviceGroup
-       +cardServiceLink(linksUrl[1]+linksInternos[3],linksUrl[1]+"assets/img/icons/service-01.svg","alt","1. Registro de Marcas, Nombres y Lemas Comerciales","-badgePrimary","Iniciar")
+       +cardServiceLink("-w100",linksUrl[1]+serviceUrl[0],linksUrl[1]+"assets/img/icons/service-01.svg","alt",serviceName[0])
       .m-serviceGroup
-       +cardService(linksUrl[1]+"assets/img/icons/service-02.svg","alt","2. Oposiciones y Recursos administrativos","-hide","New")
-       +cardService(linksUrl[1]+"assets/img/icons/service-03.svg","alt","3. Renovación de Registros de Marcas, Nombres y Lemas Comerciales","-hide","New")
+       +cardServiceLink("",linksUrl[1]+serviceUrl[1],linksUrl[1]+"assets/img/icons/service-02.svg","alt",serviceName[1],"-hide","New")
+       +cardServiceLink("",linksUrl[1]+serviceUrl[2],linksUrl[1]+"assets/img/icons/service-03.svg","alt",serviceName[2],"-hide","New")
       .m-serviceGroup
-       +cardService(linksUrl[1]+"assets/img/icons/service-04.svg","alt","4. Acciones de nulidad y Cancelaciones por falta de uso","-hide","New")
-       +cardService(linksUrl[1]+"assets/img/icons/service-05.svg","alt","5. Inscripción de licencias, cesiones, cambios de nombre y domicilio","-hide","New")
+       +cardServiceLink("",linksUrl[1]+serviceUrl[3],linksUrl[1]+"assets/img/icons/service-05.svg","alt",serviceName[3],"-hide","New")
+       +cardServiceLink("",linksUrl[1]+serviceUrl[4],linksUrl[1]+"assets/img/icons/service-08.svg","alt",serviceName[4],"-hide","New")
+   
+   .-padMdTopBottom#estudios
 
-  div.-content.m-tabs__topic
-   .m-service__container.-bg.-mMdBottom
+   .m-service__container.-bg
     .-row
      .-col-4.-colMd-12.m-service__main
       .m-service__cta
@@ -34,8 +36,6 @@ section.o-service.-padMdBottom.-zI10.-pRelative
        p Otros servicios relacionados con marcas y derechos de Propiedad Intelectual
      .-col-8.-colMd-12
       .m-serviceGroup
-       +cardService(linksUrl[1]+"assets/img/icons/service-06.svg","alt","1. Estudios jurídicos de casos sobre marcas, invenciones, derechos de autor, imagen, confidencialidad y restricción de la competencia","-hide","New")
+       +cardServiceLink("-w100",linksUrl[1]+serviceUrl[5],linksUrl[1]+"assets/img/icons/service-06.svg","alt",serviceName[5],"-hide","New")
       .m-serviceGroup
-       +cardService(linksUrl[1]+"assets/img/icons/service-07.svg","alt","2. Contratos, acuerdos y notificaciones relacionados con ventas, cesión, licencias, franquicias, confidencialidad, competencia y/o desarrollo","-hide","New")
-      .m-serviceGroup
-       +cardService(linksUrl[1]+"assets/img/icons/service-08.svg","alt","3. Registro de Nombres de Dominio","-hide","New")
+       +cardServiceLink("-w100",linksUrl[1]+serviceUrl[6],linksUrl[1]+"assets/img/icons/service-07.svg","alt",serviceName[6],"-hide","New")

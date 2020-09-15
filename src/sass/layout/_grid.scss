@@ -19,7 +19,7 @@
 
 .-ContainerBlog {
     @extend .-ContainerUniversal;
-    max-width: 70%;
+    max-width: 50%;
     @include mediaQueriesMd {
         max-width: 89.66%;
     }
@@ -68,15 +68,23 @@
 .-mRgTop {
     margin-top: $spaceRg;
 }
+.-mMdTop {
+    margin-top: $spaceMd;
+}
+.-mBgTop {
+    margin-top: $spaceBg;
+}
 .-mRgBottom {
     margin-bottom: $spaceRg;
-}
-.-mMdBottom {
-    margin-bottom: $spaceMd;
 }
 .-mSmSmBottom {
     @include mediaQueriesSm {
         margin-bottom: $spaceSm;
+    }
+}
+.-mMdRgBottom {
+    @include mediaQueriesMd {
+        margin-bottom: $spaceRg;
     }
 }
 
@@ -245,7 +253,7 @@ section .-padSmBottom, .-padSmBottom {
 }
 .-hideMd {
     @include mediaQueriesMd {
-        display: none;
+        display: none !important;
     }
 }
 .-showMd {
@@ -282,6 +290,9 @@ section .-padSmBottom, .-padSmBottom {
     }
     .-col-2 {
         width: 16.6666666666%;
+    }
+    .-col-2-5 {
+        width: 19.8888888888%;
     }
     .-col-3 {
         width: 24.9999999999%;

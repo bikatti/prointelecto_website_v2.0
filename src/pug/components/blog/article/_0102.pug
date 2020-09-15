@@ -4,7 +4,7 @@ article.o-article.-padMdTop
   p.-category #{blogCat[0]}
   h1 #{blogS_1[1]}
   h3.-subtitle.-light Una marca reconocida, el know-how de un negocio, sus recetas o fórmulas secretas y software personalizados, entre otros; son objetos de Propiedad Intelectual que representan una ventaja competitiva para la empresa que los posee. Conoce lo que esto implica.
-  p.-writer Escrito por Dra. Iskra Bohórquez
+  p.-writer Escrito por Iskra Bohórquez, #[br] Abogado especialista en Propiedad Intelectual e Internet
 
  // Background-Img
  .m-article__imgBg
@@ -15,15 +15,15 @@ article.o-article.-padMdTop
   .m-article__left
    .m-article__sec
     p.-fistLetter A lo largo de la vida de una persona o empresa, son muchas las ideas que se conciben y materializan: proyectos que se planifican y ejecutan, necesidades resueltas, obstáculos superados y metas realizadas, entre otras cosas. Es asombroso descubrir que muchas de esas ideas constituyen con el paso del tiempo ventajas competitivas.
-    p Estas ventajas son evidentes cuando se está en presencia de la fama de una marca, una cartera de clientes cautivos, la experiencia de un personal, los resultados de investigaciones realizadas en torno a la creación o mejora de productos y servicios, softwares adaptados a las necesidades del negocio y los resultados de estrategias ideadas para posicionar una marca en el mercado.
+    p Estas ventajas son evidentes cuando se está en presencia de una afamada marca con una cartera amplia de clientes cautivos, los resultados de investigaciones realizadas en torno a la creación o mejora de productos y servicios, softwares adaptados a las necesidades del negocio y los resultados de estrategias ideadas para posicionar una marca en el mercado.
     p Todo lo anterior son cosas producto del intelecto, bienes que no se tocan, pero que a pesar de ser intangibles, su existencia y valor económico son indudables.
-    p La propiedad sobre nombres, marcas, invenciones, diseños, tecnologías y obras, es lo que se denomina #[b.-semiBold.-uppercase propiedad intelectual]. Existe una rama del derecho que estudia y regula la protección de esta propiedad. 
+    p La propiedad sobre nombres, marcas, invenciones, diseños, tecnologías y obras, es lo que se denomina #[b.-semiBold.-colorPrimary Propiedad Intelectual]. Es una rama del derecho que estudia y regula la protección de esta propiedad.
     p A través del derecho de propiedad intelectual, el Estado reconoce y brinda los medios para proteger los derechos que se tienen sobre nombres y marcas comerciales, invenciones, procedimientos, mejoras tecnológicas, diseños, nuevas variedades vegetales, software, libros, películas, canciones y obras literarias y artísticas en general.
     p La protección jurídica de la propiedad intelectual implica, entre otras cosas, que no se pueden explotar los productos del intelecto sin desconocer a sus creadores o a quienes detenten sus derechos, ya que se requiere el consentimiento expreso de los titulares de estos derechos para el uso o comercialización de sus creaciones.
     p La propiedad intelectual cada vez con mayor frecuencia es objeto de tráfico comercial, como muestra de ello se observa la venta y licencia de marcas comerciales, los negocios en que se transfiere tecnología, el licenciamiento de software, aplicaciones para teléfonos móviles, venta de música, la educación en línea y así una lista interminable.
-    .m-img
-     img(src=linksUrl[1]+"assets/img/index/img_003.jpg", alt="")
     p Es evidente la presencia de la propiedad intelectual en nuestras vidas y como a paso rápido y casi imperceptible se viene convirtiendo en un tema en donde inevitablemente hay que aclarar dudas y difundir los mecanismos de su protección jurídica y beneficios.
+    .m-img.-hide
+     img(src=linksUrl[1]+"assets/img/index/img_003.jpg", alt="")
     p Surgen entonces interrogantes como las siguientes:
     ul.m-listContent.-check
      li: p ¿Cómo se protegen los derechos de los creadores?
@@ -35,16 +35,9 @@ article.o-article.-padMdTop
      li: p ¿Cómo proteger el Know How (metodología o secreto comercial) de un negocio?
 
     p El derecho de propiedad intelectual contiene las respuestas a todas estas preguntas, contempla una serie de principios rectores que dejan claro la existencia de estos derechos, su naturaleza, alcances, características y contenidos.
-    p Estas normas establecen diversas figuras y mecanismos de protección entre los que se cuentan el registro de nombres y marcas comerciales, de patentes de invenciones y modelos de utilidad, de diseños, de derechos de autor y de nuevas variedades vegetales.
-    p Conocer el derecho de propiedad intelectual, informar, concebir y realizar políticas relacionadas con esta materia, nos enrumba hacia una cultura de creatividad empresarial y de empuje social.
+    p Estas normas establecen diversas figuras y mecanismos de protección entre los que se cuentan el registro de nombres y marcas comerciales, de patentes de invenciones y modelos de utilidad, de diseños, de derechos de autor y los aspectos legales que deben cubrirse para que una información se considere un secreto comercial o industrial.
+    p Conocer el derecho de propiedad intelectual, informar, concebir y realizar políticas relacionadas con esta materia, impulsa a las sociedades hacia una cultura de creatividad empresarial y de empuje productivo.
     p La protección de los productos del intelecto nos permite generar beneficios económicos a partir de ellos, estimulando la innovación, el avance tecnológico, la competencia y en fin, el desarrollo económico particular y colectivo.
 
-
   .m-article__right
-   .m-article__cta
-    .m-ctaBox__box
-     h3.-colorLightin ¿Todavía no sabes que ofecemos?
-     p.-colorLightin.-mXsBottom Ve a nuestros servicios para ver a que nos dedicamos
-    .a-button.a-noMargin
-     button.a-btn.-btnSecondary.-btnBlock(type="button") Enviar
-
+   include ../cta/_ctaright.pug

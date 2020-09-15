@@ -1,0 +1,22 @@
+include ../lib/_var.pug
+include ../lib/_varblog.pug
+include ../lib/_mixin.pug
+<!DOCTYPE html>
+html(lang="es")
+ include ../base/_head.pug
+  include ../base/_headblog.pug
+  +metadata("Artículos sobre Registro de Marca y Propiedad Intelectual"+metaFirm,"Conozca más sobre Registro de Marcas y otros temas que abarca la Propiedad Intelectual, leyendo los artículos que periódicamente publicamos aquí",metaAuthor[0],"https://prointelecto.com/blog/propiedad-intelectual",metaType[0],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
+  meta(name="googlebot-news", content="nosnippet")
+
+ body.-bg
+  // menu
+  include ../base/_header.pug
+ 
+  // Nav
+  include ../components/blog/_nav.pug
+
+  // Propiedad Intelectual
+  include ../components/blog/index/_pi.pug
+
+  // Footer
+  include ../base/_footer.pug

@@ -3,16 +3,17 @@ include ../lib/_mixin.pug
 <!DOCTYPE html>
 html(lang="es")
  include ../base/_head.pug
- include ../base/_headask.pug
-  +metadata(ask_2[0]+" - "+title,"Descripción","https://prointelecto.com/faq/0201-el-registro-mercantil-y-el-registro-de-marca-son-lo-mismo","article","https://prointelecto.com/assets/img/banner/banner.png","Banner con el logotipo de Prointelecto")
-  +article("https://www.facebook.com/prointelecto/","2020-08-31T13:12:54+00:00","2020-08-31T13:12:54+00:00")
+  include ../base/_headask.pug
+  +metadata("Registro mercantil y el registro de marca"+metaFirm,"Son diferentes, el registro mercantil habilita personas jurídicas para operar en el comercio y el registro de marca es derecho de uso exclusivo de marcas",metaAuthor[1],"https://prointelecto.com/faq/0201-el-registro-mercantil-y-el-registro-de-marca-son-lo-mismo",metaType[1],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
+  +article("2020-08-31T13:12:54+00:00","2020-08-31T13:12:54+00:00")
  
  body.-bg
   // menu
   include ../base/_header.pug
 
   // hero
-  +heroFaq(linksUrl[1]+linksInternos[4],askSections[1])
+  +heroFaq(linksUrl[1]+linksInternos[4]+"#faq2",askSections[0],ask_2[0])
+
   // contact
   include ../components/faq/answers/_0201.pug
 
@@ -21,3 +22,6 @@ html(lang="es")
 
   // Footer
   include ../base/_footer.pug
+
+  // Google Rich Card
+  +jsonOrganization()

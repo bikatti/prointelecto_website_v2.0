@@ -1,0 +1,23 @@
+include ../lib/_var.pug
+include ../lib/_mixin.pug
+<!DOCTYPE html>
+html(lang="es")
+ include ../base/_head.pug
+  include ../base/_headask.pug
+  +metadata("Estudios jurídicos de casos sobre marcas, invenciones, derechos de autor y otros derechos de propiedad intelectual"+metaFirm,"Estudios jurídicos sobre marcas, derechos de autor, producción artística, imagen, confidencialidad y restricción de la competencia. Propiedad Intelectual",metaAuthor[0],"https://prointelecto.com/servicios/estudios-juridicos-marcas-invenciones-derechos-de-autor-confidencialidad",metaType[0],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
+
+ body.-bg
+  // menu
+  include ../base/_header.pug
+
+  // hero
+  +breadcrumb2(linksUrl[1]+linksInternos[1],titles[1],serviceName[5])
+
+  // contact
+  include ../components/servicios/estudios/_content.pug
+
+  // Footer
+  include ../base/_footer.pug
+  
+  // Google Rich Card
+  +jsonOrganization()

@@ -1,6 +1,6 @@
 a {
     color: $color-darkengrey;
-    &:hover {
+    &:hover, &:hover span {
         color: $color-alert;
         text-decoration: none;
     }
@@ -13,7 +13,7 @@ a {
     font-size: $font01;
     font-weight: 600;
     color: $color-darkengrey;
-    &:hover {
+    &:hover{
         color: rgba($color-darkengrey, $alpha: .9);
     }
     @include mediaQueriesMd {

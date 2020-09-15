@@ -68,23 +68,43 @@ mixin pi(d1,d2,d3)
       +boxItemRelated(linksUrl[1]+blogSUrl_1[2],linksUrl[1]+blogImgS_1[2],"alt",blogCat[0],blogS_1[2],"Illustration is a good way to enhance positive user experience in UI/UX design.The article by Tubik Studio considers features of efficient illustration design.")
  
 //- Hero Faq
-mixin heroFaq(a1,l1)
+mixin heroFaq(a1,l1,l2)
  section.o-hero.-padSmTop
   .-ContainerUniversal
-   ol.m-breadcrumbs
-    li: a.a-breadcrumb.-footerLink(href=linksUrl[1]+linksInternos[4]) #{titles[2]}
-    li: a.a-breadcrumb.-footerLink(href=""+a1) #{l1}
+   ol(vocab="https://schema.org/", typeof="BreadcrumbList").m-breadcrumbs
+    li(property="itemListElement", typeof="ListItem")
+     a(property="item", typeof="WebPage").-footerLink(href=linksUrl[1]+linksInternos[4]): span.a-breadcrumb(property="name") #{titles[2]}
+     meta(property="position", content="1")
+    li(property="itemListElement", typeof="ListItem")
+     a(property="item", typeof="WebPage").-footerLink(href=""+a1): span.a-breadcrumb(property="name") #{l1}
+     meta(property="position", content="2")
+    li(property="itemListElement", typeof="ListItem")
+     span.a-breadcrumb.-semiBold(property="name") #{l2}
+     meta(property="position", content="3")
 
 mixin breadcrumb(l1)
- ol.m-breadcrumbs.a-noMargin
-  li: a.a-breadcrumb.-footerLink(href=linksUrl[1]) Inicio
-  li: span.a-breadcrumb.-semiBold #{l1}
+ ol(vocab="https://schema.org/", typeof="BreadcrumbList").m-breadcrumbs.a-noMargin
+  li(property="itemListElement", typeof="ListItem")
+   a(property="item", typeof="WebPage").-footerLink(href=linksUrl[1]): span.a-breadcrumb(property="name") Inicio
+   meta(property="position", content="1")
+  li(property="itemListElement", typeof="ListItem")
+   span(property="name").a-breadcrumb.-semiBold #{l1}
+   meta(property="position", content="2")
 
 mixin breadcrumb2(url1,l1,l2)
- ol.m-breadcrumbs.a-noMargin
-  li: a.a-breadcrumb.-footerLink(href=linksUrl[1]) Inicio
-  li: a.a-breadcrumb.-footerLink(href=""+url1) #{l1}
-  li: span.a-breadcrumb.-semiBold #{l2}
+ section.o-hero.-padSmTop
+  .m-heroContent
+   .-ContainerUniversal
+    ol(vocab="https://schema.org/", typeof="BreadcrumbList").m-breadcrumbs
+     li(property="itemListElement", typeof="ListItem")
+      a(property="item", typeof="WebPage").-footerLink(href=linksUrl[1]): span.a-breadcrumb(property="name") Inicio
+      meta(property="position", content="1")
+     li(property="itemListElement", typeof="ListItem")
+      a(property="item", typeof="WebPage").-footerLink(href=""+url1): span.a-breadcrumb(property="name") #{l1}
+      meta(property="position", content="2")
+     li(property="itemListElement", typeof="ListItem")
+      span(property="name").a-breadcrumb.-semiBold #{l2}
+      meta(property="position", content="3")
 
 mixin ask_1(d1,d2,d3,d4,d5,d6,d7)
  section.m-relatedArticle.-mXsBottom
@@ -110,7 +130,7 @@ mixin ask_2(d1,d2,d3,d4,d5,d6,d7)
    li(class=""+d6): a.-footerLink.-colorAlert(href=linksUrl[1]+askUrl_2[5]) #{ask_2[5]}
    li(class=""+d7): a.-footerLink.-colorAlert(href=linksUrl[1]+askUrl_2[6]) #{ask_2[6]}
 
-mixin ask_3(d1,d2,d3,d4,d5,d6,d7)
+mixin ask_3(d1,d2,d3)
  section.m-relatedArticle.-mXsBottom
   h4.-mXsTop.-mXsBottom.-nochange Preguntas relacionadas
   ul.a-noPadding
@@ -118,7 +138,7 @@ mixin ask_3(d1,d2,d3,d4,d5,d6,d7)
    li(class=""+d2): a.-footerLink.-colorAlert(href=linksUrl[1]+askUrl_3[1]) #{ask_3[1]}
    li(class=""+d3): a.-footerLink.-colorAlert(href=linksUrl[1]+askUrl_3[2]) #{ask_3[2]}
 
-mixin ask_4(d1,d2,d3,d4,d5,d6,d7)
+mixin ask_4(d1,d2,d3,d4,d5)
  section.m-relatedArticle.-mXsBottom
   h4.-mXsTop.-mXsBottom.-nochange Preguntas relacionadas
   ul.a-noPadding
@@ -127,6 +147,24 @@ mixin ask_4(d1,d2,d3,d4,d5,d6,d7)
    li(class=""+d3): a.-footerLink.-colorAlert(href=linksUrl[1]+askUrl_4[2]) #{ask_4[2]}
    li(class=""+d4): a.-footerLink.-colorAlert(href=linksUrl[1]+askUrl_4[3]) #{ask_4[3]}
    li(class=""+d5): a.-footerLink.-colorAlert(href=linksUrl[1]+askUrl_4[4]) #{ask_4[4]}
+
+//- servicios
+mixin service_1(d1,d2,d3,d4,d5)
+ section.m-relatedArticle.-mXsBottom
+  h4.-mXsTop.-mXsBottom.-nochange Otros servicios
+  ul.a-noPadding
+   li(class=""+d1): a.-footerLink.-colorAlert(href=linksUrl[1]+serviceUrl[0]) #{serviceName[0]}
+   li(class=""+d2): a.-footerLink.-colorAlert(href=linksUrl[1]+serviceUrl[1]) #{serviceName[1]}
+   li(class=""+d3): a.-footerLink.-colorAlert(href=linksUrl[1]+serviceUrl[2]) #{serviceName[2]}
+   li(class=""+d4): a.-footerLink.-colorAlert(href=linksUrl[1]+serviceUrl[3]) #{serviceName[3]}
+   li(class=""+d5): a.-footerLink.-colorAlert(href=linksUrl[1]+serviceUrl[4]) #{serviceName[4]}
+
+mixin service_2(d1,d2)
+ section.m-relatedArticle.-mXsBottom
+  h4.-mXsTop.-mXsBottom.-nochange Otros servicios
+  ul.a-noPadding
+   li(class=""+d1): a.-footerLink.-colorAlert(href=linksUrl[1]+serviceUrl[5]) #{serviceName[5]}
+   li(class=""+d2): a.-footerLink.-colorAlert(href=linksUrl[1]+serviceUrl[6]) #{serviceName[6]}
 
 //- Card
 mixin cardService(img,alt,t,badge,cta)
@@ -137,8 +175,8 @@ mixin cardService(img,alt,t,badge,cta)
     .m-mediaBody
      p.-semiBold #{t} #[span.-mXsLeft(class="a-badge "+badge) #{cta}]
 
-mixin cardServiceLink(url,img,alt,t,badge,cta)
- a(href=""+url)
+mixin cardServiceLink(w,url,img,alt,t,badge,cta)
+ a(class=""+w, href=""+url)
   .m-service__card
    .m-service__item
     .m-service__itemContent
@@ -157,21 +195,151 @@ mixin nameFaq(id="faq1", n="pregunta")
    .a-iconFaq__icon
 
 //- Metadata
-mixin metadata(t,d,url,type,img,imgAlt)
+mixin metadata(t,d,a,url,type,timg,img,imgAlt,twitter)
+ // normal meta tags
+ title=t
+ meta(name="title", content=""+t)
+ meta(name="description", content=""+d)
+ meta(name="author", content=""+a)
  link(rel="canonical", href=""+url)
+ // openGl meta tags
  meta(name="og:title", content=""+t)
  meta(name="og:description", content=""+d)
  meta(name="og:url", content=""+url)
+ meta(name="og:site_name", content="Prointelecto")
+ meta(name="og:locale", content="es_ES")
+ meta(name="og:author", content=""+a)
  meta(name="og:type", content=""+type)
+ meta(name="og:image:type", content="image/"+timg)
  meta(name="og:image", content=""+img)
- meta(name="og:image:alt", content=""+imgAlt)
- meta(name="og:image:type", content="image/png")
  meta(name="og:image:secure_url", content=""+img)
- meta(name="title", content=""+t)
- meta(name="description", content=""+d)
- title=t
+ meta(name="og:image:alt", content=""+imgAlt)
+ // twitter meta tags
+ meta(name="twitter:card", content=""+twitter)
+ meta(name="twitter:site", content="@prointelecto")
+ meta(name="twitter:creator", content="@prointelecto")
+ meta(name="twitter:title", content=""+t)
+ meta(name="twitter:description", content=""+d)
+ meta(name="twitter:image", content=""+img)
+ meta(name="twitter:image:alt", content=""+imgAlt)
 
-mixin article(pf,pt,mt)
- meta(name="article:publisher", content=""+pf)
+
+mixin article(pt,mt)
+ meta(name="article:publisher", content="https://www.facebook.com/prointelecto/")
  meta(name="article:published_time", content=""+pt)
  meta(name="article:modified_time", content=""+mt)
+
+//- Datos estructurados
+mixin jsonOrganization()
+ script(type="application/ld+json")
+  |{
+  |  "@context": "https://schema.org",
+  |  "@type": "Organization",
+  |  "name": "Prointelecto",
+  |  "url": "https://prointelecto.com/",
+  |  "logo": "https://a.prointelecto.com/assets/img/logo/isotipo.png",
+  |  "description": "Abogados especialistas en Propiedad Intelectual. Registro de Marcas fácil serio confiable y profesional  por mas de 20 años, más de 350 marcas registradas.",
+  |  "foundingDate": "2006-01-01",
+  |  "founders": [
+  |  {
+  |    "@type": "Person",
+  |    "name": "Iskra Bohórquez"
+  |  }
+  | ],
+  | "sameAs": [
+  |    "https://www.facebook.com/prointelecto/",
+  |    "https://twitter.com/prointelecto"
+  | ]
+  |}
+ //-script(type="application/ld+json")
+  |{
+  |  "@context": "https://schema.org",
+  |  "@type": "Organization",
+  |  "name": "Prointelecto",
+  |  "url": "https://prointelecto.com/",
+  |  "description": "Abogados especialistas en Propiedad Intelectual. Registro de Marcas fácil serio confiable y profesional  por mas de 20 años, más de 350 marcas registradas.",
+  |  "foundingDate": "2006-01-01",
+  |  "founders": [
+  |  {
+  |    "@type": "Person",
+  |    "name": "Iskra Bohórquez"
+  |  }
+  | ],
+  | "sameAs": [
+  |    "https://www.facebook.com/prointelecto/",
+  |    "https://twitter.com/prointelecto"
+  | ]
+  |}
+
+mixin jsonArticle(autor,title,d,url,dP,dM,img)
+ script(type="application/ld+json")
+  |{
+  |  "@context": "https://schema.org",
+  |  "@type": "Article",
+  |  "publisher": {
+  |    "@type": "Organization",
+  |    "name": "Prointelecto",
+  |    "url": "https://prointelecto.com/",
+  |    "logo":
+  |      {
+  |        "@type": "ImageObject",
+  |        "url": "https://a.prointelecto.com/assets/img/logo/isotipo.png"
+  |      }
+  |    },
+  |  "author": {
+  |    "@type": "Person",
+  |    "name": "#{autor}"
+  |    },
+  |  "headline": "#{title}",
+  |  "url": "#{url}",
+  |  "datePublished": "#{dP}",
+  |  "dateModified": "#{dM}",
+  |  "description": "#{d}",
+  |  "image": {
+  |    "@type": "ImageObject",
+  |    "url": "#{img}",
+  |    "width": 1200,
+  |    "height": 630
+  |    },
+  |  "mainEntityOfPage": {
+  |    "@type": "WebPage",
+  |    "@id": "https://prointelecto.com/assets/img/blog/img_011.jpg#{url}"
+  |    }
+  |}
+
+mixin jsonFAQ(p1,a1,p2,a2,p3,a3,p4,a4)
+ script(type="application/ld+json")
+  |{
+  |  "@context": "https://schema.org",
+  |  "@type": "FAQPage",
+  |  "mainEntity": [{
+  |    "@type": "Question",
+  |    "name": "#{p1}",
+  |    "acceptedAnswer": {
+  |        "@type": "Answer",
+  |        "text": "#{a1}"
+  |      }
+  |    }, {
+  |    "@type": "Question",
+  |    "name": "#{p2}",
+  |    "acceptedAnswer": {
+  |        "@type": "Answer",
+  |        "text": "#{a2}"
+  |      }
+  |    }, {
+  |    "@type": "Question",
+  |    "name": "#{p3}",
+  |    "acceptedAnswer": {
+  |        "@type": "Answer",
+  |        "text": "#{a3}"
+  |      }
+  |    }, {
+  |    "@type": "Question",
+  |    "name": "#{p4}",
+  |    "acceptedAnswer": {
+  |        "@type": "Answer",
+  |        "text": "#{a4}"
+  |      }
+  |    }]
+  |}
+

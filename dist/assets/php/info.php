@@ -4,8 +4,9 @@
  $nombre = $_POST['nombre'];
  $mensaje = $_POST['mensaje'];
  $email = $_POST['email'];
- $asunto = $_POST['asunto'];
+ $lugar = $_POST['lugar'];
 
+ $asunto = "Forma simple, enviado por " . $nombre;
  $header = "Enviado por " . $nombre . " desde la página de web de prointelecto.com";
  $mensajeCompleto = $header . "\n" . $mensaje . "\nAtentamente: " . $nombre . "\nDe: " . $email;
 

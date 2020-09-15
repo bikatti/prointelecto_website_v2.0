@@ -3,16 +3,17 @@ include ../lib/_mixin.pug
 <!DOCTYPE html>
 html(lang="es")
  include ../base/_head.pug
- include ../base/_headask.pug
-  +metadata(ask_1[2]+" - "+title,"Descripción","https://prointelecto.com/faq/0103-que-se-puede-registrar-como-marca","article","https://prointelecto.com/assets/img/banner/banner.png","Banner con el logotipo de Prointelecto")
-  +article("https://www.facebook.com/prointelecto/","2020-08-31T13:12:54+00:00","2020-08-31T13:12:54+00:00")
+  include ../base/_headask.pug
+  +metadata("Qué se puede registrar como Marca"+metaFirm,"Se puede registrar como Marca los siguientes signos: palabras, letras o combinación; imágenes, figuras, símbolos, gráficos, logotipos, entre otras",metaAuthor[1],"https://prointelecto.com/faq/0103-que-se-puede-registrar-como-marca",metaType[1],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
+  +article("2020-08-31T13:12:54+00:00","2020-08-31T13:12:54+00:00")
  
  body.-bg
   // menu
   include ../base/_header.pug
 
   // hero
-  +heroFaq(linksUrl[1]+linksInternos[4],askSections[0])
+  +heroFaq(linksUrl[1]+linksInternos[4]+"#faq1",askSections[0],ask_1[2])
+  
   // contact
   include ../components/faq/answers/_0103.pug
 
@@ -21,3 +22,6 @@ html(lang="es")
 
   // Footer
   include ../base/_footer.pug
+  
+  // Google Rich Card
+  +jsonOrganization()

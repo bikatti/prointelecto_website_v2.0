@@ -1,0 +1,25 @@
+include ../lib/_var.pug
+include ../lib/_mixin.pug
+<!DOCTYPE html>
+html(lang="es")
+ include ../base/_head.pug
+  include ../base/_headstyle.pug
+  +metadata("Solicitud de información y tarifas para el registro de marcas"+metaFirm,"Forma para la Solicitud de información y tarifas para el Registro de Marcas, Nombres o Lemas Comerciales",metaAuthor[0],"https://prointelecto.com/servicios/solicitud-informacion-y-tarifas-registro-marcas",metaType[0],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
+  meta(name="robots", content="noindex")
+  meta(name="googlebot-news", content="nosnippet")
+
+ body.-bg
+  // menu
+  include ../base/_header.pug
+
+  // hero
+  +breadcrumb2(linksUrl[1]+linksInternos[1],titles[1],"Solicitud de información de registro de marca")
+
+  // Formulario
+  include ../components/servicios/contact-rdm/_form.pug
+
+  // Footer
+  include ../base/_footer.pug
+  
+  // Google Rich Card
+  +jsonOrganization()

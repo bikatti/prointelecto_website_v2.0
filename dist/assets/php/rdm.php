@@ -1,6 +1,10 @@
 <?php
  $destinatario = 'info@prointelecto.com';
  // esto es al correo al que se enviará el mensaje
+ $address = $_POST['direccion'];
+ $mensaje = $_POST['mensaje'];
+ $email = $_POST['email'];
+ $asunto = $_POST['asunto'];
  $nombre = $_POST['nombre'];
  $mensaje = $_POST['mensaje'];
  $email = $_POST['email'];

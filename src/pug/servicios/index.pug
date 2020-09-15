@@ -3,11 +3,11 @@ include ../lib/_mixin.pug
 <!DOCTYPE html>
 html(lang="es")
  include ../base/_head.pug
- include ../base/_headstyle.pug
-  +metadata(titles[1]+" - "+title,"Descripción","https://prointelecto.com/servicios/","website","https://prointelecto.com/assets/img/banner/banner.png","Banner con el logotipo de Prointelecto")
+  include ../base/_headstyle.pug
+  +metadata(titles[1]+metaFirm,"Prointelecto Servicios para Registro de marcas y trámites relacionados. Estudios Jurídicos y Contratos relacionados con Propiedad Intelectual",metaAuthor[1],"https://prointelecto.com/servicios/",metaType[0],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
   meta(name="googlebot-news", content="nosnippet")
 
- body.o-colorIndex.-bg
+ body.-bg
   // menu
   include ../base/_header.pug
 
@@ -23,3 +23,6 @@ html(lang="es")
   // Footer
   include ../base/_footer.pug
   include ../base/_nav-segment.pug
+
+  // Google Rich Card
+  +jsonOrganization()

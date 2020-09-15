@@ -1,3 +1,9 @@
+.m-tabs {
+    @include mediaQueriesMd {
+        margin-bottom: 0;
+    }
+}
+
 .m-tabs__nav {
     // display: flex;
     display: inline-flex;

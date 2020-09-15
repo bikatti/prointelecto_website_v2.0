@@ -1,0 +1,24 @@
+include ../lib/_var.pug
+include ../lib/_mixin.pug
+<!DOCTYPE html>
+html(lang="es")
+ include ../base/_head.pug
+  include ../base/_headask.pug
+  +metadata("Oposiciones, recursos administrativos, reingresos y otros"+metaFirm,"Redacción y presentación de escritos de oposiciones, contestación a oposiciones, recursos administrativos, de reingresos y diligenciativos",metaAuthor[0],"https://prointelecto.com/servicios/oposiciones-recursos-administrativos",metaType[0],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
+  meta(name="googlebot-news", content="nosnippet")
+ 
+ body.-bg
+  // menu
+  include ../base/_header.pug
+
+  // hero
+  +breadcrumb2(linksUrl[1]+linksInternos[1],titles[1],serviceName[1])
+
+    // Formulario
+  include ../components/servicios/oposicion/_content.pug
+
+  // Footer
+  include ../base/_footer.pug
+  
+  // Google Rich Card
+  +jsonOrganization()
