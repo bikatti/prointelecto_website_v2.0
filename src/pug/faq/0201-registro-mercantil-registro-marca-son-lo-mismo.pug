@@ -5,14 +5,15 @@ html(lang="es")
  include ../base/_head.pug
   include ../base/_headask.pug
   +metadata("Registro mercantil y el registro de marca"+metaFirm,"Son diferentes, el registro mercantil habilita personas jurídicas para operar en el comercio y el registro de marca es derecho de uso exclusivo de marcas",metaAuthor[1],"https://prointelecto.com/faq/0201-el-registro-mercantil-y-el-registro-de-marca-son-lo-mismo",metaType[1],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
-  +article("2020-08-31T13:12:54+00:00","2020-08-31T13:12:54+00:00")
+  +article("2020-09-17T09:36:03-0600","2020-09-17T09:36:03-0600")
+  include ../base/_headjs.pug
  
  body.-bg
   // menu
   include ../base/_header.pug
 
   // hero
-  +heroFaq(linksUrl[1]+linksInternos[4]+"#faq2",askSections[0],ask_2[0])
+  +heroFaq(askSections[1])
 
   // contact
   include ../components/faq/answers/_0201.pug
@@ -25,3 +26,4 @@ html(lang="es")
 
   // Google Rich Card
   +jsonOrganization()
+  +jsonArticle(metaAuthor[2],"Registro mercantil y el registro de marca","Son diferentes, el registro mercantil habilita personas jurídicas para operar en el comercio y el registro de marca es derecho de uso exclusivo de marcas","https://prointelecto.com/faq/0201-registro-mercantil-registro-marca-son-lo-mismo","2020-09-17T09:36:03-0600","2020-09-17T09:36:03-0600",metaOgImg[0])

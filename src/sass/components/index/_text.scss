@@ -1,61 +1,80 @@
 .m-article__header {
-    p, h3 {
+    .m-article__summary, h3 {
         max-width: 680px;
     }
-    .m-article__img {
-        position: absolute;
-        top: 0;
-        right: 0;
-        &.-header {
-            top: -$spaceBg;
-        }
-        img {
-            width: 300px;
-        }
-    }
     @include mediaQueriesXl {
-        p, h3 {
+        .m-article__summary, h3 {
             max-width: 60%;
         }
     }
     @include mediaQueriesMd {
-        p, h3 {
+        .m-article__summary, h3 {
             max-width: 100%;
         }
-        .m-article__img {
-            position: relative;
-            top: auto;
-            right: auto;
-            bottom: -180px;
-            margin-top: -180px;
-            display: flex;
-            justify-content: flex-end;
-            &.-header {
-                position: relative;
-                top: auto;
-                right: auto;
-                bottom: -80px;
-                margin-top: -180px;
-                display: flex;
-                justify-content: flex-end;
-            }
+        p:last-child {
+            padding-bottom: 130px;
+        }
+    }
+}
+.-headerImg {
+    display: flex;
+    position: relative;
+    .-padHeader {
+        position: relative;
+        z-index: 10;
+    }
+    .m-headerImg {
+        position: absolute;
+        top: -$spaceBg;
+        right: 0;
+        max-width: 300px;
+        width: 100%;
+    }
+    @include mediaQueriesMd {
+        flex-direction: column;
+        .-padHeader {
+            padding-bottom: 100px;
+        }
+        .m-headerImg {
+            top: $spaceRg;
+            right: 0;
         }
     }
     @include mediaQueriesXs {
-        .m-article__img {
-            bottom: -220px;
-            margin-top: -220px;
-            justify-content: center;
-            &.-header {
-                bottom: -140px;
-                margin-top: -140px;
-                justify-content: center;
-                img {
-                    width: 80%;
-                }
-            }
+        .-padHeader {
+            padding-bottom: 150px;
+        }
+        .m-headerImg {
+            top: 100px;
+        }
+    }
+}
+
+.m-article__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 300px;
+    width: 100%;
+    &.-header {
+        top: -100px;
+    }
+    @include mediaQueriesMd {
+        top: auto;
+        right: 0;
+        bottom: -180px;
+        &.-header {
+            top: auto;
+            bottom: -80px;
+        }
+    }
+    @include mediaQueriesXs {
+        max-width: 400px;
+        bottom: -240px;
+        &.-header {
+            bottom: -140px;
             img {
-                width: 90%;
+                width: 80%;
             }
         }
     }

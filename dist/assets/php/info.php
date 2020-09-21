@@ -8,9 +8,8 @@
 
  $asunto = "Forma simple, enviado por " . $nombre;
  $header = "Enviado por " . $nombre . " desde la página de web de prointelecto.com";
- $mensajeCompleto = $header . "\n" . $mensaje . "\nAtentamente: " . $nombre . "\nDe: " . $email;
+ $mensajeCompleto =  $mensaje . "\n\nAtentamente: " . $nombre . "\nDe: " . $email . "\nDirección: " . $lugar . "\n\n" . $header;
 
  mail($destinatario, $asunto, $mensajeCompleto);
- echo "<script>alert('mensaje enviado!')</script>";
- echo "<script> setTimeout(\"location.href='/'\", 1000)</script>";
+ echo "<script> setTimeout(\"location.href='/mensaje'\", 1000)</script>";
 ?>

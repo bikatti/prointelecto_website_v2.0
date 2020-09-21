@@ -1,0 +1,3 @@
+Sitemap: https://prointelecto.com/sitemap.xml
+User-agent: *
+Allow: /

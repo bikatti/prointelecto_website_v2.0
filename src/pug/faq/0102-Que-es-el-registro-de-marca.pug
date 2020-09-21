@@ -5,14 +5,15 @@ html(lang="es")
  include ../base/_head.pug
   include ../base/_headask.pug
   +metadata("Qué es el registro de marca"+metaFirm,"Procedimiento ante oficina pública, una solicitud que identifica productos o servicios y termina con la concesión de certificado de registro de marca",metaAuthor[1],"https://prointelecto.com/faq/0102-que-es-el-registro-de-marca",metaType[1],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
-  +article("2020-08-31T13:12:54+00:00","2020-08-31T13:12:54+00:00")
+  +article("2020-09-17T09:36:03-0600","2020-09-17T09:36:03-0600")
+  include ../base/_headjs.pug
  
  body.-bg
   // menu
   include ../base/_header.pug
 
   // hero
-  +heroFaq(linksUrl[1]+linksInternos[4]+"#faq1",askSections[0],ask_1[1])
+  +heroFaq(askSections[0])
 
   // contact
   include ../components/faq/answers/_0102.pug
@@ -25,3 +26,4 @@ html(lang="es")
 
   // Google Rich Card
   +jsonOrganization()
+  +jsonArticle(metaAuthor[2],"Qué es el registro de marca","Procedimiento ante oficina pública, una solicitud que identifica productos o servicios y termina con la concesión de certificado de registro de marca","https://prointelecto.com/faq/0102-que-es-el-registro-de-marca","2020-09-17T09:36:03-0600","2020-09-17T09:36:03-0600",metaOgImg[0])

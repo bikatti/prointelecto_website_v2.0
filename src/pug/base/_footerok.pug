@@ -1,24 +1,30 @@
-.o-footerContent.-padSmBottom.-padBgTop
+.o-footerContent.-padBgTop
  .m-footer.-ContainerUniversal
   .m-footer__us
+   img.-logo(src=linksUrl[1]+logoResponsive[2], alt="")
+
+  .m-footer__course
    h4.-nochange.-semiBold.-mXsBottom.-colorDarken Compañía
    ol.m-listFooter
     +footerLink(linksUrl[1]+linksInternos[0],"", titles[0])
     +footerLink(linksUrl[1]+linksInternos[1],"", titles[1])
-  .m-footer__course
-   h4.-nochange.-semiBold.-mXsBottom.-colorDarken Servicios
-   ol.m-listFooter
-    +footerLink(linksUrl[1]+linksInternos[3],"", services[1])
-
-  .m-footer__article
-   h4.-nochange.-semiBold.-mXsBottom.-colorDarken Blog
-   ol.m-listFooter
     +footerLink(linksUrl[1]+linksInternos[6],"", "Artículos")
     +footerLink(linksUrl[1]+linksInternos[9],"", blogCat[0])
-  .m-footer__subs
+    
+
+  .m-footer__article
    h4.-nochange.-semiBold.-mXsBottom.-colorDarken Consultas
    ol.m-listFooter
     +footerLink(linksUrl[1]+linksInternos[5],"", titles[3])
     +footerLink(linksUrl[1]+linksInternos[4],"", titles[2])
- .a-border.-mw80.-mAutoRL
+    +footerLink(linksUrl[1]+linksInternos[7],"", "Solicitud de información")
+    
+  .m-footer__subs
+   h4.-nochange.-semiBold.-mXsBottom.-colorDarken Servicios
+   ol.m-listFooter.a-noMargin
+    +footerLink(linksUrl[1]+linksInternos[1],"-colorAlert", "Registro de marcas y trámites relacionados")
+    +footerLink(linksUrl[1]+linksInternos[1]+"#estudios","-colorAlert", "Estudios y contratos")
+   +ctaMini(linksUrl[1]+linksInternos[3],"-shadow",linksUrl[1]+"assets/img/recursos/forma-rdm.svg","Ilustración de aplicaciones de servicios de registro de marca, Flat design","Registro de marcas")
+
+ .a-border.-padMdTop.-mAutoRL.-ContainerUniversal
   .-borderBottom

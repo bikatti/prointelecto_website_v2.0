@@ -47,6 +47,20 @@
             justify-content: center;
         }
     }
+    &.-mini {
+        padding: calc(#{$spaceXs} / 1.2);
+        .m-ctaBox__text {
+            width: 50%;
+        }
+        .m-ctaBox__img {
+            width: 120px;
+            top: -8px;
+            left: -$spaceXs;
+        }
+    }
+    &.-primary {
+        @extend .-bgPri;
+    }
     &.-calm {
         @extend .-bgCalm;
     }

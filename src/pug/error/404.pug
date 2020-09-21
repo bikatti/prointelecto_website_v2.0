@@ -4,14 +4,30 @@ include ../lib/_mixin.pug
 html(lang="es")
  include ../base/_head.pug
   include ../base/_headstyle.pug
-  +metadata("404 Error!!","Descripción",metaAuthor[1],"https://prointelecto.com/error/404",metaType[0],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
+  +metadata("404 Error!!","Se ha produccido un error en el servidor",metaAuthor[0],"https://prointelecto.com/error/404",metaType[0],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
   meta(name="googlebot-news", content="nosnippet")
   meta(name="googlebot", content="noindex")
+  include ../base/_headjs.pug
  
  body.-bg
   // menu
   include ../base/_header.pug
- 
+
+  // Mensaje
+  section.o-highlight.-padBgTop.-error
+   .-ContainerUniversal.-pRelative
+    .-squareOrange.-icon.-iconLeftBottom.-zI-1
+    .-errorServer.-e404
+    .m-article__header.-hideMd
+     .m-article__img
+      img(src=linksUrl[1]+"assets/img/recursos/forma-fdr.svg", alt="Ilustración de plantilla de registro de marca, Flat design")
+    .m-highlight.-send
+     h1.-h3.-semiBold Error 404!!
+     p.-padSmBottom Oh no!! se ha producido un error y no podemos encontrar la página que estás buscando.
+     a(href=linksUrl[1]).a-button.a-noMargin
+      button.a-btn.-btnSecondary(type="button") ← Volver a inicio
+
+  
   // Footer
   include ../base/_footer.pug
 

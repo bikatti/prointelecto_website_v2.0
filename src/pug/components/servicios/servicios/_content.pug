@@ -1,29 +1,31 @@
 section.o-service.-padMdBottom.-padMdTop
+ .-headerImg.-ContainerUniversal
+  .-padHeader
+   h1.-h2.-medium.-mXsBottom ¿Qué servicio requieres?
+   .m-tabs.-mRgBottom
+    ul.m-tabs__nav
+     li: p.m-tabs__item.-isActive(onclick="mostrarPestana(0)") Propiedad Intelectual
+  .m-headerImg
+   img(src=linksUrl[1]+"assets/img/recursos/servicios.svg", alt="Ilustración de aplicaciones de servicios de registro de marca, Flat design")
+ 
  .m-service__content.-ContainerUniversal.-zI10.-pRelative
-  h1.-h2.-medium.-mXsBottom ¿Qué servicio requieres? 
-  .m-tabs.-mRgBottom
-   ul.m-tabs__nav
-    li: p.m-tabs__item.-isActive(onclick="mostrarPestana(0)") Propiedad Intelectual
-
-  include _text.pug
-
   div.-content.m-tabs__topic.-isActive.-pRelative.-zI10
    .m-service__container.-bg
     .-row
      .-col-4.-colMd-12.m-service__main
       .m-service__cta
        .-pRelative
-        img.-mXsBottom(src=linksUrl[1]+"assets/img/servicios/img001.jpg", alt="")
+        img.-mXsBottom(src=linksUrl[1]+"assets/img/servicios/img001.jpg", alt="Tarjeta de servicios de registro de marcas")
        p Servicios para Registro de marcas y trámites relacionados
      .-col-8.-colMd-12
       .m-serviceGroup
-       +cardServiceLink("-w100",linksUrl[1]+serviceUrl[0],linksUrl[1]+"assets/img/icons/service-01.svg","alt",serviceName[0])
+       +cardServiceLink("-w100",linksUrl[1]+serviceUrl[0],linksUrl[1]+"assets/img/icons/service-01.svg","marca registrada",serviceName[0])
       .m-serviceGroup
-       +cardServiceLink("",linksUrl[1]+serviceUrl[1],linksUrl[1]+"assets/img/icons/service-02.svg","alt",serviceName[1],"-hide","New")
-       +cardServiceLink("",linksUrl[1]+serviceUrl[2],linksUrl[1]+"assets/img/icons/service-03.svg","alt",serviceName[2],"-hide","New")
+       +cardServiceLink("",linksUrl[1]+serviceUrl[1],linksUrl[1]+"assets/img/icons/service-02.svg","engranaje",serviceName[1],"-hide","New")
+       +cardServiceLink("",linksUrl[1]+serviceUrl[2],linksUrl[1]+"assets/img/icons/service-03.svg","renovación de marca registrada",serviceName[2],"-hide","New")
       .m-serviceGroup
-       +cardServiceLink("",linksUrl[1]+serviceUrl[3],linksUrl[1]+"assets/img/icons/service-05.svg","alt",serviceName[3],"-hide","New")
-       +cardServiceLink("",linksUrl[1]+serviceUrl[4],linksUrl[1]+"assets/img/icons/service-08.svg","alt",serviceName[4],"-hide","New")
+       +cardServiceLink("",linksUrl[1]+serviceUrl[3],linksUrl[1]+"assets/img/icons/service-05.svg","inscripción",serviceName[3],"-hide","New")
+       +cardServiceLink("",linksUrl[1]+serviceUrl[4],linksUrl[1]+"assets/img/icons/service-08.svg","búsqueda en google",serviceName[4],"-hide","New")
    
    .-padMdTopBottom#estudios
 
@@ -32,10 +34,10 @@ section.o-service.-padMdBottom.-padMdTop
      .-col-4.-colMd-12.m-service__main
       .m-service__cta
        .-pRelative
-        img.-mXsBottom(src=linksUrl[1]+"assets/img/servicios/img002.jpg", alt="")
-       p Otros servicios relacionados con marcas y derechos de Propiedad Intelectual
+        img.-mXsBottom(src=linksUrl[1]+"assets/img/servicios/img002.jpg", alt="Tarjeta de servicios de estudios y contractos")
+       p Estudios y Contratos relacionados con derechos de Propiedad Intelectual
      .-col-8.-colMd-12
       .m-serviceGroup
-       +cardServiceLink("-w100",linksUrl[1]+serviceUrl[5],linksUrl[1]+"assets/img/icons/service-06.svg","alt",serviceName[5],"-hide","New")
+       +cardServiceLink("-w100",linksUrl[1]+serviceUrl[5],linksUrl[1]+"assets/img/icons/service-06.svg","libro",serviceName[5],"-hide","New")
       .m-serviceGroup
-       +cardServiceLink("-w100",linksUrl[1]+serviceUrl[6],linksUrl[1]+"assets/img/icons/service-07.svg","alt",serviceName[6],"-hide","New")
+       +cardServiceLink("-w100",linksUrl[1]+serviceUrl[6],linksUrl[1]+"assets/img/icons/service-07.svg","contrato",serviceName[6],"-hide","New")

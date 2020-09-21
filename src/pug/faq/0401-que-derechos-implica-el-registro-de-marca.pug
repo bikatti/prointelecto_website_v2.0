@@ -5,14 +5,15 @@ html(lang="es")
  include ../base/_head.pug
   include ../base/_headask.pug
   +metadata("Qué derechos implica el registro de una marca"+metaFirm,"El registro de marca confiere a su titular el derecho de uso exclusivo, le permite defenderse legalmente e impedir el uso no autorizado de su marca",metaAuthor[1],"https://prointelecto.com/faq/0401-que-derechos-implica-el-registro-de-una-marca",metaType[1],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
-  +article("2020-08-31T13:12:54+00:00","2020-08-31T13:12:54+00:00")
+  +article("2020-09-17T09:36:03-0600","2020-09-17T09:36:03-0600")
+  include ../base/_headjs.pug
  
  body.-bg
   // menu
   include ../base/_header.pug
 
   // hero
-  +heroFaq(linksUrl[1]+linksInternos[4]+"#faq4",askSections[0],ask_4[0])
+  +heroFaq(askSections[3])
 
   // contact
   include ../components/faq/answers/_0401.pug
@@ -25,3 +26,4 @@ html(lang="es")
 
   // Google Rich Card
   +jsonOrganization()
+  +jsonArticle(metaAuthor[2],"Qué derechos implica el registro de una marca","El registro de marca confiere a su titular el derecho de uso exclusivo, le permite defenderse legalmente e impedir el uso no autorizado de su marca","https://prointelecto.com/faq/0401-que-derechos-implica-el-registro-de-marca","2020-09-17T09:36:03-0600","2020-09-17T09:36:03-0600",metaOgImg[0])

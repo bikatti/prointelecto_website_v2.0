@@ -6,16 +6,20 @@ html(lang="es")
   include ../base/_headask.pug
   +metadata(serviceName[3]+metaFirm,"Tramitación de la inscripción ante la Oficina de Registro de Marcas de: licencias, cesiones, cambios de nombre y de domicilio",metaAuthor[0],"https://prointelecto.com/servicios/inscripcion-licencias-cesiones-cambios-de-nombre-domicilio",metaType[0],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
   meta(name="googlebot-news", content="nosnippet")
+  include ../base/_headjs.pug
  
  body.-bg
   // menu
   include ../base/_header.pug
 
   // hero
-  +breadcrumb2(linksUrl[1]+linksInternos[1],titles[1],serviceName[3])
+  +breadcrumb2(linksUrl[1]+linksInternos[1],titles[1],servicesCat[0])
 
   // Content
   include ../components/servicios/inscripcion/_content.pug
+
+  // call-to-action
+  include ../components/servicios/servicios/_cta.pug
 
   // Footer
   include ../base/_footer.pug

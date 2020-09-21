@@ -40,6 +40,14 @@
         background-attachment: fixed;
         margin-bottom: $spaceMd;
     }
+    @include mediaQueriesMd {
+        .m-imgBg__post {
+            object-fit: contain;
+            background-position: center;
+            background-attachment: inherit;
+            height: 330px;
+        }
+    }
 }
 
 .m-article__text {
@@ -80,6 +88,14 @@
         width: 100%;
         min-width: 217px;
         border-radius: 4px;
+    }
+    @include mediaQueriesSm {
+        .m-listContent {
+            margin-bottom: $spaceXs;
+        }
+        .m-listContent.-check li {
+            margin-left: 0;
+        }
     }
 }
 

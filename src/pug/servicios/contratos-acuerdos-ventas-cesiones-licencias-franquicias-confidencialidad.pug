@@ -5,16 +5,20 @@ html(lang="es")
  include ../base/_head.pug
   include ../base/_headask.pug
   +metadata("Contratos acuerdos notificaciones ventas licencias franquicias"+metaFirm,"Redacción de contratos, acuerdos y notificaciones de ventas, cesiones, licencias, franquicias, confidencialidad, competencia y otras propiedad intelectual",metaAuthor[0],"https://prointelecto.com/servicios/contratos-acuerdos-ventas-cesiones-licencias-franquicias-confidencialidad",metaType[0],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
+  include ../base/_headjs.pug
 
  body.-bg
   // menu
   include ../base/_header.pug
 
   // hero
-  +breadcrumb2(linksUrl[1]+linksInternos[1],titles[1],serviceName[6])
+  +breadcrumb2(linksUrl[1]+linksInternos[1],titles[1],servicesCat[1])
 
   // contact
   include ../components/servicios/contratos/_content.pug
+
+  // call-to-action
+  include ../components/servicios/servicios/_cta.pug
 
   // Footer
   include ../base/_footer.pug

@@ -5,14 +5,15 @@ html(lang="es")
  include ../base/_head.pug
   include ../base/_headask.pug
   +metadata("Desventajas de usar marcas no registradas"+metaFirm,"Usar marcas no registradas es de alto riesgo, están libres para cualquiera que solicite su registro, y luego podrían exigirle a usted que la deje de usar",metaAuthor[1],"https://prointelecto.com/faq/0405-cuales-son-las-desventajas-de-usar-marcas-no-registradas",metaType[1],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
-  +article("2020-08-31T13:12:54+00:00","2020-08-31T13:12:54+00:00")
-
+  +article("2020-09-17T09:36:03-0600","2020-09-17T09:36:03-0600")
+  include ../base/_headjs.pug
+ 
  body.-bg
   // menu
   include ../base/_header.pug
 
   // hero
-  +heroFaq(linksUrl[1]+linksInternos[4]+"#faq4",askSections[0],ask_4[4])
+  +heroFaq(askSections[3])
 
   // contact
   include ../components/faq/answers/_0405.pug
@@ -25,3 +26,4 @@ html(lang="es")
 
   // Google Rich Card
   +jsonOrganization()
+  +jsonArticle(metaAuthor[2],"Desventajas de usar marcas no registradas","Usar marcas no registradas es de alto riesgo, están libres para cualquiera que solicite su registro, y luego podrían exigirle a usted que la deje de usar","https://prointelecto.com/faq/0405-desventajas-de-usar-marcas-no-registradas","2020-09-17T09:36:03-0600","2020-09-17T09:36:03-0600",metaOgImg[0])

@@ -1,12 +1,22 @@
 .o-footer {
     background-color: $color-lightin;
+    .-logo {
+        width: $spaceBg;
+    }
+}
+.o-upFooter {
+    margin-top: $spaceBg;
+    padding: calc(#{$spaceXs} / 2) 0;
+    background-color: $color-secondary;
+    &:hover {
+        background-color: darken($color-secondary, $amount: 5%);
+    }
 }
 .-footerIndex {
     padding-top: calc(#{$spaceBg} * 1.5);
 }
 
 .m-footer {
-    max-width: 71%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
@@ -17,14 +27,28 @@
     }
     @include mediaQueriesMd {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, auto);
-        grid-template-areas: "usFooter courFooter" "artiFooter subsFooter";
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "usFooter usFooter" "courFooter artiFooter" "subsFooter subsFooter";
         grid-gap: $spaceSm;
         justify-content: start;
-        margin-bottom: $spaceSm;
+        .m-ctaBox {
+            margin-top: $spaceSm;
+            .m-ctaBox__img {
+                width: 38%;
+                top: -$spaceMd;
+            }
+            p {
+                font-size: $fontS3;
+            }
+        }
     }
     @include mediaQueriesXs {
-        max-width: 93%;
+        .m-ctaBox {
+            .m-ctaBox__img {
+                width: 38%;
+                top: -$spaceXs;
+            }
+        }
     }
 }
 
@@ -43,7 +67,6 @@
 
 .m-footer__us {
     grid-area: usFooter;
-    padding-left: $spaceXs;
 }
 .a-footerIcons {
     display: flex;
@@ -124,50 +147,29 @@
     }
 }
 
-
-.a-mailChimp__form {
-    .-btnFooter {
-        padding: 6px 20px;
-        font-weight: 600;
-    }
-    display: flex;
-    max-width: 100%;
-    @include mediaQueriesLg {
-        flex-wrap: wrap;
-    }
-}
-
-.a-mailchimpGroup {
-    margin-right: $spaceXs;
-    @include mediaQueriesXxs {
-        margin-right: 8px;
-    }
-}
-.a-mailchimpMail {
-    font-size: $fontS2;
-    border-radius: 6px;
-    border: 2px solid $color-primary;
-    box-shadow: 4px 4px $color-alert;
-    padding: 6px $spaceXs;
-    &:focus {
-        outline: none;
-        border-color: $color-secondary;
-    }
-}
-
 // Firm Dev
+.o-footerFirmDev {
+    .-logoMonlogo {
+        display: flex;
+        justify-content: center;
+        img {
+            position: absolute;
+            bottom: -$spaceSm;
+            opacity: .7;
+            width: $spaceRg;
+        }
+    }
+}
+
 .m-footerFirmDev {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding-bottom: $spaceSm;
-    p {
-        margin-right: $spaceXs;
-    }
     @include mediaQueriesSm {
-        flex-wrap: wrap;
+        padding-bottom: $spaceRg;
         p {
-            margin-right: 5px;
+            font-size: $fontS1;
         }
     }
 }

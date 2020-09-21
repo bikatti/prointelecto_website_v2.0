@@ -6,16 +6,20 @@ html(lang="es")
   include ../base/_headask.pug
   +metadata(serviceName[2]+metaFirm,"Tramitación dela renovación de Registros de marcas, nombres y lemas comerciales dentro del lapso de renovación legalmente establecido",metaAuthor[0],"https://prointelecto.com/servicios/renovacion-registros-de-marcas-nombres-y-lemas-comerciales",metaType[0],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
   meta(name="googlebot-news", content="nosnippet")
- 
+  include ../base/_headjs.pug
+
  body.-bg
   // menu
   include ../base/_header.pug
 
   // hero
-  +breadcrumb2(linksUrl[1]+linksInternos[1],titles[1],serviceName[2])
+  +breadcrumb2(linksUrl[1]+linksInternos[1],titles[1],servicesCat[0])
 
   // content
   include ../components/servicios/renovacion/_content.pug
+
+  // call-to-action
+  include ../components/servicios/servicios/_cta.pug
 
   // Footer
   include ../base/_footer.pug

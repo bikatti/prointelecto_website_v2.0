@@ -1,0 +1,39 @@
+include lib/_var.pug
+include lib/_mixin.pug
+<!DOCTYPE html>
+html(lang="es")
+ include base/_head.pug
+  include base/_headstyle.pug
+  +metadata("Mensaje enviado con exito!!"+metaFirm,"El mensaje ha sido enviado",metaAuthor[0],"https://prointelecto.com/mensaje",metaType[0],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
+  meta(name="robots", content="noindex")
+  meta(name="googlebot-news", content="nosnippet")
+  include base/_headjs.pug
+
+ body.-bg
+  // menu
+  include base/_header.pug
+
+  // Hero
+  section.o-hero.-padSmTop
+   .m-heroContent
+    .-ContainerUniversal
+     +breadcrumb("Mensaje enviado")
+
+  // Mensaje
+  section.o-highlight.-padMdTop
+   .-headerImg.-ContainerUniversal
+    .m-headerImg
+     img(src=linksUrl[1]+"assets/img/recursos/forma-fdr.svg", alt="Ilustración de plantilla de registro de marca, Flat design")
+   .-ContainerUniversal.-pRelative
+    .-squareOrange.-icon.-iconLeftBottom.-zI-1
+
+    .m-highlight.-send
+     h1.-h3.-semiBold.-padSmBottom Gracias por enviar el formulario!! A la brevedad posible le contactaremos.
+     a(href=linksUrl[1]+linksInternos[1]).a-button.a-noMargin
+      button.a-btn.-btnSecondary(type="button") ← Ir a servcios
+ 
+  // Footer
+  include base/_footer.pug
+
+  // Google Rich Card
+  +jsonOrganization()

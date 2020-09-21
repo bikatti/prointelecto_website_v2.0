@@ -5,14 +5,15 @@ html(lang="es")
  include ../base/_head.pug
   include ../base/_headask.pug
   +metadata("Qué derechos implica el registro de un nombre comercial"+metaFirm,"El registro de un nombre comercial se asimila al de la marca otorga derecho de uso exclusivo y permite la defensa legal y combatir el uso no autorizado",metaAuthor[1],"https://prointelecto.com/faq/0402-que-derechos-implica-el-registro-de-un-nombre-comercial",metaType[1],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
-  +article("2020-08-31T13:12:54+00:00","2020-08-31T13:12:54+00:00")
+  +article("2020-09-17T09:36:03-0600","2020-09-17T09:36:03-0600")
+  include ../base/_headjs.pug
  
  body.-bg
   // menu
   include ../base/_header.pug
 
   // hero
-  +heroFaq(linksUrl[1]+linksInternos[4]+"#faq4",askSections[0],ask_4[1])
+  +heroFaq(askSections[3])
 
   // contact
   include ../components/faq/answers/_0402.pug
@@ -25,3 +26,4 @@ html(lang="es")
   
   // Google Rich Card
   +jsonOrganization()
+  +jsonArticle(metaAuthor[2],"Qué derechos implica el registro de un nombre comercial","El registro de un nombre comercial se asimila al de la marca otorga derecho de uso exclusivo y permite la defensa legal y combatir el uso no autorizado","https://prointelecto.com/faq/0402-que-derechos-implica-el-registro-de-nombre-comercial","2020-09-17T09:36:03-0600","2020-09-17T09:36:03-0600",metaOgImg[0])

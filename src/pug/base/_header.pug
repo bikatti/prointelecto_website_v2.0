@@ -2,7 +2,7 @@ nav.o-nav.sticky
  .o-navFixedContainer
   .o-nav__content
    .a-brand
-    a(href=linksUrl[1]): img.a-brand__Img(src=linksUrl[1]+logoResponsive[0], alt="Logotipo de monlogo")
+    a(href=linksUrl[1]): img.a-brand__Img(src=linksUrl[1]+logoResponsive[0], alt="Logotipo de "+title)
  
    .a-burguer#burger
     img.a-burguer__menu(src=linksUrl[1]+"assets/img/icons/burguer.svg", alt="Icono de menu")
@@ -19,4 +19,4 @@ nav.o-nav.sticky
       li: a.a-itemLink(href=linksUrl[1]+linksInternos[4]) #{titles[2]}
       li: a.a-itemLink(href=linksUrl[1]+linksInternos[6]) #{titles[4]}
       li: a.a-itemLink(href=linksUrl[1]+linksInternos[5]) #{titles[3]}
-      li: a.a-itemLink.-icon(href=linksUrl[1]) #[.a-icon.-search]
+      //-li: a.a-itemLink.-icon(href=linksUrl[1]) #[.a-icon.-search]

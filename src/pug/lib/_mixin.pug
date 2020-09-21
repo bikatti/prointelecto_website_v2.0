@@ -21,7 +21,7 @@ mixin boxItemIcon(n,url,color,t,p,f,cL,icon,img,alt)
    .-back-half
    h4.-nochange.-noLetter #{t}
    p.-openMouth.-noLetter #{p}
-   span(class="-moreLink -bottom -uppercase -semiBold "+cL) #{f} #[i(class="-icon -iconLeft "+icon)]
+   small(class="-moreLink -bottom -uppercase -semiBold "+cL) #{f} #[i(class="-icon -iconLeft "+icon)]
    .m-boxImg
     img(src=""+img, alt="Icono de la sección "+t+", "+alt)
  
@@ -61,22 +61,22 @@ mixin pi(d1,d2,d3)
    .m-box__group
     .-row
      .-col-6.-colMd-6.-colSm-6.-pSmall.-mXsBottom(class=""+d1)
-      +boxItemRelated(linksUrl[1]+blogSUrl_1[0],linksUrl[1]+"assets/img/blog/img_011.jpg","alt",blogCat[0],blogS_1[0],"Illustration is a good way to enhance positive user experience in UI/UX design.The article by Tubik Studio considers features of efficient illustration design.")
+      +boxItemRelated(linksUrl[1]+blogSUrl_1[0],linksUrl[1]+blogImgS_1[0],"Registro de marca, escritorio de trabajo",blogCat[0],blogS_1[0],"La marca es esencial para el mercadeo, que tiene como meta hacer y mantener una clientela. El registro de marca otorga derecho a su uso exclusivo y su tramitación temprana evita que personas ajenas, por desconocimiento o mala fe, tramiten el registro de una marca idéntica o similar antes que su verdadero creador.")
      .-col-6.-colMd-6.-colSm-6.-pSmall.-mXsBottom(class=""+d2)
-      +boxItemRelated(linksUrl[1]+blogSUrl_1[1],linksUrl[1]+"assets/img/blog/img_005.jpg","alt",blogCat[0],blogS_1[1],"Illustration is a good way to enhance positive user experience in UI/UX design.The article by Tubik Studio considers features of efficient illustration design.")
+      +boxItemRelated(linksUrl[1]+blogSUrl_1[1],linksUrl[1]+blogImgS_1[1],"Propiedad intelectual, escritorio de trabajo artístico",blogCat[0],blogS_1[1],"Una marca reconocida, el know-how de un negocio, sus recetas o fórmulas secretas y software personalizados, entre otros; son objetos de Propiedad Intelectual que representan una ventaja competitiva para la empresa que los posee. Conoce lo que esto implica.")
      .-col-6.-colMd-6.-colSm-6.-pSmall.-mXsBottom(class=""+d3)
-      +boxItemRelated(linksUrl[1]+blogSUrl_1[2],linksUrl[1]+blogImgS_1[2],"alt",blogCat[0],blogS_1[2],"Illustration is a good way to enhance positive user experience in UI/UX design.The article by Tubik Studio considers features of efficient illustration design.")
+      +boxItemRelated(linksUrl[1]+blogSUrl_1[2],linksUrl[1]+blogImgS_1[2],"Propiedad intelectual, conferencias de abogados",blogCat[0],blogS_1[2],"Nada más injusto que después de usted haya producido un evento con gran pegada comercial, venga un tercero a identificar un nuevo evento con la misma marca o imagen comercial que usted forjó, aprovechándose indebidamente de los frutos de su esfuerzo. Entérese cómo la Propiedad Intelectual lo ayuda en un caso así.")
  
 //- Hero Faq
-mixin heroFaq(a1,l1,l2)
+mixin heroFaq(l2)
  section.o-hero.-padSmTop
   .-ContainerUniversal
    ol(vocab="https://schema.org/", typeof="BreadcrumbList").m-breadcrumbs
     li(property="itemListElement", typeof="ListItem")
-     a(property="item", typeof="WebPage").-footerLink(href=linksUrl[1]+linksInternos[4]): span.a-breadcrumb(property="name") #{titles[2]}
+     a(property="item", typeof="WebPage").-footerLink(href=linksUrl[1]): span.a-breadcrumb(property="name") Inicio
      meta(property="position", content="1")
     li(property="itemListElement", typeof="ListItem")
-     a(property="item", typeof="WebPage").-footerLink(href=""+a1): span.a-breadcrumb(property="name") #{l1}
+     a(property="item", typeof="WebPage").-footerLink(href=linksUrl[1]+linksInternos[4]): span.a-breadcrumb(property="name") #{titles[2]}
      meta(property="position", content="2")
     li(property="itemListElement", typeof="ListItem")
      span.a-breadcrumb.-semiBold(property="name") #{l2}
@@ -194,6 +194,25 @@ mixin nameFaq(id="faq1", n="pregunta")
   .a-iconFaq
    .a-iconFaq__icon
 
+//- CTA
+mixin cta(color,img,alt,t,p,a,colorb,b)
+ .m-ctaBox(class="-only -shadow "+color)
+  .m-ctaBox__img
+   img(src=""+img, alt=""+alt)
+  .m-ctaBox__text
+   h3.-colorLightin #{t}
+   p.-colorLightin #{p}
+  a.a-noMargin(href=""+a).a-button
+   button(class="a-btn "+colorb, type="button") #{b}
+
+mixin ctaMini(a,color,img,alt,p)
+ a.a-noMargin(href=""+a)
+  .m-ctaBox(class="-primary -mini "+color)
+   .m-ctaBox__img
+    img(src=""+img, alt=""+alt)
+   .m-ctaBox__text
+    p.-colorLightin #{p}
+
 //- Metadata
 mixin metadata(t,d,a,url,type,timg,img,imgAlt,twitter)
  // normal meta tags
@@ -203,17 +222,17 @@ mixin metadata(t,d,a,url,type,timg,img,imgAlt,twitter)
  meta(name="author", content=""+a)
  link(rel="canonical", href=""+url)
  // openGl meta tags
- meta(name="og:title", content=""+t)
- meta(name="og:description", content=""+d)
- meta(name="og:url", content=""+url)
- meta(name="og:site_name", content="Prointelecto")
- meta(name="og:locale", content="es_ES")
- meta(name="og:author", content=""+a)
- meta(name="og:type", content=""+type)
- meta(name="og:image:type", content="image/"+timg)
- meta(name="og:image", content=""+img)
- meta(name="og:image:secure_url", content=""+img)
- meta(name="og:image:alt", content=""+imgAlt)
+ meta(property="og:title", content=""+t)
+ meta(property="og:description", content=""+d)
+ meta(property="og:url", content=""+url)
+ meta(property="og:site_name", content="Prointelecto")
+ meta(property="og:locale", content="es_ES")
+ meta(property="og:author", content=""+a)
+ meta(property="og:type", content=""+type)
+ meta(property="og:image:type", content="image/"+timg)
+ meta(property="og:image", content=""+img)
+ meta(property="og:image:secure_url", content=""+img)
+ meta(property="og:image:alt", content=""+imgAlt)
  // twitter meta tags
  meta(name="twitter:card", content=""+twitter)
  meta(name="twitter:site", content="@prointelecto")
@@ -237,26 +256,7 @@ mixin jsonOrganization()
   |  "@type": "Organization",
   |  "name": "Prointelecto",
   |  "url": "https://prointelecto.com/",
-  |  "logo": "https://a.prointelecto.com/assets/img/logo/isotipo.png",
-  |  "description": "Abogados especialistas en Propiedad Intelectual. Registro de Marcas fácil serio confiable y profesional  por mas de 20 años, más de 350 marcas registradas.",
-  |  "foundingDate": "2006-01-01",
-  |  "founders": [
-  |  {
-  |    "@type": "Person",
-  |    "name": "Iskra Bohórquez"
-  |  }
-  | ],
-  | "sameAs": [
-  |    "https://www.facebook.com/prointelecto/",
-  |    "https://twitter.com/prointelecto"
-  | ]
-  |}
- //-script(type="application/ld+json")
-  |{
-  |  "@context": "https://schema.org",
-  |  "@type": "Organization",
-  |  "name": "Prointelecto",
-  |  "url": "https://prointelecto.com/",
+  |  "logo": "https://prointelecto.com/assets/img/logo/isotipo.png",
   |  "description": "Abogados especialistas en Propiedad Intelectual. Registro de Marcas fácil serio confiable y profesional  por mas de 20 años, más de 350 marcas registradas.",
   |  "foundingDate": "2006-01-01",
   |  "founders": [
@@ -283,7 +283,7 @@ mixin jsonArticle(autor,title,d,url,dP,dM,img)
   |    "logo":
   |      {
   |        "@type": "ImageObject",
-  |        "url": "https://a.prointelecto.com/assets/img/logo/isotipo.png"
+  |        "url": "https://prointelecto.com/assets/img/logo/isotipo.png"
   |      }
   |    },
   |  "author": {
@@ -303,7 +303,43 @@ mixin jsonArticle(autor,title,d,url,dP,dM,img)
   |    },
   |  "mainEntityOfPage": {
   |    "@type": "WebPage",
-  |    "@id": "https://prointelecto.com/assets/img/blog/img_011.jpg#{url}"
+  |    "@id": "#{url}"
+  |    }
+  |}
+
+mixin jsonNewsArticle(autor,title,d,url,dP,dM,img)
+ script(type="application/ld+json")
+  |{
+  |  "@context": "https://schema.org",
+  |  "@type": "NewsArticle",
+  |  "publisher": {
+  |    "@type": "Organization",
+  |    "name": "Prointelecto",
+  |    "url": "https://prointelecto.com/",
+  |    "logo":
+  |      {
+  |        "@type": "ImageObject",
+  |        "url": "https://prointelecto.com/assets/img/logo/isotipo.png"
+  |      }
+  |    },
+  |  "author": {
+  |    "@type": "Person",
+  |    "name": "#{autor}"
+  |    },
+  |  "headline": "#{title}",
+  |  "url": "#{url}",
+  |  "datePublished": "#{dP}",
+  |  "dateModified": "#{dM}",
+  |  "description": "#{d}",
+  |  "image": {
+  |    "@type": "ImageObject",
+  |    "url": "#{img}",
+  |    "width": 1200,
+  |    "height": 630
+  |    },
+  |  "mainEntityOfPage": {
+  |    "@type": "WebPage",
+  |    "@id": "#{url}"
   |    }
   |}
 

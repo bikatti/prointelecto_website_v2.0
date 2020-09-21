@@ -15,21 +15,21 @@ section.o-contact.-padMdTop.-zI10.-pRelative
       label ¿Usted o su empresa tienen alguna experiencia anterior con trámites de registro de marca en el país que desea hacer este trámite?
       .m-form__group.-radio
        .a-radioCheck.-mSmRight
-        input(type="radio", name="experiencia", id="yes",value="experiencia-yes")
+        input(type="radio", name="experiencia", id="yes",value="Tengo experiencia")
         label(for="yes") Sí
        .a-radioCheck.-mSmRight
-        input(type="radio", name="experiencia", id="no",value="experiencia-no")
+        input(type="radio", name="experiencia", id="no",value="No tengo experiencia")
         label(for="no") No
        .a-radioCheck
-        input(type="radio", name="experiencia", id="idk",value="experiencia-idk", checked)
+        input(type="radio", name="experiencia", id="idk",value="No sé", checked)
         label(for="idk") No lo sé
       .m-form__group
        label ¿Los trámites de registro de marca que le interesa gestionar se harán a nombre de una empresa o de una persona natural?
        select(name="persona", id="", required)
         option(value, selected, disabled) Seleccionar
-        option(value="persona1") Persona Natural
-        option(value="persona2") Persona Jurídica (empresa)
-        option(value="persona3") No sabe
+        option(value="Persona Natural") Persona Natural
+        option(value="Persona Jurídica") Persona Jurídica (empresa)
+        option(value="No sé") No sabe
       .m-form__group
        label Comentario (opcional)
        textarea.-formControl(name="mensaje", id="", rows="3")
@@ -42,7 +42,7 @@ section.o-contact.-padMdTop.-zI10.-pRelative
        input.-mXsRight(type="tel", name="numero", id="", required)
       .m-form__group
        label Correo electrónico
-       input.-mXsRight(type="email", name="nombre", id="", required)
+       input.-mXsRight(type="email", name="email", id="", required)
 
       .a-button.a-noMargin
        button.a-btn.-btnPrimary.-btnBlock(type="submit") Enviar
