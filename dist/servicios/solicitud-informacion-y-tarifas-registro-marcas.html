@@ -100,7 +100,7 @@
             <form action="/assets/php/rdm.php" method="POST">
               <div class="m-form">
                 <div class="m-form__group">
-                  <label>¿Cuál es la ciudad en la que se encuentra ubicada la empresa o actividad comercial relacionada con los productos o servicios de la(s) marca(s) que desea registrar?</label>
+                  <label>¿Cuál es el país y la ciudad en la que se encuentra ubicada la empresa o actividad comercial relacionada con los productos o servicios de la(s) marca(s) que desea registrar?</label>
                   <input class="-mXsRight" type="address" name="direccion" id="" required="required"/>
                 </div>
                 <div class="m-form__group">
@@ -147,6 +147,12 @@
                 <div class="m-form__group">
                   <label>Correo electrónico</label>
                   <input class="-mXsRight" type="email" name="email" id="" required="required"/>
+                </div>
+                <div class="spam">
+                  <label>Dejar esto en blanco</label>
+                  <input id="dejarenblando" type="text" name="dejarenblando"/>
+                  <label>No cambiar esto</label>
+                  <input type="text" value="http://" name="nocambiar"/>
                 </div>
                 <div class="a-button a-noMargin">
                   <button class="a-btn -btnPrimary -btnBlock" type="submit">Enviar</button>

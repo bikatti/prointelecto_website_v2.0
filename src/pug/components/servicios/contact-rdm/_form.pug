@@ -7,7 +7,7 @@ section.o-contact.-padMdTop.-zI10.-pRelative
     form(action=linksUrl[1]+"assets/php/rdm.php", method="POST")
      .m-form
       .m-form__group
-       label ¿Cuál es la ciudad en la que se encuentra ubicada la empresa o actividad comercial relacionada con los productos o servicios de la(s) marca(s) que desea registrar?
+       label ¿Cuál es el país y la ciudad en la que se encuentra ubicada la empresa o actividad comercial relacionada con los productos o servicios de la(s) marca(s) que desea registrar?
        input.-mXsRight(type="address", name="direccion", id="", required)
       .m-form__group
        label Señale la actividad comercial, productos y/o servicios que se identificarán con la(s) marca(s) que desea registrar
@@ -43,6 +43,11 @@ section.o-contact.-padMdTop.-zI10.-pRelative
       .m-form__group
        label Correo electrónico
        input.-mXsRight(type="email", name="email", id="", required)
+      .spam
+       label Dejar esto en blanco
+       input#dejarenblando(type="text", name="dejarenblando")
+       label No cambiar esto
+       input(type="text", value="http://", name="nocambiar")
 
       .a-button.a-noMargin
        button.a-btn.-btnPrimary.-btnBlock(type="submit") Enviar

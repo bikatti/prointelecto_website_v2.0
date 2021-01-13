@@ -1,15 +1,30 @@
 <?php
- $destinatario = 'info@prointelecto.com';
- // esto es al correo al que se enviará el mensaje
- $nombre = $_POST['nombre'];
- $mensaje = $_POST['mensaje'];
- $email = $_POST['email'];
- $lugar = $_POST['lugar'];
 
- $asunto = "Forma simple, enviado por " . $nombre;
- $header = "Enviado por " . $nombre . " desde la página de web de prointelecto.com";
- $mensajeCompleto =  $mensaje . "\n\nAtentamente: " . $nombre . "\nDe: " . $email . "\nDirección: " . $lugar . "\n\n" . $header;
+$destinatario = 'info@prointelecto.com';
+// esto es al correo al que se enviará el mensaje
+$nombre = $_POST['nombre'];
+$mensaje = $_POST['mensaje'];
+$email = $_POST['email'];
 
- mail($destinatario, $asunto, $mensajeCompleto);
- echo "<script> setTimeout(\"location.href='/mensaje'\", 1000)</script>";
-?>
+$address = [
+    'pais' => $_POST['pais'],
+    'ciudad' => $_POST['ciudad']
+];
+
+if(isset($_POST['dejarenblanco'])){
+    $dejarenblanco = $_POST['dejarenblanco'];
+}
+if(isset($_POST['nocambiar'])){
+    $nocambiar = $_POST['nocambiar'];
+}
+
+if ($dejarenblanco == '' && $nocambiar == 'http://') { 
+    // código para enviar el formulario
+    $asunto = "Forma simple, enviado por " . $nombre;
+    $header = "Enviado por " . $nombre . " desde la página de web de prointelecto.com";
+    $mensajeCompleto =  $mensaje ."\n\nAtentamente: " . $nombre . "\nDe: " . $email . "\nDirección: {$address['ciudad']}, {$address['pais']} \n\n" . $header;
+
+    // Enviarlo
+    mail($destinatario, $asunto, $mensajeCompleto);
+    echo "<script> setTimeout(\"location.href='/mensaje'\", 1000)</script>";
+}

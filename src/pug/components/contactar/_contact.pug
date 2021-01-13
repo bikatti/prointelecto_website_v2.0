@@ -12,10 +12,19 @@ section.o-contact.-padMdTop.-zI10.-pRelative
        label Correo electrónico
        input.-mXsRight.-mSmSmBottom(type="email", name="email", id="", required)
       .m-form__group
-       label Dirección
-       input.-mXsRight.-mSmSmBottom(type="address", name="lugar", id="", required)
+       label País
+       input.-mXsRight.-mSmSmBottom(type="address", name="pais", id="", required)
+      .m-form__group
+       label Ciudad
+       input.-mXsRight.-mSmSmBottom(type="address", name="ciudad", id="", required)
       .m-form__group
        label Escríbenos
        textarea.-formControl(name="mensaje", id="", rows="3", required)
+      .spam
+       label Dejar esto en blanco
+       input#dejarenblando(type="text", name="dejarenblando")
+       label No cambiar esto
+       input(type="text", value="http://", name="nocambiar")
+       
       .a-button.a-noMargin
        button.a-btn.-btnPrimary.-btnBlock(type="submit") Enviar
