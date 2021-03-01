@@ -64,6 +64,10 @@
     &.-calm {
         @extend .-bgCalm;
     }
+
+    &.-monlogo {
+        background-color: #226ef2;
+    }
     .m-ctaBox__img {
         position: absolute;
         top: -$spaceXs;

@@ -20,10 +20,11 @@ html(lang="es")
   include components/contactar/_contact.pug
 
   // Contactar
-  include components/contactar/_cta.pug
+  include components/index/_cta.pug
  
   // Footer
   include base/_footer.pug
+  script(src=linksUrl[1]+"assets/js/contact.js"+cssV)
 
   // Google Rich Card
   +jsonOrganization()

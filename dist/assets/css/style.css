@@ -1379,6 +1379,36 @@ article p:last-child, .-textContent p:last-child {
   border-color: #f1f1f1;
 }
 
+.-monlogo .-monlogo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 3px;
+  padding: 5px 28px;
+  background-color: #FEFEFE;
+  border-radius: 6px;
+  color: #393E46;
+  -webkit-box-shadow: 4px 4px #46b3e6;
+          box-shadow: 4px 4px #46b3e6;
+  border: 2px solid #226ef2;
+}
+.-monlogo .-monlogo:hover {
+  -webkit-box-shadow: 3px 3px #46b3e6;
+          box-shadow: 3px 3px #46b3e6;
+  top: 1px;
+  left: 1px;
+}
+.-monlogo .-monlogo:active {
+  -webkit-box-shadow: 0 0 #46b3e6;
+          box-shadow: 0 0 #46b3e6;
+  top: 3px;
+  left: 3px;
+}
+
 .-btnBlock {
   display: block;
   width: 100%;
@@ -3373,6 +3403,9 @@ ol.faq-list .-check__container p:first-child {
 .m-form {
   width: 100%;
 }
+.m-form .-required {
+  color: #E65F13;
+}
 
 .m-form__group {
   position: relative;
@@ -3404,6 +3437,13 @@ ol.faq-list .-check__container p:first-child {
   margin-right: 15px;
   position: relative;
   top: -4px;
+}
+.m-form__group.-grid-2columns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 25px 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
 }
 .m-form__group .a-radioCheck {
   display: -webkit-box;
@@ -3455,6 +3495,11 @@ ol.faq-list .-check__container p:first-child {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .m-form__group.-grid-2columns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -3587,6 +3632,9 @@ ol.faq-list .-check__container p:first-child {
   width: 120px;
   top: -8px;
   left: -15px;
+}
+.m-ctaBox.-monlogo {
+  background-color: #226ef2;
 }
 .m-ctaBox .m-ctaBox__img {
   position: absolute;

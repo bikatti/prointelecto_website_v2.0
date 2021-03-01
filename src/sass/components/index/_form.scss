@@ -9,6 +9,9 @@
 .m-form {
     width: 100%;
     // padding: $spaceSm;
+    .-required {
+        color: $color-primary;
+    }
 }
 .m-form__group {
     position: relative;
@@ -28,6 +31,11 @@
             position: relative;
             top: -4px;
         }
+    }
+    &.-grid-2columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: $spaceSm;
     }
     .a-radioCheck {
         display: flex;
@@ -62,5 +70,8 @@
     }
     @include mediaQueriesSm {
         flex-direction: column;
+        &.-grid-2columns {
+            display: flex;
+        }
     }
 }

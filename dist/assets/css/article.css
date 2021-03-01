@@ -1379,6 +1379,36 @@ article p:last-child, .-textContent p:last-child {
   border-color: #f1f1f1;
 }
 
+.-monlogo .-monlogo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 3px;
+  padding: 5px 28px;
+  background-color: #FEFEFE;
+  border-radius: 6px;
+  color: #393E46;
+  -webkit-box-shadow: 4px 4px #46b3e6;
+          box-shadow: 4px 4px #46b3e6;
+  border: 2px solid #226ef2;
+}
+.-monlogo .-monlogo:hover {
+  -webkit-box-shadow: 3px 3px #46b3e6;
+          box-shadow: 3px 3px #46b3e6;
+  top: 1px;
+  left: 1px;
+}
+.-monlogo .-monlogo:active {
+  -webkit-box-shadow: 0 0 #46b3e6;
+          box-shadow: 0 0 #46b3e6;
+  top: 3px;
+  left: 3px;
+}
+
 .-btnBlock {
   display: block;
   width: 100%;
@@ -2668,6 +2698,9 @@ a.-LinkFaq {
   width: 120px;
   top: -8px;
   left: -15px;
+}
+.m-ctaBox.-monlogo {
+  background-color: #226ef2;
 }
 .m-ctaBox .m-ctaBox__img {
   position: absolute;

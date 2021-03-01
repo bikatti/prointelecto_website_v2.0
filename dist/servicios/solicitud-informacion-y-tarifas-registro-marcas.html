@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="/assets/img/logo/favicon_web.png" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="/assets/img/logo/favicon_web.png" type="image/png" sizes="180x180"/>
     <link rel="icon" href="/assets/img/logo/favicon_web.png" type="image/png" sizes="196x196"/>
-    <link rel="stylesheet" href="/assets/css/style.css?v=62"/>
+    <link rel="stylesheet" href="/assets/css/style.css?v=3.2.65"/>
     <!-- normal meta tags-->
     <title>Solicitud de información y tarifas para el registro de marcas - Prointelecto</title>
     <meta name="title" content="Solicitud de información y tarifas para el registro de marcas - Prointelecto"/>
@@ -100,14 +100,21 @@
             <form action="/assets/php/rdm.php" method="POST">
               <div class="m-form">
                 <div class="m-form__group">
-                  <label>¿Cuál es el país y la ciudad en la que se encuentra ubicada la empresa o actividad comercial relacionada con los productos o servicios de la(s) marca(s) que desea registrar?</label>
-                  <input class="-mXsRight" type="address" name="direccion" id="" required="required"/>
+                  <label>¿En dónde se encuentra ubicada la empresa o actividad comercial relacionada con los productos o servicios de la(s) marca(s) que desea registrar?  <i class="-required">*</i></label>
+                  <div class="m-form__group -grid-2columns a-noMargin">
+                    <div class="m-form__item">
+                      <input class="-mXsRight -mSmSmBottom" type="address" name="ciudad" placeholder="Ciudad" required="required"/>
+                    </div>
+                    <div class="m-form__item">
+                      <input class="-mXsRight -mSmSmBottom" type="address" name="pais" placeholder="País" id="" required="required"/>
+                    </div>
+                  </div>
                 </div>
                 <div class="m-form__group">
-                  <label>Señale la actividad comercial, productos y/o servicios que se identificarán con la(s) marca(s) que desea registrar</label>
+                  <label>Señale la actividad comercial, productos y/o servicios que se identificarán con la(s) marca(s) que desea registrar <i class="-required">*</i></label>
                   <input type="text" name="actividad" id="" required="required"/>
                 </div>
-                <label>¿Usted o su empresa tienen alguna experiencia anterior con trámites de registro de marca en el país que desea hacer este trámite?</label>
+                <label>¿Usted o su empresa tienen alguna experiencia anterior con trámites de registro de marca en el país que desea hacer este trámite? <i class="-required">*</i></label>
                 <div class="m-form__group -radio">
                   <div class="a-radioCheck -mSmRight">
                     <input type="radio" name="experiencia" id="yes" value="Tengo experiencia"/>
@@ -123,7 +130,7 @@
                   </div>
                 </div>
                 <div class="m-form__group">
-                  <label>¿Los trámites de registro de marca que le interesa gestionar se harán a nombre de una empresa o de una persona natural?</label>
+                  <label>¿Los trámites de registro de marca que le interesa gestionar se harán a nombre de una empresa o de una persona natural? <i class="-required">*</i></label>
                   <select name="persona" id="" required="required">
                     <option value="value" selected="selected" disabled="disabled">Seleccionar</option>
                     <option value="Persona Natural">Persona Natural</option>
@@ -135,25 +142,39 @@
                   <label>Comentario (opcional)</label>
                   <textarea class="-formControl" name="mensaje" id="" rows="3"></textarea>
                 </div>
+                <div class="m-form__group">
+                  <label>Se enteró de nosotros por: <i class="-required">*</i></label>
+                  <select name="encontrarnos" id="encontrarnos" onchange="others(event)" required="required">
+                    <option value="value" selected="selected" disabled="disabled">Seleccionar</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Google">Google</option>
+                    <option value="Instragram">Instragram</option>
+                    <option value="MercadoLibre">MercadoLibre</option>
+                    <option value="Un amigo o conocido">Un amigo o conocido</option>
+                    <option value="Otros">Otros</option>
+                  </select>
+                </div>
+                <div id="othersOption"></div>
                 <h3>Datos de persona contacto</h3>
                 <div class="m-form__group">
-                  <label>Nombre completo</label>
+                  <label>Nombre completo <i class="-required">*</i></label>
                   <input class="-mXsRight" type="text" name="nombre" id="" required="required"/>
                 </div>
                 <div class="m-form__group">
-                  <label>Teléfono de contacto</label>
+                  <label>Teléfono de contacto <i class="-required">*</i></label>
                   <input class="-mXsRight" type="tel" name="numero" id="" required="required"/>
                 </div>
                 <div class="m-form__group">
-                  <label>Correo electrónico</label>
+                  <label>Correo electrónico <i class="-required">*</i></label>
                   <input class="-mXsRight" type="email" name="email" id="" required="required"/>
                 </div>
                 <div class="spam">
-                  <label>Dejar esto en blanco</label>
+                  <label>url</label>
                   <input id="dejarenblando" type="text" name="dejarenblando"/>
-                  <label>No cambiar esto</label>
+                  <label>telefono</label>
                   <input type="text" value="http://" name="nocambiar"/>
                 </div>
+                <p class="-mSmBottom"><i class="-required">*</i> Información obligatoria</p>
                 <div class="a-button a-noMargin">
                   <button class="a-btn -btnPrimary -btnBlock" type="submit">Enviar</button>
                 </div>
@@ -215,7 +236,8 @@
         <div class="-logoMonlogo"><img src="/assets/img/@1x/004-monlogo.png" alt="Logo de monlogo"/></div>
       </div>
     </footer>
-    <script src="/assets/js/index.js?v=62"></script>
+    <script src="/assets/js/index.js?v=3.2.65"></script>
+    <script src="/assets/js/contact.js?v=3.2.65"></script>
     <!-- Google Rich Card-->
     <script type="application/ld+json">
       {

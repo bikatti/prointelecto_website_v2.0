@@ -7,12 +7,16 @@ section.o-contact.-padMdTop.-zI10.-pRelative
     form(action=linksUrl[1]+"assets/php/rdm.php", method="POST")
      .m-form
       .m-form__group
-       label ¿Cuál es el país y la ciudad en la que se encuentra ubicada la empresa o actividad comercial relacionada con los productos o servicios de la(s) marca(s) que desea registrar?
-       input.-mXsRight(type="address", name="direccion", id="", required)
+       label ¿En dónde se encuentra ubicada la empresa o actividad comercial relacionada con los productos o servicios de la(s) marca(s) que desea registrar?  #[i.-required *]
+       .m-form__group.-grid-2columns.a-noMargin
+        .m-form__item
+         input.-mXsRight.-mSmSmBottom(type="address", name="ciudad", placeholder="Ciudad", required)
+        .m-form__item
+         input.-mXsRight.-mSmSmBottom(type="address", name="pais", placeholder="País", id="", required)
       .m-form__group
-       label Señale la actividad comercial, productos y/o servicios que se identificarán con la(s) marca(s) que desea registrar
+       label Señale la actividad comercial, productos y/o servicios que se identificarán con la(s) marca(s) que desea registrar #[i.-required *]
        input(type="text", name="actividad", id="", required)
-      label ¿Usted o su empresa tienen alguna experiencia anterior con trámites de registro de marca en el país que desea hacer este trámite?
+      label ¿Usted o su empresa tienen alguna experiencia anterior con trámites de registro de marca en el país que desea hacer este trámite? #[i.-required *]
       .m-form__group.-radio
        .a-radioCheck.-mSmRight
         input(type="radio", name="experiencia", id="yes",value="Tengo experiencia")
@@ -24,7 +28,7 @@ section.o-contact.-padMdTop.-zI10.-pRelative
         input(type="radio", name="experiencia", id="idk",value="No sé", checked)
         label(for="idk") No lo sé
       .m-form__group
-       label ¿Los trámites de registro de marca que le interesa gestionar se harán a nombre de una empresa o de una persona natural?
+       label ¿Los trámites de registro de marca que le interesa gestionar se harán a nombre de una empresa o de una persona natural? #[i.-required *]
        select(name="persona", id="", required)
         option(value, selected, disabled) Seleccionar
         option(value="Persona Natural") Persona Natural
@@ -33,21 +37,38 @@ section.o-contact.-padMdTop.-zI10.-pRelative
       .m-form__group
        label Comentario (opcional)
        textarea.-formControl(name="mensaje", id="", rows="3")
+      .m-form__group
+       label Se enteró de nosotros por: #[i.-required *]
+       select(name="encontrarnos", id="encontrarnos", onchange="others(event)", required)
+        option(value, selected, disabled) Seleccionar
+        option(value="Facebook") Facebook
+        option(value="Google") Google
+        option(value="Instragram") Instragram
+        option(value="MercadoLibre") MercadoLibre
+        option(value="Un amigo o conocido") Un amigo o conocido
+        option(value="Otros") Otros
+      
+      #othersOption
+      
       h3 Datos de persona contacto
       .m-form__group
-       label Nombre completo
+       label Nombre completo #[i.-required *]
        input.-mXsRight(type="text", name="nombre", id="", required)
       .m-form__group
-       label Teléfono de contacto
+       label Teléfono de contacto #[i.-required *]
        input.-mXsRight(type="tel", name="numero", id="", required)
       .m-form__group
-       label Correo electrónico
+       label Correo electrónico #[i.-required *]
        input.-mXsRight(type="email", name="email", id="", required)
+      
       .spam
-       label Dejar esto en blanco
+       label url
        input#dejarenblando(type="text", name="dejarenblando")
-       label No cambiar esto
+       label telefono
        input(type="text", value="http://", name="nocambiar")
+
+            
+      p.-mSmBottom #[i.-required *] Información obligatoria
 
       .a-button.a-noMargin
        button.a-btn.-btnPrimary.-btnBlock(type="submit") Enviar
