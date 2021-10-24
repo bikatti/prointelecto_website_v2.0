@@ -41,7 +41,7 @@
     } else {
          $mensajeCompleto = "Datos de persona contacto: \n\nNombre del cliente: {$nombre}\nEmail de contacto: {$email} \nNúmero de teléfono: {$tl}\n\nRespuestas a las preguntas:" . $a1 . $a2 . $a3 . $a4 . "\n\nComentario: \n{$comentario}\n\nNos encontraron por: {$findUs} \n\n {$header}";
     }
-
+    
     // Enviarlo
     mail($destinatario, $asunto, $mensajeCompleto);
     echo "<script> setTimeout(\"location.href='/mensaje'\", 1000)</script>";
