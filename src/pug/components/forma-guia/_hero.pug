@@ -1,4 +1,40 @@
-section.o-hero.-padSmTop
-  .m-heroContent
-   .-ContainerUniversal
-    +breadcrumb('Búsqueda')
+section.o-hero.hero--form#main
+ .main
+  .m-waves__container
+   .m-waves
+    .a-wave.-a
+    .a-wave.-b
+    .a-wave.-c
+  
+  .m-heroContent.-waveHero.container
+   .content.-ContainerUniversal.content--form
+    .m-heroContent__text.-mSmTop
+     h4.-h4.-colorLightin.-regular(style="margin: 0;") Guía Digital
+     .a-heroContent__title
+      h1.-colorLightin.-semiBold.-mXsBottom Cómo registrar tu marca
+     .a-heroContent__text(style="margin-right: 40px;")
+      p.-colorLightin.-light.-subtitle ¿Estás pensando en ir en registrar tu marca pero no sabes por dónde empezar? ¿Te gustaría entender cómo es el proceso? ¡Entonces descarga nuestro eBook y resuelve todas tus dudas!
+    
+    .m-contact__form
+     form(action=linksUrl[1]+"assets/php/guia.php", method="POST")
+      .m-form
+       .m-form__group
+        label Correo electrónico #[i.-required *]
+        input.-mSmSmBottom(type="email", name="email", id="", required)
+       .m-form__group
+        label Nombre de la persona contacto #[i.-required *]
+        input.-mSmSmBottom(type="text", name="name", id="", required)
+       .m-form__group
+        label Teléfono #[i.-required *]
+        input.-mSmSmBottom(type="tel", name="phone", id="", required)
+ 
+       .spam
+        label url
+        input#dejarenblando(type="text", name="dejarenblando")
+        label numero de telefono (No cambiar esto)
+        input(type="text", value="http://", name="nocambiar")
+      
+       p.-mSmBottom #[i.-required *] Información obligatoria
+       
+       .a-button.a-noMargin
+        button.a-btn.-btnSecondary.-bold.-btnBlock(type="submit") Enviar

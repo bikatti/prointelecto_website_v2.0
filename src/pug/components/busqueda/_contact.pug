@@ -1,0 +1,34 @@
+section.o-contact.-padMdTop.-zI10.-pRelative
+ .m-contact__content.-ContainerBlog
+  .m-contact__grid.-zI10
+   .m-contact__form
+    form(action=linksUrl[1]+"assets/php/busqueda.php", method="POST")
+     .m-form
+      h1.-h3.-mSmBottom Entérate si la marca que estás usando ya fue registrada
+      p.-mSmBottom Complete el formulario y le contáctaremos lo más pronto posible
+      .m-form__group
+       label Nombre de la marca#[i.-required *]
+       input.-mXsRight.-mSmSmBottom(type="text", name="marca", id="", required)
+      .m-form__group
+       label Productos y/o servicios que distingue #[i.-required *]
+       input.-mXsRight.-mSmSmBottom(type="text", name="product", id="", required)
+      .m-form__group
+       label Correo electrónico #[i.-required *]
+       input.-mXsRight.-mSmSmBottom(type="email", name="email", id="", required)
+      .m-form__group
+       label Nombre de la persona contacto #[i.-required *]
+       input.-mXsRight.-mSmSmBottom(type="text", name="name", id="", required)
+      .m-form__group
+       label Teléfono #[i.-required *]
+       input.-mXsRight.-mSmSmBottom(type="tel", name="phone", id="", required)
+
+      .spam
+       label url
+       input#dejarenblando(type="text", name="dejarenblando")
+       label numero de telefono (No cambiar esto)
+       input(type="text", value="http://", name="nocambiar")
+      
+      p.-mSmBottom #[i.-required *] Información obligatoria
+       
+      .a-button.a-noMargin
+       button.a-btn.-btnSecondary.-bold.-btnBlock(type="submit") Enviar

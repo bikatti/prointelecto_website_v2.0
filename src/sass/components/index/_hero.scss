@@ -6,6 +6,62 @@
         }
     }
 }
+
+.hero--form {
+    margin-bottom: 160px;
+
+    .-waveHero {
+        height: auto;
+        align-items: flex-start;
+        padding-top: $spaceRg;
+    }
+
+    @include mediaQueriesMd {
+        margin-bottom: 120%;
+
+        .-waveHero {
+            padding-top:0;
+        }
+
+        .a-heroContent__text {
+            margin: 0 !important;
+        }
+    }
+
+    @include mediaQueriesXxs {
+        margin-bottom: 140%;
+    }
+}
+
+.content--form {
+    display: flex;
+    max-width: 1140px;
+    width: 100%;
+    gap: 80px;
+
+    .m-contact__form {
+        
+        form {
+            border-radius: 8px;
+            box-shadow: $shadow1;
+            background-color: $color-lightin;
+            max-width: 400px;
+            width: 100%;
+            padding: 20px 30px;
+        }
+    }
+
+    @include mediaQueriesMd {
+        padding: 15px 25px;
+        gap: 30px;
+        flex-direction: column;
+
+        form {
+            margin: 0 auto;
+        }
+    }
+}
+
 .m-waves__container {
     position: relative;
     height: 380px;

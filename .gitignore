@@ -2,6 +2,7 @@ recursos/
 dist/assets/img
 dist/assets/fonts
 dist/assets/video
+node_modules/
 *.ai
 *.xd
 *.psd

@@ -1,0 +1,24 @@
+include lib/_var.pug
+include lib/_mixin.pug
+<!DOCTYPE html>
+html(lang="es")
+ include base/_head.pug
+  include base/_headstyle.pug
+  +metadata("Guía de Registro de Marca"+metaFirm,"Contacta a Prointelecto para Registro de marcas y otros servicios de Propiedad Intelectual",metaAuthor[0],"https://prointelecto.com/contactar",metaType[0],metaTypeImg[0],metaOgImg[0],metaImgAlt[0],metaTwitter[1])
+  meta(name="robots", content="noindex")
+  meta(name="googlebot-news", content="nosnippet")
+  include base/_headjs.pug
+
+ body.-bg
+  // menu
+  include base/_header.pug
+
+  // Hero
+  include components/forma-guia/_hero.pug
+ 
+  // Footer
+  include base/_footer.pug
+  script(src=linksUrl[1]+"assets/js/contact.js"+cssV)
+
+  // Google Rich Card
+  +jsonOrganization()
